@@ -2,14 +2,14 @@
 \[
 A^H(t) = S^{-1}(t, t_0) A^S(t_0) S(t, t_0), \quad A^S(t_0) \text{ costante nel tempo.}
 \]
-Per $ \ket{\psi} $ ho $ \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} $ e ho elemento di matrice
+Per \( \ket{\psi} \) ho \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \) e ho elemento di matrice
 \begin{align*}
 \braket{\psi_H(t_0)|A^H(t)|\psi_H(t_0)} &= \braket{\psi_S(t_0)|S^{-1}(t, t_0) A^S(t_0) S(t, t_0)|\psi_S(t_0)} = \\
 &= \braket{\psi_S(t)|A^S(t_0)|\psi_S(t)}
 \end{align*}
-Quindi passo da $ S $ ad $ H $ e nel primo l'operatore \`e costante nel tempo ed evolvono gli stati, nel secondo \`e il contrario.
+Quindi passo da \( S \) ad \( H \) e nel primo l'operatore \`e costante nel tempo ed evolvono gli stati, nel secondo \`e il contrario.
 
-Allora posso prendere gli $ \ket{n(t)} $ (fissi nel tempo) e uso
+Allora posso prendere gli \( \ket{n(t)} \) (fissi nel tempo) e uso
 \[
 A^H(t) \ket{n(t)} = \lambda_n \ket{n(t)}
 \]
@@ -27,7 +27,7 @@ Quindi una generica misura
 \braket{n_S(t_0)|\psi_S(t)} = \braket{n_S(t_0)|S(t, t_0)|\psi_S(t_0)} = \braket{n_H(t)|\psi_H(t)}.
 \]
 
-Per studiare l'evoluzione temporale di $ A^H(t) $ faccio
+Per studiare l'evoluzione temporale di \( A^H(t) \) faccio
 \begin{align*}
 \frac{d}{dt} A^H(t) &= \frac{d}{dt} \left( S^{-1}(t, t_0) A^S(t_0) S(t, t_0) \right) = \\
 &= \frac{\partial S^{-1}}{\partial t} A^S(t_0) S + S^{-1} A^S \frac{\partial S}{\partial t} + S^{-1} \frac{\partial A^S}{\partial t} S,
@@ -40,7 +40,7 @@ quindi
 \[
 \frac{d}{dt} A^H(t) = -\frac{1}{i \hbar} S^{-1} \mathcal{H} A^S S + S^{-1} A^S \frac{\mathcal{H} S}{i \hbar} + \frac{\partial}{\partial t} A^H(t).
 \]
-Poich\'e per definizione $ S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) $, ho
+Poich\'e per definizione \( S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) \), ho
 \begin{align*}
 \frac{d}{dt} A^H(t) &= -\frac{1}{i \hbar} S^{-1} \mathcal{H} S A^H + \frac{1}{i \hbar} A^H S^{-1} \mathcal{H} S + \frac{\partial}{\partial t} A^H(t) = \\
 &= \frac{1}{i \hbar} \left[ A^H, \underbrace{S^{-1} \mathcal{H} S}_{\mathcal{H}^H} \right] + \frac{\partial}{\partial t} A^H(t)
@@ -50,12 +50,12 @@ Poich\'e per definizione $ S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) $, ho
 &= \frac{d}{dt} \braket{\psi_i^H(t_0)|A^H(t)|\psi_j^H(t_0)} = \\
 &= \frac{1}{i \hbar} \braket{\psi_i^H(t_0)|\left\{ \left[ A^H(t), \mathcal{H}^H \right] + \frac{\partial}{\partial t} A^H(t) \right\}|\psi_j^H(t_0)}
 \end{align*}
-per\`o $ A^H = S^{-1} A^S S $ e $ A^H \mathcal{H}^H = S A^S S S^{-1} \mathcal{H} S = S A^S \mathcal{H} S $
+per\`o \( A^H = S^{-1} A^S S \) e \( A^H \mathcal{H}^H = S A^S S S^{-1} \mathcal{H} S = S A^S \mathcal{H} S \)
 \[
 \frac{d}{dt} A_{ij}(t) = \braket{\psi_i^S(t)|\frac{1}{i \hbar} \left[ A^S(t_0), \mathcal{H}^S \right]|\psi_j^S(t)} + \braket{\psi_i^S(t)|\frac{\partial A^S}{\partial t}|\psi_j^S(t)}.
 \]
 
-Esempio: $ A $ e $ B $ costanti del moto $ \Rightarrow [A, B] $ costante del moto. Infatti
+Esempio: \( A \) e \( B \) costanti del moto \( \Rightarrow [A, B] \) costante del moto. Infatti
 \[
 [A, \mathcal{H}] = [B, \mathcal{H}] = 0 \quad \Rightarrow \quad \left[ [A, B], \hat{\mathcal{H}} \right] = 0.
 \]

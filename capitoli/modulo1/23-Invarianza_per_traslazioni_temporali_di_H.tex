@@ -1,11 +1,11 @@
-\subsection{Invarianza per traslazioni temporali di $\mathcal{H}$}
-So che $ S(t_1, t_0) = S(t_1 + \delta, t_0 + \delta) $, nel caso infinitesimo
+\subsection{Invarianza per traslazioni temporali di \(\mathcal{H}\)}
+So che \( S(t_1, t_0) = S(t_1 + \delta, t_0 + \delta) \), nel caso infinitesimo
 \[
 \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0) = \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0 + \delta) \quad \Rightarrow \quad \frac{d}{dt} \hat{\mathcal{H}}(t) = 0
 \]
-cio\`e $ \hat{\mathcal{H}} \equiv \hat{\mathcal{H}}(\hat{p}, \hat{q}) $ (N.B.: \`e un ``se e solo se'').
+cio\`e \( \hat{\mathcal{H}} \equiv \hat{\mathcal{H}}(\hat{p}, \hat{q}) \) (N.B.: \`e un ``se e solo se'').
 
-Se $ \hat{\mathcal{H}} $ non dipende dal tempo, allora $ S $ e $ \hat{\mathcal{H}} $ commutano. La condizione di partenza equivale a $ S(t_1 + \delta, t_0 + \delta) = S(t_1, t_0) $ con $ \delta $ infinitesimo questa volta,
+Se \( \hat{\mathcal{H}} \) non dipende dal tempo, allora \( S \) e \( \hat{\mathcal{H}} \) commutano. La condizione di partenza equivale a \( S(t_1 + \delta, t_0 + \delta) = S(t_1, t_0) \) con \( \delta \) infinitesimo questa volta,
 \begin{align*}
 S(t_1 + \delta, t_0 + \delta) &= S(t_1 + \delta, t_1) S(t_1, t_0) S(t_0, t_0 + \delta) = \\
 &= S(t_1 + \delta, t_1) S(t_1, t_0) S^{-1}(t_0 + \delta, t_0) = \\
@@ -16,7 +16,7 @@ S(t_1 + \delta, t_0 + \delta) &= S(t_1 + \delta, t_1) S(t_1, t_0) S(t_0, t_0 + \
 \[
 \Rightarrow \quad \left[ \hat{\mathcal{H}}, S(t_1, t_0) \right] = 0.
 \]
-Inoltre gli autovalori di $ \hat{\mathcal{H}} $ si conservano per traslazione temporale
+Inoltre gli autovalori di \( \hat{\mathcal{H}} \) si conservano per traslazione temporale
 \[
 \hat{\mathcal{H}} \ket{E} = E \ket{E}.
 \]
@@ -26,7 +26,7 @@ Inoltre gli autovalori di $ \hat{\mathcal{H}} $ si conservano per traslazione te
 &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \braket{\varphi|E} \left( E \braket{E|S|E^\prime} - E^\prime \braket{E|S|E^\prime}\right) \braket{E^\prime|\psi} \, dE \, dE^\prime  = \\
 &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (E - E^\prime) \braket{\varphi|E} \braket{E|S|E^\prime} \braket{E^\prime|\psi} \, dE \, dE^\prime
 \end{align*}
-cio\`e $ \braket{E|S|E^\prime} = 0 $ se $ E \neq E^\prime $.
+cio\`e \( \braket{E|S|E^\prime} = 0 \) se \( E \neq E^\prime \).
 
 Digressione sulla lagrangiana.
 \begin{align*}
@@ -38,7 +38,7 @@ Digressione sulla lagrangiana.
 \]
 Fine digressione sulla lagrangiana.
 
-Voglio che $\hat{\mathcal{H}} = -c \mathcal{H}$. Dimensionalmente, poich\'e
+Voglio che \(\hat{\mathcal{H}} = -c \mathcal{H}\). Dimensionalmente, poich\'e
 \[
 S(t, t_0) \ket{\psi(t_0)} = \ket{\psi(t)} \; \xrightarrow[\text{infinitesim.}] \; \ket{\psi(t)} = e^{(t - t_0) \frac{d}{dt}} \ket{\psi(t)} |_{t_0} =
 \]
@@ -48,11 +48,11 @@ S(t, t_0) \ket{\psi(t_0)} = \ket{\psi(t)} \; \xrightarrow[\text{infinitesim.}] \
 \[
 \Rightarrow \quad \hat{\mathcal{H}}(t) \ket{\psi(t)} = \frac{d}{dt} \ket{\psi(t)}
 \]
-la costante \`e un'azione, quindi $ c \equiv \frac{1}{\hbar} $. Riscrivo
+la costante \`e un'azione, quindi \( c \equiv \frac{1}{\hbar} \). Riscrivo
 \[
 \hat{\mathcal{H}} = - \frac{1}{\hbar} \mathcal{H} \left( \hat{p}, \hat{q} \right) \quad \Rightarrow \quad \boxed{i \hbar \frac{d}{dt} \ket{\psi(t)} = \mathcal{H}( t; \hat{p}, \hat{q}) \ket{\psi(t)}} \; \text{eq. di Schr\"odinger.}
 \]
-Per $ \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) $ per stati $ \ket{q} $
+Per \( \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) \) per stati \( \ket{q} \)
 \[
 \braket{q|i \hbar \frac{d}{dt}|\psi(t)} = \braket{q|\frac{\hat{p}^2}{2m} + V(\hat{q})|\psi(t)} \quad \Rightarrow
 \]
@@ -71,7 +71,7 @@ Per $ \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) $ per stati $ \ket
 \Rightarrow \quad i \hbar \frac{d \psi}{dt}(q; t) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dq^2}(q;t) + V(q) \psi(q;t).
 \]
 
-Per l'evoluzione temporale, $ \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} $, quindi
+Per l'evoluzione temporale, \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \), quindi
 \[
 i \hbar \frac{d}{dt} S(t, t_0) \ket{\psi(t_0)} = \mathcal{H}(t) S(t, t_0) \ket{\psi(t_0)}
 \]
@@ -107,11 +107,11 @@ Caso 3.
   \draw[dashed] (0,0) -- (5,5);
   \draw (0,3) -- (3,3) -- (3,0);
 
-  \node (t0) at (-.2,-.2) {$t_0$};
-  \node (t1) at (3,-.3) {$t'$};
-  \node (t2) at (-.3,3) {$t''$};
+  \node (t0) at (-.2,-.2) {\(t_0\)};
+  \node (t1) at (3,-.3) {\(t'\)};
+  \node (t2) at (-.3,3) {\(t''\)};
 \end{tikzpicture}
-\caption{Logica di funzionamento della funzione $T[O_1(t_1)O_2(t_1)]$.}
+\caption{Logica di funzionamento della funzione \(T[O_1(t_1)O_2(t_1)]\).}
 \label{schema_T}
 \end{figure}
 Definisco
@@ -130,25 +130,25 @@ S(t, t_0) &= T \exp{\left\{ \frac{1}{i \hbar} \int_{t_0}^t \mathcal{H}(t^\prime)
 & \left. \quad + \int_{t_0}^t \int_{t'}^t \mathcal{H}(t'') \mathcal{H}(t') \, dt'' \, dt' \right) = \\
 &= \mathbbm{1} + \frac{1}{i \hbar} \int_{t_0}^t \mathcal{H}(t^\prime) \, dt^\prime + \frac{1}{(i \hbar)^2} \int_{t_0}^t \int_{t_0}^{t'} \mathcal{H}(t') \mathcal{H}(t'') \, dt' \, dt''.
 \end{align*}
-Quindi per l'$n$-esimo termine dello sviluppo in serie di Taylor dell'esponenziale applico lo stesso metodo, cio\`e
+Quindi per l'\(n\)-esimo termine dello sviluppo in serie di Taylor dell'esponenziale applico lo stesso metodo, cio\`e
 \[
 T \left( \int_{t_0}^t \mathcal{H}(t_1) \, dt_1 \right) \left( \int_{t_0}^{t_1} \mathcal{H}(t_2) \, dt_2 \right) \cdots \left( \int_{t_0}^{t_{n - 1}} \mathcal{H}(t_n) \, dt_n \right) =
 \]
 \[
 = n! \int_{t_0}^t \int_{t_0}^{t_1} \int_{t_0}^{t_2} \cdots \int_{t_0}^{t_{n - 1}} \mathcal{H}(t_1) \mathcal{H}(t_2) \cdots \mathcal{H}(t_n) \, dt_1 \, dt_2 \cdots dt_n
 \]
-e gli $ n! $ si semplificano. Adesso controllo se $ S(t, t_0) $ \`e soluzione dell'equazione di Schr\"odinger.
+e gli \( n! \) si semplificano. Adesso controllo se \( S(t, t_0) \) \`e soluzione dell'equazione di Schr\"odinger.
 \begin{align*}
 i \hbar \frac{d}{dt} S(t, t_0) &= \mathcal{H}(t) + \frac{1}{i \hbar} \mathcal{H}(t) \int_{t_0}^t \mathcal{H}(t_2) \, dt_2 + \cdots + \\
 &\quad + \frac{1}{(i \hbar)^{n + 1}} \mathcal{H}(t) \int_{t_0}^t \int_{t_0}^{t_2} \cdots \int_{t_0}^{t_{n - 1}} \mathcal{H}(t_2) \cdots \mathcal{H}(t_n) \, dt_2 \cdots dt_n = \\
 &= \mathcal{H}(t) S(t, t_0)
 \end{align*}
 
-Nel caso pi\`u semplice in cui $ \frac{d}{dt} \mathcal{H} = 0 $ so che
+Nel caso pi\`u semplice in cui \( \frac{d}{dt} \mathcal{H} = 0 \) so che
 \[
 S(t, t_0) = \exp\left\{ \frac{1}{i \hbar} (t - t_0) \mathcal{H} \right\}
 \]
-allora l'operatore di evoluzione temporale lo posso calcolare solo quando $ \mathcal{H} \ket{n} = E_n \ket{n} $ (diagonalizzabilit\`a dell'operatore), da cui poi $ \braket{n|\psi} = c_n $ e $ p_n = |c_n|^2$.
+allora l'operatore di evoluzione temporale lo posso calcolare solo quando \( \mathcal{H} \ket{n} = E_n \ket{n} \) (diagonalizzabilit\`a dell'operatore), da cui poi \( \braket{n|\psi} = c_n \) e \( p_n = |c_n|^2\).
 
 Se ho un potenziale per cui so calcolare gli stati di energia, posso calcolare gli elementi di matrice, ottenendo
 \[
@@ -166,13 +166,13 @@ S(t, t_0) = \sum_{n,m} \ket{m} \braket{m|S(t, t_0)|n} \bra{n} =
 \[
 = \sum_n \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}} \ket{n} \bra{n}
 \]
-operatore diagonale nella base degli $ \ket{n} $.
+operatore diagonale nella base degli \( \ket{n} \).
 
-Quindi per $ \ket{\psi(t_0)} = \ket{k} $ al tempo $ t $
+Quindi per \( \ket{\psi(t_0)} = \ket{k} \) al tempo \( t \)
 \[
 \ket{\psi(t)} = S(t, t_0) \ket{k} = \sum_n \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}} \ket{n} \braket{n|k} = e^{\frac{1}{i \hbar}(t-t_0)E_k}\ket{k}
 \]
-cio\`e $ \ket{\psi(t_0)} $ e $ \ket{\psi(t)} $ \textbf{differiscono per una fase}. Inoltre
+cio\`e \( \ket{\psi(t_0)} \) e \( \ket{\psi(t)} \) \textbf{differiscono per una fase}. Inoltre
 \[
 \ket{\psi(t_0)} = \sum_k \ket{k} \overbrace{\braket{k|\psi(t_0)}}^{c_k(t_0)} = \sum_k c_k(t_0) \ket{k} \quad \Rightarrow
 \]
@@ -187,11 +187,11 @@ cio\`e la probabilit\`a si conserva perch\'e
 p_n(t) = |c_n(t)|^2 = |c_n(t_0)|^2 = p_n(t_0).
 \]
 
-Per lo stato $ \ket{\psi} $ il valor medio di un operatore sulla base degli $ \ket{n} $ autostati dell'energia 
+Per lo stato \( \ket{\psi} \) il valor medio di un operatore sulla base degli \( \ket{n} \) autostati dell'energia 
 \[
 \braket{n|A|n} = \braket{n(t_0)|e^{- \frac{1}{i \hbar} (t_n - t_0) E_n} A e^{\frac{1}{i \hbar} (t_n - t_0) E_n}|n(t_0)} = \braket{n(t_0)|A|n(t_0)}.
 \]
-Gli stati $ \ket{n} $ sono detti \textbf{stati stazionari}.
+Gli stati \( \ket{n} \) sono detti \textbf{stati stazionari}.
 
 \subsubsection{Esempio: hamiltoniana e matrici di Pauli}
 $$ \mathcal{H} = B \sigma_z, \qquad \sigma_z = \begin{pmatrix}

@@ -9,18 +9,18 @@ e chiamo
 \[
 U_{ij} = \braket{e_i'|e_j}
 \]
-e $U$ \`e la matrice di cambiamento di base, con
+e \(U\) \`e la matrice di cambiamento di base, con
 \[
 U = \sum_m \ket{e_m} \bra{e_m'}
 \]
 
-Inoltre, se $U \ket{\psi} = \ket{\psi'}$, vale che
+Inoltre, se \(U \ket{\psi} = \ket{\psi'}\), vale che
 \begin{enumerate}
-\item $\braket{e_i|\psi'} = \sum_m \braket{e_i|e_m'} \braket{e_m'|\psi} = \braket{e_i'|\psi}$
-\item $U_{ij} = \sum_m \braket{e_i|e_m} \braket{e_m'|e_j} = \sum_m \braket{e_i'|e_m'} \braket{e_m'|e_j'} = \braket{e_i'|U|e_j'} = \braket{e_i'|e_j}$
+\item \(\braket{e_i|\psi'} = \sum_m \braket{e_i|e_m'} \braket{e_m'|\psi} = \braket{e_i'|\psi}\)
+\item \(U_{ij} = \sum_m \braket{e_i|e_m} \braket{e_m'|e_j} = \sum_m \braket{e_i'|e_m'} \braket{e_m'|e_j'} = \braket{e_i'|U|e_j'} = \braket{e_i'|e_j}\)
 \end{enumerate}
 
-$U$ \`e unitario se
+\(U\) \`e unitario se
 \[
 U^\dag = U^{-1}, \qquad U^\dag U = \mathbbm{1}
 \]
@@ -36,7 +36,7 @@ U U^\dag = \sum_{n,m} \ket{e_n} \braket{e_n'|e_m'} \bra{e_m} = \sum_m \ket{e_m} 
 \]
 Gli operatori unitari sono matrici di cambio base.
 
-Prendo due stati $\ket{\psi}$ e $\ket{\varphi}$, allora per $U$ unitario
+Prendo due stati \(\ket{\psi}\) e \(\ket{\varphi}\), allora per \(U\) unitario
 \[
 \ket{\psi'} = U \ket{\psi} \qquad \ket{\varphi'} = U \ket{\varphi}
 \]
@@ -50,4 +50,4 @@ cio\`e i cambiamenti di base attraverso operatori unitari mantiene invariato il 
 \[
 \ket{\psi} \xrightarrow{\text{misura}} \ket{e_k} = N \, P_k \ket{\psi} \qquad P_k \text{ operatore di proiezione}
 \]
-Infatti gli operatori di proiezione non sono unitari perch\'e se esistesse l'inverso $P^{-1}$ avrei $P^2 = P$, cio\`e $P = \mathbbm{1}$.
+Infatti gli operatori di proiezione non sono unitari perch\'e se esistesse l'inverso \(P^{-1}\) avrei \(P^2 = P\), cio\`e \(P = \mathbbm{1}\).

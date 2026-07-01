@@ -1,5 +1,5 @@
 \subsection{Sistema QUBIT}
-Sistema che pu\`o esistere in due stati $\rightarrow$ notazione di Dirac. $\ket{A}$ ket $\rightarrow$ stati del sistema $\sim$ vettore.
+Sistema che pu\`o esistere in due stati \(\rightarrow\) notazione di Dirac. \(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
 
 \begin{figure}
 \centering
@@ -16,32 +16,32 @@ Sistema che pu\`o esistere in due stati $\rightarrow$ notazione di Dirac. $\ket{
   \node (G) at (2, 3) {};
   \node (H) at (2, -3) {};
 
-  \node (I) at (-2, 0) {$ \ket{\psi} $};
-  \node (J) at (.7, .95) {$ \ket{+} $};
-  \node (K) at (.7,-1) {$ \ket{-} $};
+  \node (I) at (-2, 0) {\( \ket{\psi} \)};
+  \node (J) at (.7, .95) {\( \ket{+} \)};
+  \node (K) at (.7,-1) {\( \ket{-} \)};
 
   \draw[thick] (A) -- (B);
   \draw[thick] (C) -- (D);
   \draw[thick] (E) -- (F);
   \draw[thick] (G) -- (H);
 \end{tikzpicture}
-\caption{Nell'esperimento della doppia fenditura, lo stato $ \ket{\psi} $ \`e la combinazione degli stati $ \ket{+} $ e $ \ket{-} $.}
+\caption{Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) \`e la combinazione degli stati \( \ket{+} \) e \( \ket{-} \).}
 \label{stati_qubit}
 \end{figure}
 
-In questo caso indico gli stati con $\ket{+}$ e $\ket{-}$ $\Rightarrow \ket{\pm}$ (Figura \ref{stati_qubit}).
+In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\) \(\Rightarrow \ket{\pm}\) (Figura \ref{stati_qubit}).
 
 Se non misuro da quale fenditura passa la particella allora ho sovrapposizione, cio\`e
 \[
 \ket{\psi} = a_+ \ket{+} + a_- \ket{-} \qquad \text{con } a_+, a_- \in \mathbb{C}, \mathrm{ampiezze}
 \]
-e $\ket{\psi}$ \`e ancora uno stato del sistema. La probabilit\`a allora \`e definita come
+e \(\ket{\psi}\) \`e ancora uno stato del sistema. La probabilit\`a allora \`e definita come
 \[
 P_\pm = |a_\pm|^2
 \]
 quando sto misurando.
 
-Questa probabilit\`a \`e tale che $P_+ + P_- = 1$, condizione di normalizzazione su $\ket{\psi}$. A priori, $a_\pm$ non sono determinabili.
+Questa probabilit\`a \`e tale che \(P_+ + P_- = 1\), condizione di normalizzazione su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
 
 Una peculiarit\`a \`e quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (Figura \ref{sovrapposizione_stati}).
 \begin{figure}
@@ -65,11 +65,11 @@ Una peculiarit\`a \`e quella di poter applicare il principio  di sovrapposizione
   \node (K) at (2, -1) {};
   \node (L) at (2, -3) {};
 
-  \node (M) at (-2, 0) {$ \ket{\psi} $};
-  \node (N) at (.7, .95) {$ \ket{+} $};
-  \node (O) at (.7,-1) {$ \ket{-} $};
-  \node (P) at (2.7, .95) {$ \ket{\psi_1} $};
-  \node (Q) at (2.7,-1) {$ \ket{\psi_2} $};
+  \node (M) at (-2, 0) {\( \ket{\psi} \)};
+  \node (N) at (.7, .95) {\( \ket{+} \)};
+  \node (O) at (.7,-1) {\( \ket{-} \)};
+  \node (P) at (2.7, .95) {\( \ket{\psi_1} \)};
+  \node (Q) at (2.7,-1) {\( \ket{\psi_2} \)};
 
   \draw[thick] (A) -- (B);
   \draw[thick] (C) -- (D);
@@ -119,14 +119,14 @@ Allora suppongo che ci sia un prodotto scalare: bra-ket.
 \]
 e lo definisco con le propriet\`a
 \begin{enumerate}
-\item $\braket{\varphi|\psi} = (\braket{\psi|\varphi})^*$
-\item $\braket{\varphi|\varphi} \geq 0$
-\item se $\ket{\psi} = a \ket{1} + b \ket{2}$ allora
+\item \(\braket{\varphi|\psi} = (\braket{\psi|\varphi})^*\)
+\item \(\braket{\varphi|\varphi} \geq 0\)
+\item se \(\ket{\psi} = a \ket{1} + b \ket{2}\) allora
 \[
 \braket{\varphi|\psi} = a \braket{\varphi|1} + b \braket{\varphi|2}
 \]
 \end{enumerate}
-Cos\`{i} $\ket{\psi} = a \ket{1} + b \ket{2}$ d\`a
+Cos\`{i} \(\ket{\psi} = a \ket{1} + b \ket{2}\) d\`a
 \begin{align*}
 \braket{\psi|w} &\stackrel{(1)}{=} \left( \braket{w|\psi} \right)^* \\
 &\stackrel{(3)}{=} \left( a \braket{w|1} + b \braket{w|2} \right)^* \\
@@ -160,7 +160,7 @@ Ad esempio,
 \[
 P_\pm = \frac{1}{2}
 \]
-tuttavia non so se $\psi_1$ e $\psi_2$ sono uguali. Infatti,
+tuttavia non so se \(\psi_1\) e \(\psi_2\) sono uguali. Infatti,
 \[
 \braket{\psi_1|\psi_2} = \frac{1}{2} (\bra{+} + \bra{-})(\ket{+} - \ket{-}) = \frac{1}{2} (1 + 0 + 0 - 1) = 0
 \]
@@ -169,7 +169,7 @@ cio\`e sono ortogonali, quindi sono diversi pur avendo la stessa probabilit\`a. 
 \braket{\psi_1|\psi_1} = \braket{\psi_2|\psi_2} = 1
 \]
 
-Quindi se dallo stato $\ket{\psi_1}$ misuro $\ket{+}$ e da qui misuro la probabilit\`a associata allo stato $\ket{\psi_2}$, classicamente otterrei 0, mentre qui ho la rigenerazione di $\ket{\psi_2}$.
+Quindi se dallo stato \(\ket{\psi_1}\) misuro \(\ket{+}\) e da qui misuro la probabilit\`a associata allo stato \(\ket{\psi_2}\), classicamente otterrei 0, mentre qui ho la rigenerazione di \(\ket{\psi_2}\).
 \[
 \left| \braket{\psi_2|+} \right|^2 = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}, \quad \text{cio\`e il 50\%}.
 \]
@@ -179,7 +179,7 @@ La misura quindi modifica lo stato. Allo stesso modo, se non eseguo nessuna misu
 &= \frac{1}{2} \left( \ket{+} + \ket{+} + \ket{-} - \ket{-} \right) = \\
 &= \ket{+}
 \end{align*}
-cio\`e \`e sparito $\ket{-}$ (cfr. le onde in controfase).
+cio\`e \`e sparito \(\ket{-}\) (cfr. le onde in controfase).
 
 Potrei avere
 \[
@@ -212,7 +212,7 @@ e questo \`e leggibile in termini di sovrapposizione
 \[
 \ket{w} = N \left( c \ket{\varphi} + d \ket{\psi} \right)
 \]
-Allora $\left| \braket{\varphi|\psi} \right|^2$ \`e una probabilit\`a che ci sia la sovrapposizione degli stati.
+Allora \(\left| \braket{\varphi|\psi} \right|^2\) \`e una probabilit\`a che ci sia la sovrapposizione degli stati.
 
 Un altro esempio \`e
 \[

@@ -13,7 +13,7 @@ S = e^{(t - t_0)\frac{\mathcal{H}}{i \hbar}} \quad \braket{x|k} = \frac{1}{\sqrt
 &= \int_{-\infty}^{+\infty} \braket{x|k} \braket{k|S(t, 0)|\psi(0)} \, dk \\
 &= \int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}} e^{i(kx - \omega_k t)} \psi(k; 0) \, dk
 \end{align*}
-$ \psi(x, t) $ pacchetto d'onda. Pacchetto d'onda ad indeterminazione minima $ \Delta^2 \hat{x} \Delta^2 \hat{p} = \frac{\hbar^2}{4} $, in $ t = 0 $.
+\( \psi(x, t) \) pacchetto d'onda. Pacchetto d'onda ad indeterminazione minima \( \Delta^2 \hat{x} \Delta^2 \hat{p} = \frac{\hbar^2}{4} \), in \( t = 0 \).
 \[
 \psi(x, 0) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{ikx} \psi(k; 0) \, dk
 \]
@@ -21,11 +21,11 @@ Allora anche la disuguaglianza di Schwarz deve diventare un'uguaglianza, cio\`e
 \[
 \Delta \hat{x} = \hat{x} - \braket{\hat{x}}, \qquad \Delta \hat{p} = \hat{p} - \braket{\hat{p}}
 \]
-cio\`e per $ \ket{\psi} $
+cio\`e per \( \ket{\psi} \)
 \[
 \left( \hat{p} - \braket{\hat{p}} \right) \ket{\psi} = i \lambda \left( \hat{x} - \braket{\hat{x}} \right) \ket{\psi}.
 \]
-Anche l'altra deve essere uguale, quindi $ \lambda \in \mathbb{R} $.
+Anche l'altra deve essere uguale, quindi \( \lambda \in \mathbb{R} \).
 \[
 \braket{x|(\hat{p} - \underbrace{\braket{\hat{p}}}_{p_0})|\psi} = i \lambda \braket{x|(\hat{x} - \underbrace{\braket{\hat{x}}}_{x_0})| \psi}
 \]
@@ -46,7 +46,7 @@ che \`e una gaussiana modulata (Figura \ref{gaussiana_modulata}).
   \draw[thick] (-3,0) -- (4,0);
   \draw[thick] (0,-2) -- (0,2);
 \end{tikzpicture}
-\caption{Andamento qualitativo della funzione d'onda $\psi$ per la particella libera. \`E una gaussiana modulata, pertanto la distribuzione \`e quella tipica del pacchetto d'onda.}
+\caption{Andamento qualitativo della funzione d'onda \(\psi\) per la particella libera. \`E una gaussiana modulata, pertanto la distribuzione \`e quella tipica del pacchetto d'onda.}
 \label{gaussiana_modulata}
 \end{figure}
 \begin{align*}
@@ -68,14 +68,14 @@ MANCANTE
 
 Per un pacchetto gaussiano calcolo la dipendenza di indeterminazione dal tempo. In rappresentazione di Schr\"odinger MANCANTE.
 
-In rappresentazione di Heisenberg in $ t = 0 $ ($ \psi_H(t_0) = \psi_S(0) $)
+In rappresentazione di Heisenberg in \( t = 0 \) (\( \psi_H(t_0) = \psi_S(0) \))
 \[
 \braket{x|\psi} = \psi(x) = N \exp \left\{ i k_0 x \right\} \exp \left\{ -\frac{\lambda}{2} \frac{(x - x_0)^2}{\hbar} \right\}
 \]
 \[
 \Delta^2 x = \Delta_0^2 x = \frac{\hbar}{2\lambda}, \; \Delta^2 p = \frac{\hbar^2}{4 \Delta_0^2 x} = \Delta_0^2 p \; \Rightarrow \; \braket{x} = x_0, \; \braket{p} = \hbar k_0
 \]
-Al $ t $ generico
+Al \( t \) generico
 \[
 \braket{p} = \braket{\psi|p_H|\psi} = \braket{\psi|p_S|\psi} = \hbar k_0
 \]
@@ -120,7 +120,7 @@ p_S \ket{\psi} &= p_0 \ket{\psi} + \lambda (x - x_0) \ket{\psi}
 \[
 \frac{d}{dt} \braket{\psi|\Delta^2 x|\psi} = \frac{2t}{m} \Delta_0^2 p 
 \]
-Impongo la condizione iniziale $ \Delta_0^2 x $
+Impongo la condizione iniziale \( \Delta_0^2 x \)
 \[
 \Delta^2 x = \Delta_0^2 x + \frac{t^2}{m^2} \Delta_0^2 p
 \]

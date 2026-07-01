@@ -70,7 +70,7 @@ Quindi, come avevo prima,
 \[
 {p'}_{a'}^{(i)} = -i\hbar\frac{\partial}{\partial {x'}_{a'}^{(i)}},
 \]
-infatti, per $ (i) $ fissato,
+infatti, per \( (i) \) fissato,
 \[
 -i\hbar \frac{\partial}{\partial {x'}_{a'}^{(i)}} = -i\hbar \frac{\partial}{\partial x_a^{(i)}} \frac{\partial x_a^{(i)}}{\partial {x'}_{a'}^{(i)}} \quad \Rightarrow \quad M_{aa'} = M_{aa'}^{-1}
 \]
@@ -94,7 +94,7 @@ y = r \sin \theta \sin \varphi \\
 z = r \cos \theta
 \end{cases}
 \]
-per\`o adesso devo sepapare $ \vec{p} = -i\hbar \vec{\nabla} $. Per l'impostazione radiale
+per\`o adesso devo sepapare \( \vec{p} = -i\hbar \vec{\nabla} \). Per l'impostazione radiale
 \[
 \hat{p} = \frac{\vec{x}}{\left\Vert \vec{x} \right\Vert} \mathbf{\cdot} \vec{p}
 \]
@@ -102,7 +102,7 @@ e vedo se vado da qualche parte. Introduco
 \[
 \frac{\vec{x}}{\left\Vert \vec{x} \right\Vert} \mathbf{\cdot} \vec{\nabla} = ?
 \]
-Prendo la componente $ \partial_i $
+Prendo la componente \( \partial_i \)
 \[
 \begin{cases}
 \partial_i = \frac{\partial}{\partial r} \partial_i r + \frac{\partial}{\partial \theta} \partial_i \theta + \frac{\partial}{\partial \varphi} \partial_i \varphi \\
@@ -113,7 +113,7 @@ Prendo la componente $ \partial_i $
 \Rightarrow \quad \frac{x_i}{r} \frac{\partial}{\partial r} \frac{\partial}{\partial x_i} |\vec{x}| = \frac{x_i}{r} \frac{\partial}{\partial r} \frac{x_i}{|\vec{x}|} = \frac{x_i^2}{r^2} \frac{\partial}{\partial r} = \frac{\partial}{\partial r}.
 \]
 
-Quindi ottengo che $ [\tilde{p}_r, r] = -i\hbar $. Noto che anche $ [\tilde{p}_r + f(r), r] = -i\hbar $. Il secondo termine \`e critico, quindi 
+Quindi ottengo che \( [\tilde{p}_r, r] = -i\hbar \). Noto che anche \( [\tilde{p}_r + f(r), r] = -i\hbar \). Il secondo termine \`e critico, quindi 
 \[
 T = \frac{{\vec{p}}^2}{2m} = \frac{\Delta}{2m} = \sum_i \frac{\partial_i^2}{2m}.
 \]
@@ -140,7 +140,7 @@ Allora
 \left\Vert \vec{a} \wedge \vec{b} \right\Vert^2 = \varepsilon^{imn} \varepsilon^{ijk} a_n b_n a_i b_k
 \]
 
-Voglio sapere che cos'\`e $ \hat{\vec{p}}^2 $, partendo dal caso classico, per arrivare a quello quantistico. Uso l'identit\`a vettoriale, che nel caso classico \`e 
+Voglio sapere che cos'\`e \( \hat{\vec{p}}^2 \), partendo dal caso classico, per arrivare a quello quantistico. Uso l'identit\`a vettoriale, che nel caso classico \`e 
 \[
 (\vec{a} \mathbf{\cdot} \vec{b})^2 = |\vec{a}|^2 + |\vec{b}|^2 - |\vec{a} \wedge \vec{b}|^2 \quad (\text{da dimostrare}).
 \]
@@ -157,12 +157,12 @@ Con ci\`o visto sopra
 &= a^j a^j b^k b^k - a^j b^j a^k b^k = \\
 &= |\vec{a}|^2 + |\vec{b}|^2 - (\vec{a} \mathbf{\cdot} \vec{b})^2
 \end{align*}
-e ho ci\`o che cercavo. Poi sostituisco $ \vec{a} $ e $ \vec{b} $ con $ \vec{x} $ e $ \vec{p} $ e ho la relazione classica 
+e ho ci\`o che cercavo. Poi sostituisco \( \vec{a} \) e \( \vec{b} \) con \( \vec{x} \) e \( \vec{p} \) e ho la relazione classica 
 \[
 \vec{p}^2 = \vec{p}_r^2 + \frac{\vec{L}^2}{r^2}.
 \]
 
-Passo alla quantistica, con $ \hat{\vec{x}} $ e $ \hat{\vec{p}} $ (che non commutano)
+Passo alla quantistica, con \( \hat{\vec{x}} \) e \( \hat{\vec{p}} \) (che non commutano)
 \begin{align*}
 \varepsilon^{ijk} \varepsilon^{ilm} \hat{x}^j \hat{p}^m &= (\delta^{jl}\delta^{km} - \delta^{jm}\delta^{kl}) \hat{x}^j \hat{p}^k \hat{x}^l \hat{p}^m = \\
 &= \hat{x}^j \hat{p}^k \hat{x}^j \hat{p}^k - \hat{x}^j \hat{p}^k \hat{x}^k \hat{p}^j = \\
@@ -172,7 +172,7 @@ Passo alla quantistica, con $ \hat{\vec{x}} $ e $ \hat{\vec{p}} $ (che non commu
 &= \hat{r}^2 \hat{\vec{p}}^2 -i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) - (-3i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} + i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) = \\
 &= \hat{r}^2 \hat{\vec{p}}^2 + i\hbar \hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}})^2 = |\vec{x} \wedge \vec{p}|^2 \equiv \vec{L}^2
 \end{align*}
-dove $ \vec{L} $ ha la propriet\`a che
+dove \( \vec{L} \) ha la propriet\`a che
 \[
 \vec{x} \mathbf{\cdot} \vec{L} = \varepsilon^{ijk} x^i x^j p^k = \frac{1}{2} \varepsilon^{ijk} [x^i, x^j] p^k = 0.
 \]

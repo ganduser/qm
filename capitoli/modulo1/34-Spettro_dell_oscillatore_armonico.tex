@@ -3,7 +3,7 @@ Le relazioni che ho ottenuto sono
 \[
 [\hat{a}^\dag, \hat{a}] = -1, \qquad \mathcal{H} = \hbar \omega \left( N + \frac{1}{2} \right).
 \]
-Voglio determinare lo spettro di $ \mathcal{H} $ e passo attraverso $ [N, \hat{a}] $ e $ [N, \hat{a}^\dag] $.
+Voglio determinare lo spettro di \( \mathcal{H} \) e passo attraverso \( [N, \hat{a}] \) e \( [N, \hat{a}^\dag] \).
 \[
 [N, \hat{a}] = [\hat{a}^\dag \hat{a}, \hat{a}] = [\hat{a}^\dag, \hat{a}]\hat{a} = -\hat{a},
 \]
@@ -11,7 +11,7 @@ Voglio determinare lo spettro di $ \mathcal{H} $ e passo attraverso $ [N, \hat{a
 [N, \hat{a}^\dag] = [\hat{a}^\dag \hat{a}, \hat{a}^\dag] = \hat{a}^\dag[\hat{a}, \hat{a}^\dag] = \hat{a}^\dag.
 \]
 
-Se conosco un autostato di $ N $, sia $ \ket{z} $, allora
+Se conosco un autostato di \( N \), sia \( \ket{z} \), allora
 \[
 N \ket{z} = \lambda_z \ket{z} \; \Rightarrow \; \begin{cases}
 N \hat{a}^\dag \ket{z} = (\lambda_z + 1) \hat{a}^\dag \ket{z} \\
@@ -25,35 +25,35 @@ N \hat{a}^\dag \ket{z} &= [N \hat{a}^\dag = \hat{a}^\dag N + \hat{a}^\dag] = (\h
 N \hat{a} \ket{z} &= (\hat{a}N - \hat{a}) \ket{z} = (\lambda_z - 1) \hat{a} \ket{z}. \qed
 \end{align*}
 
-Inoltre, $ N \ket{z} = \lambda_z \ket{z} \Rightarrow \lambda_z \geq 0 $.
+Inoltre, \( N \ket{z} = \lambda_z \ket{z} \Rightarrow \lambda_z \geq 0 \).
 
-Dimostrazione: $ \braket{z|N|z} = \lambda_z $ quando $ \braket{z|z} = 1 $, quindi
+Dimostrazione: \( \braket{z|N|z} = \lambda_z \) quando \( \braket{z|z} = 1 \), quindi
 \begin{align*}
 \lambda_z &= \braket{z|\hat{a}^\dag \hat{a}|z} = \\
 &= \sum_n \braket{z|\hat{a}^\dag|n} \braket{n|\hat{a}|z} = \\
 &= \sum_n \left| \braket{n|\hat{a}|z} \right|^2 \geq 0. \qed
 \end{align*}
 
-Deve esistere $ \ket{0} $ tale che $ \hat{a} \ket{0} = 0 $, perch\'e se non esistesse, cosiderando
+Deve esistere \( \ket{0} \) tale che \( \hat{a} \ket{0} = 0 \), perch\'e se non esistesse, cosiderando
 \[
 N \hat{a}^P \ket{z} = (\lambda_z - P) \hat{a}^P \ket{z},
 \]
-per $ P $ abbastanza grande avrei autovalori negativi. Inoltre, se $ \hat{a} \ket{0} = 0 $, allora $ N \ket{0} = \hat{a}^\dag \hat{a} \ket{0} = \lambda_0 \ket{0} $, cio\`e $ \lambda_0 = 0 $.
+per \( P \) abbastanza grande avrei autovalori negativi. Inoltre, se \( \hat{a} \ket{0} = 0 \), allora \( N \ket{0} = \hat{a}^\dag \hat{a} \ket{0} = \lambda_0 \ket{0} \), cio\`e \( \lambda_0 = 0 \).
 
 Allora posso definire
 \[
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0}
 \]
-$ K_n $ costante di normalizzazione tale che 
+\( K_n \) costante di normalizzazione tale che 
 \[
 N \ket{n} = n \ket{n},
 \]
 \[
 \hat{a}^\dag \ket{n} = \frac{K_n}{K_{n + 1}} \ket{n + 1}, \qquad \hat{a} \ket{n} = n \frac{K_n}{K_{n - 1}}\ket{n - 1}.
 \]
-Dico che $ \ket{0} $ \`e il \textbf{vuoto}, $ N $ \`e l'\textbf{operatore numero}, $ \hat{a} $ e $ \hat{a}^\dag $ sono gli \textbf{operatori di ditruzione e creazione}.
+Dico che \( \ket{0} \) \`e il \textbf{vuoto}, \( N \) \`e l'\textbf{operatore numero}, \( \hat{a} \) e \( \hat{a}^\dag \) sono gli \textbf{operatori di ditruzione e creazione}.
 
-Per calcolare $ K_n $ normalizzo $ \braket{0|0} = 1 $. Allora
+Per calcolare \( K_n \) normalizzo \( \braket{0|0} = 1 \). Allora
 \[
 \begin{cases}
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0} \\
@@ -88,11 +88,11 @@ E_n = \hbar \omega \left( n + \frac{1}{2} \right) \text{ autovalori di } \mathca
 
 N.B.: il formalismo di Heisenberg ha permesso di riscrivere tutto senza dover scegliere una base.
 
-Gli elementi di matrice li calcolo attraverso $ \hat{a} \pm \hat{a}^\dag $
+Gli elementi di matrice li calcolo attraverso \( \hat{a} \pm \hat{a}^\dag \)
 \[
 \hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dag), \qquad \hat{p} = -i \sqrt{\frac{m\omega\hbar}{2}}(\hat{a} - \hat{a}^\dag)
 \]
-e usando $ \braket{n|m} = \delta_{nm} $, allora
+e usando \( \braket{n|m} = \delta_{nm} \), allora
 \[
 \begin{cases}
 \braket{m|\hat{a}^\dag|n} = \delta_{m, n + 1}\sqrt{n + 1} \\
@@ -138,4 +138,4 @@ Le indeterminazioni sono
 \[
 \Rightarrow \quad \Delta^2 \hat{x} \Delta^2 \hat{p} = \hbar^2 \left( n + \frac{1}{2} \right)^2 \geq \frac{\hbar^2}{4}
 \]
-e $ n = 0 $ d\`a lo stato a minima indeterminazione.
+e \( n = 0 \) d\`a lo stato a minima indeterminazione.

@@ -13,7 +13,7 @@ Infatti l'invarianza della lagrangiana \`e
 &= \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta q + \frac{\partial \mathcal{L}}{\partial \dot{q}} \frac{d}{dt} \delta q = \\
 &= \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta q \right)
 \end{align*}
-quindi $ \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta q $ \`e costante. Questo \`e il \textbf{teorema di Noether}.
+quindi \( \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta q \) \`e costante. Questo \`e il \textbf{teorema di Noether}.
 
 Per le traslazioni, dal punto di vista quantistico ho un operatore unitario che agisce sui vettori di base
 \[
@@ -21,7 +21,7 @@ T \ket{q} = \ket{q - \delta} \qquad (T^\dag T = \mathbbm{1})
 \]
 producendo una nuova base.
 
-Per lo stato $ \ket{\psi} $
+Per lo stato \( \ket{\psi} \)
 \begin{align*}
 T \ket{\psi} &= \int_{-\infty}^{+\infty} T \ket{q} \braket{q|\psi} \, dq = \int_{-\infty}^{+\infty} \ket{q - \delta} \braket{q|\psi} \, dq = \\
 &= \int_{-\infty}^{+\infty} \ket{q - \delta} \psi(q) \, dq = \int_{-\infty}^{+\infty} \ket{q^\prime} \psi(q^\prime + \delta) \, dq^\prime
@@ -36,12 +36,12 @@ che sviluppata \`e
 &= \left[ \sum_{k = 0}^\infty \frac{\delta^k}{k!} \left( \frac{d}{dq} \right)^k \right] \psi(q) = \\
 &= e^{\delta \frac{d}{dq}} \psi(q)
 \end{align*}
-Inoltre so che $T_\delta = e^{i \hat{K} \delta}$, dove $\hat{K}^\dag = \hat{K}$, quindi
+Inoltre so che \(T_\delta = e^{i \hat{K} \delta}\), dove \(\hat{K}^\dag = \hat{K}\), quindi
 \[
 \psi(q + \delta) = e^{i \delta \left( -i \frac{d}{dq} \right)} \psi(q).
 \]
 
-Per trasformazioni infinitesime $ T_\varepsilon = e^{i \varepsilon \hat{K}} = 1 + i \varepsilon \hat{K} + \sigma(\varepsilon^2) $, dove $ \hat{K} $ \`e il \textbf{generatore delle traslazioni}. Allora
+Per trasformazioni infinitesime \( T_\varepsilon = e^{i \varepsilon \hat{K}} = 1 + i \varepsilon \hat{K} + \sigma(\varepsilon^2) \), dove \( \hat{K} \) \`e il \textbf{generatore delle traslazioni}. Allora
 \[
 \bra{q} 1 + i \delta \hat{K} \ket{\psi} =  \bra{q} e^{i \delta \hat{K}} \ket{\psi} = e^{i \delta \left( -i \frac{d}{dq} \right)} \psi(q) = \psi(q) + i \delta \left( -i \psi^\prime(q) \right)
 \]
@@ -53,7 +53,7 @@ Per trasformazioni infinitesime $ T_\varepsilon = e^{i \varepsilon \hat{K}} = 1 
 
 Ma cosa si conserva di un sistema quando c'\`e invarianza per traslazione?
 
-Supponendo che esista $ S $ tale che $ S^\dag \, S = \mathbbm{1} $ e $ S(t, t_0) |\ket{\psi} = \ket{\psi(t)} $ e quindi $ \braket{\psi(t_0)|\psi(t_0)} = \braket{\psi(t)|\psi(t)} $; avendo invarianza per traslazione per due stati $ \ket{\varphi} $ e $ \ket{\psi} $, segue
+Supponendo che esista \( S \) tale che \( S^\dag \, S = \mathbbm{1} \) e \( S(t, t_0) |\ket{\psi} = \ket{\psi(t)} \) e quindi \( \braket{\psi(t_0)|\psi(t_0)} = \braket{\psi(t)|\psi(t)} \); avendo invarianza per traslazione per due stati \( \ket{\varphi} \) e \( \ket{\psi} \), segue
 \[
 \braket{\varphi(t)|\psi(t)} = \braket{\varphi(t)|S(t, t_0)|\psi(t_0)} = \braket{\varphi(t)|T^\dag S(t, t_0) T|\psi(t_0)}
 \]
@@ -67,18 +67,18 @@ che nel caso infinitesimo \`e
 \[
 = \braket{\varphi(t)|S(t, t_0)|\psi(t_0)} - i \varepsilon \braket{\varphi(t)|\left[ \hat{K}, S(t, t_0) \right]|\psi(t_0)}
 \]
-Quindi deve essere $ \left[ \hat{K}, S(t, t_0) \right] = 0 $.
+Quindi deve essere \( \left[ \hat{K}, S(t, t_0) \right] = 0 \).
 
-Gli autostati di  $ \hat{K} $ ci sono e $ \hat{K} \ket{k} = k \ket{k} $, quindi
+Gli autostati di  \( \hat{K} \) ci sono e \( \hat{K} \ket{k} = k \ket{k} \), quindi
 \begin{align*}
 0 &= \braket{\varphi(t)|\left[ \hat{K}, S(t, t_0) \right]|\psi(t_0)} = \int_{-\infty}^{+\infty} \braket{\varphi|k} \braket{k|[,]|k^\prime} \braket{k^\prime|\psi} dk \, dk^\prime \\
 &= \int_{-\infty}^{+\infty} \braket{\varphi|k} \left( k - k^\prime \right) \braket{k|S(t, t_0)|k^\prime} \braket{k^\prime|\psi} dk \, dk^\prime
 \end{align*}
-e questo per ogni $\ket{\psi}, \ket{\phi}$, quindi
+e questo per ogni \(\ket{\psi}, \ket{\phi}\), quindi
 \[
 \text{se } k \neq k^\prime, \text{allora } \braket{k|S(t, t_0)|k^\prime} = 0
 \]
-cio\`e l'autovalore di $ \hat{K} $ si conserva.
+cio\`e l'autovalore di \( \hat{K} \) si conserva.
 
 Definisco l'\textbf{operatore impulso} o \textbf{momento}
 \[
@@ -93,14 +93,14 @@ Definisco l'\textbf{operatore impulso} o \textbf{momento}
 T^{-1} \hat{q} \, T \ket{q} &= T^{-1} \hat{q} \ket{q - \delta} = T^{-1} \left( q - \delta \right) \ket{q - \delta} = \\
 &= \left( q - \delta \right) T^{-1} \ket{q - \delta} = \left( q - \delta \right) \ket{q}.
 \end{align*}
-Per trasfromazioni infinitesimali $ T_\varepsilon = \mathbbm{1} + i \varepsilon \hat{K} = \mathbbm{1} + i \varepsilon \frac{1}{\hbar} \hat{p} $, quindi
+Per trasfromazioni infinitesimali \( T_\varepsilon = \mathbbm{1} + i \varepsilon \hat{K} = \mathbbm{1} + i \varepsilon \frac{1}{\hbar} \hat{p} \), quindi
 \[
 \left( \mathbbm{1} - i \varepsilon \frac{1}{\hbar} \hat{p} \right) \, \hat{q} \, \left( \mathbbm{1} + i \varepsilon \frac{1}{\hbar} \hat{p} \right) = \hat{q} - \varepsilon
 \]
 \[
 \hat{q} - i \varepsilon \frac{1}{\hbar} \left( \hat{p} \hat{q} - \hat{q} \hat{p} \right) = \hat{q} - \varepsilon
 \]
-quindi  $ \left[ \hat{p}, \hat{q} \right] = -i \hbar $.
+quindi  \( \left[ \hat{p}, \hat{q} \right] = -i \hbar \).
 
 \subsubsection{Esempio: ancora sull'operatore traslazione}
 \[

@@ -1,6 +1,6 @@
 \subsection{Esprimere le osservabili come operatori}
 
-Il sistema si presenta come combinazione di stati $\ket{e_i}$ e quando misuro ottengo un $\lambda_i$ reale associato a $\ket{e_i}$. Chiamo $O$ questa osservabile. Allora
+Il sistema si presenta come combinazione di stati \(\ket{e_i}\) e quando misuro ottengo un \(\lambda_i\) reale associato a \(\ket{e_i}\). Chiamo \(O\) questa osservabile. Allora
 \begin{align*}
 \text{valore medio} \quad \braket{O}_\psi &= \sum_i \lambda_i P_i = \sum_i \lambda_i \left| \braket{e_i|\psi} \right|^2 \\
 &\stackrel{\text{def}}{=} \braket{\psi|O|\psi}
@@ -20,7 +20,7 @@ O \ket{\psi} = \sum_i \lambda_i \ket{e_i} \braket{e_i|\psi}
 \[
 \braket{O}_\psi = \sum_i \lambda_i \left| \braket{\psi|e_i} \right|^2 \qquad \braket{O}_\psi = \braket{\psi|O|\psi}
 \]
-Inoltre, la matrice $O$ \`e diagonale
+Inoltre, la matrice \(O\) \`e diagonale
 \[
 O = \begin{pmatrix}
 \lambda_1 & 0 \\
@@ -43,7 +43,7 @@ O = \ket{\psi_1}\bra{\psi_2} + \ket{\psi_2}\bra{\psi_1}
 \[
 \ket{\psi_1} = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right) \qquad \ket{\psi_2} = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
 \]
-Poich\'e $\braket{\pm|\pm} = 1$ e $\braket{\pm|\mp} = 0$, ho la BON e
+Poich\'e \(\braket{\pm|\pm} = 1\) e \(\braket{\pm|\mp} = 0\), ho la BON e
 \begin{align*}
 O_{11} &= \braket{+|\frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right) \frac{1}{\sqrt{2}} \left( \bra{+} + i \bra{-} \right)|+} + \\
 &+ \braket{+|\frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right) \frac{1}{\sqrt{2}} \left( \bra{+} - i \bra{-} \right)|+} = \\
@@ -71,22 +71,22 @@ P_i = \frac{|a_i|^2}{\sum_{k=1}^3 |a_k|^2} = \begin{cases}
 2/5
 \end{cases}
 \]
-e ho le singole probabilit\`a. La probabilit\`a che non si trovi in $\ket{2}$ \`e $1 - P_2 = 3/5$.
+e ho le singole probabilit\`a. La probabilit\`a che non si trovi in \(\ket{2}\) \`e \(1 - P_2 = 3/5\).
 
 Potrei definire un'osservabile
 \[
 O = \lambda \ket{1}\bra{1} + \lambda \ket{3}\bra{3} + \lambda' \ket{2}\bra{2}
 \]
-e se misuro che il sistema si trova in $\ket{2}$ so gi\`a, altrimenti se non si trova in $\ket{2}$ \`e nello stato
+e se misuro che il sistema si trova in \(\ket{2}\) so gi\`a, altrimenti se non si trova in \(\ket{2}\) \`e nello stato
 \[
 \ket{\psi'} = \frac{1}{2} \ket{1} + \frac{1}{\sqrt{2}} \ket{3}
 \]
-cio\`e proietto $\ket{\psi}$ attraverso un operatore $P$ tale che $P^2 = P$ attraverso
+cio\`e proietto \(\ket{\psi}\) attraverso un operatore \(P\) tale che \(P^2 = P\) attraverso
 \[
 P_{\ket{S}} = \ket{S}\bra{S}, \qquad \text{non } S \rightarrow P = \mathbbm{1} - \ket{S}\bra{S}
 \]
 
-Se si trova in $\ket{2}$ e voglio calcolare la probabilti\`a con
+Se si trova in \(\ket{2}\) e voglio calcolare la probabilti\`a con
 \[
 \ket{\varphi} = \frac{1}{\sqrt{2}} \left( \ket{2} - \ket{3} \right)
 \]
@@ -97,11 +97,11 @@ Inoltre,
 \[
 \left| \braket{\varphi|\psi} \right|^2 = 0
 \]
-cio\`e $\ket{\varphi} \perp \ket{\psi}$ ed \`e l'informazione sul sistema $\rightarrow$ il proiettore lascia invariato lo $\ket{\varphi}$, infatti
+cio\`e \(\ket{\varphi} \perp \ket{\psi}\) ed \`e l'informazione sul sistema \(\rightarrow\) il proiettore lascia invariato lo \(\ket{\varphi}\), infatti
 \[
 P = \mathbbm{1} - \ket{\varphi}\bra{\varphi}, \qquad P \ket{\psi} = \ket{\psi}
 \]
-e quindi la probabilit\`a che il sistema sia in $\ket{2}$.
+e quindi la probabilit\`a che il sistema sia in \(\ket{2}\).
 
 Quindi il proiettore
 \[

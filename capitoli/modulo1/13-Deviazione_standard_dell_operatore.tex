@@ -1,6 +1,6 @@
 \subsection{Deviazione standard dell'operatore}
 
-\`E l'incertezza dell'operatore su $\ket{\psi}$
+\`E l'incertezza dell'operatore su \(\ket{\psi}\)
 \begin{align*}
 \Delta^2 A_\psi & \equiv \braket{\psi|A^2|\psi} - \left( \braket{\psi|A|\psi} \right)^2 = \\
 & = \braket{\psi|\left( A - \braket{\psi|A|\psi} \mathbbm{1} \right)^2|\psi}
@@ -9,7 +9,7 @@
 \Delta^2 A_\psi = 0 \quad \Leftrightarrow \quad A \ket{\psi} = \lambda \ket{\psi}
 \]
 
-$\Leftarrow$ | 
+\(\Leftarrow\) | 
 \[
 A^2 \ket{\psi} = \lambda^2 \ket{\psi}
 \]
@@ -17,11 +17,11 @@ A^2 \ket{\psi} = \lambda^2 \ket{\psi}
 \Delta^2 A = \braket{\psi|A^2|\psi} - \left( \braket{\psi|A|\psi} \right)^2 = \lambda^2 \braket{\psi|\psi} - \lambda^2 \braket{\psi|\psi} = 0
 \]
 
-$\Rightarrow$ |
+\(\Rightarrow\) |
 \begin{align*}
 0 & = \braket{e_i|A^2|e_i} - \left( \braket{e_i|A|e_i} \right)^2 = \\
 & = \sum_j \braket{e_i|A|e_j}\braket{e_j|A|e_i} - \left( \underbrace{\braket{e_i|A|e_i}}_{\text{matrice diagonale}} \right)^2 = \\
 & = \sum_j \left| \braket{e_i|A|e_j} \right|^2 - \left| \braket{e_i|A|e_i} \right|^2 = \\
 & = \sum_{j \ne i} \left| \braket{e_i|A|e_j} \right|^2
 \end{align*}
-Somma di numeri positivi, quindi $\braket{e_i|A|e_j} = 0$. Quindi solo $\braket{e_i|A|e_i}$ pu\`o essere diverso da 0, cio\`e $\ket{e_i}$ \`e autostato. $\square$
+Somma di numeri positivi, quindi \(\braket{e_i|A|e_j} = 0\). Quindi solo \(\braket{e_i|A|e_i}\) pu\`o essere diverso da 0, cio\`e \(\ket{e_i}\) \`e autostato. \(\square\)

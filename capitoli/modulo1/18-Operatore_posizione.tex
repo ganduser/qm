@@ -1,6 +1,6 @@
 \subsection{Operatore posizione}
 
-Il problema \`e decomporre $\ket{\psi}$ su una base che ne dia la posizione. Allora introduco
+Il problema \`e decomporre \(\ket{\psi}\) su una base che ne dia la posizione. Allora introduco
 \[
 \hat{x} \ket{x} = x \ket{x}
 \]
@@ -8,11 +8,11 @@ che in generale d\`a
 \[
 \braket{x|\psi} = \psi(x) \qquad \text{funzione d'onda}
 \]
-dove $|\psi(x)|^2 = |\braket{x|\psi}|^2$. Dato che $x$ \`e un parametro reale continuo, vorrei scrivere
+dove \(|\psi(x)|^2 = |\braket{x|\psi}|^2\). Dato che \(x\) \`e un parametro reale continuo, vorrei scrivere
 \[
 \ket{\psi} = \int \psi(x) \ket{x} \, dx
 \]
-come estensione del caso discreto. Cos\`{i} $|\psi(x)|^2$ \`e una distribuzione di probabilit\`a $\longrightarrow$ una densit\`a di probabilit\`a del tipo
+come estensione del caso discreto. Cos\`{i} \(|\psi(x)|^2\) \`e una distribuzione di probabilit\`a \(\longrightarrow\) una densit\`a di probabilit\`a del tipo
 \[
 P_\Delta \left( [x, x + \Delta x] \right) = \int_x^{x + \Delta x} |\psi(x)|^2 \, dx
 \]
@@ -50,7 +50,7 @@ Da questa discende:
 \[
 \delta(x', x) = \delta(x' - x)
 \]
-Poich\'e $\delta(x' - x) = \delta(x' + a, x + a)$
+Poich\'e \(\delta(x' - x) = \delta(x' + a, x + a)\)
 \[
 \int_{-\infty}^{+\infty} \delta(x' + a, x + a) \psi(x) \, dx = [x'' = x + a] =
 \]
@@ -65,14 +65,14 @@ Infatti
 \[
 \braket{\psi|x'} = \int_{-\infty}^{+\infty} \braket{\psi|x}\braket{x|x'} \, dx = \int_{-\infty}^{+\infty} \psi^*(x) \delta(x,x') \, dx = \psi^*(x')
 \]
-\item $f(x) \delta(x) = f(0) \delta(x)$
+\item \(f(x) \delta(x) = f(0) \delta(x)\)
 \begin{align*}
 \int_{-\infty}^{+\infty} f(x) \delta(x) \psi(x) \, dx &= f(0) \psi(0) = \\
 &= f(0) \int_{-\infty}^{+\infty} \psi(x) \delta(x) \, dx = \\
 &= \int_{-\infty}^{+\infty} f(0) \psi(x) \delta(x) \, dx
 \end{align*}
-Poich\'e $\psi$ \`e generica, $f(0) \delta(x) = f(x) \delta(x)$.
-\item $\delta(ax) = \frac{1}{a} \delta(x)$
+Poich\'e \(\psi\) \`e generica, \(f(0) \delta(x) = f(x) \delta(x)\).
+\item \(\delta(ax) = \frac{1}{a} \delta(x)\)
 \[
 \int_{-\infty}^{+\infty} \delta(ax) \psi(x) \, dx = \left[ ax = t \; \Rightarrow \; dx = \frac{dt}{a} \right] = 
 \]
@@ -92,7 +92,7 @@ Poich\'e $\psi$ \`e generica, $f(0) \delta(x) = f(x) \delta(x)$.
 \[
 \ket{\psi} = \int_{-\infty}^{+\infty} \ket{x}\braket{x|\psi} \, dx
 \]
-Nel caso continuo $\braket{x|x'} = \delta(x - x') \longrightarrow$ ortogonalizzazione impropria, infatti
+Nel caso continuo \(\braket{x|x'} = \delta(x - x') \longrightarrow\) ortogonalizzazione impropria, infatti
 \[
 \begin{cases}
 \braket{x|x} = \delta(0) \\
@@ -136,11 +136,11 @@ Ad es.
 
 \textbf{Riepilogo}
 \begin{enumerate}
-\item $\braket{q'|\hat{q}|q} = q \braket{q'|q} = q \delta(q' - q)$
-\item $\braket{q'|f(\hat{q})|q} = f(q) \braket{q|q'} = f(q) \, \delta(q - q')$
+\item \(\braket{q'|\hat{q}|q} = q \braket{q'|q} = q \delta(q' - q)\)
+\item \(\braket{q'|f(\hat{q})|q} = f(q) \braket{q|q'} = f(q) \, \delta(q - q')\)
 \end{enumerate}
 
-\subsubsection{Esempio: ulteriori propriet\`a della $\delta$}
+\subsubsection{Esempio: ulteriori propriet\`a della \(\delta\)}
 \[
 \int_{-\infty}^{+\infty} \delta(f(x)) \psi(x) \, dx
 \]
@@ -152,14 +152,14 @@ Ad es.
 \end{align*}
 
 \subsubsection{Esempio: operatore parit\`a}
-$ \braket{x|\mathcal{P}|\psi} = \psi(-x) $ con $ \braket{x|\psi} = \psi(x) \Rightarrow \bra{x} \mathcal{P} = \bra{-x} $.
+\( \braket{x|\mathcal{P}|\psi} = \psi(-x) \) con \( \braket{x|\psi} = \psi(x) \Rightarrow \bra{x} \mathcal{P} = \bra{-x} \).
 \begin{align*}
 (\braket{\psi|\mathcal{P}|x})^* &= \left( \int_{-\infty}^{+\infty} \braket{\psi|x'} \braket{x'|\mathcal{P}|x} \, dx' \right)^* = \\
 &= \left( \int_{-\infty}^{+\infty} \psi^*(x') \delta(-x' - x) \, dx' \right)^* = \\
 &= \int_{-\infty}^{+\infty} \psi(x') \delta(-x' - x) \, dx' = \\
 &= \psi(-x)
 \end{align*}
-quindi $ \mathcal{P} $ \`e hermitiano $ \Rightarrow \mathcal{P} \ket{x} = \ket{-x} \Rightarrow \mathcal{P}^2 \ket{x} = \ket{x} \Rightarrow \mathcal{P}^2 = \mathbbm{1} \Rightarrow \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \Rightarrow \mathcal{P} $ \`e unitario. $ \mathcal{P}^2 = \mathbbm{1} \Rightarrow $ autovalori $ \pm 1 $.
+quindi \( \mathcal{P} \) \`e hermitiano \( \Rightarrow \mathcal{P} \ket{x} = \ket{-x} \Rightarrow \mathcal{P}^2 \ket{x} = \ket{x} \Rightarrow \mathcal{P}^2 = \mathbbm{1} \Rightarrow \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \Rightarrow \mathcal{P} \) \`e unitario. \( \mathcal{P}^2 = \mathbbm{1} \Rightarrow \) autovalori \( \pm 1 \).
 
 Le autofunzioni sono
 \[

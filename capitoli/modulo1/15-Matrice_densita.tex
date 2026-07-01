@@ -12,18 +12,18 @@ Allora le probabilit\`a (fase globale)
 \[
 P_i = |\braket{e_i|\psi}|^2 = |\braket{e_i|\psi'}|^2
 \]
-fanno perdere informazione  sulla fase di $\ket{\psi'}$ rispetto a  $\ket{\psi}$ e anche per un generico operatore $A$
+fanno perdere informazione  sulla fase di \(\ket{\psi'}\) rispetto a  \(\ket{\psi}\) e anche per un generico operatore \(A\)
 \[
 \braket{\psi|A|\psi} = \braket{\psi'|A|\psi'}
 \]
 
-Ho una classe di equivalenze (\textit{raggio}) fra quelli che differiscono per la fase globale $\rightarrow$ sono lo stesso stato.
+Ho una classe di equivalenze (\textit{raggio}) fra quelli che differiscono per la fase globale \(\rightarrow\) sono lo stesso stato.
 
 Parto dalla considerazione che se non posso ricostruire il sistema con le sue condizioni iniziali,  non ho informazioni sul sistema. Devo poter riprodurre pi\`u volte le codizioni iniziali.
 
 Suppongo di avere un'osservabile e voglio capire quanta informazione sullo stato posso ricostruire partendo dalle caratteristiche dell'osservabile.
 
-Da $A$ ottengo
+Da \(A\) ottengo
 \[
 \begin{cases}
 \braket{A} = \lambda_1 P_1 + \lambda_2 P_2 \\
@@ -59,10 +59,10 @@ Allora
 e ricordo che
 \begin{enumerate}
 \item \`e invariante per cambio di base,
-\item $\Tr(A\rho) = \Tr(\rho A)$,
-\item $\Tr(A) = \sum_i \mu_i$ autovalori.
+\item \(\Tr(A\rho) = \Tr(\rho A)\),
+\item \(\Tr(A) = \sum_i \mu_i\) autovalori.
 \end{enumerate}
-Dimostrazione che $\braket{A} = \Tr(A\rho)$
+Dimostrazione che \(\braket{A} = \Tr(A\rho)\)
 \[
 \begin{cases}
 \Tr(A\rho) = \sum_i \braket{e_i|A\rho|e_i} \\
@@ -84,7 +84,7 @@ p_i \longrightarrow \ket{\psi_i}
 \braket{\psi_i|\psi_i} = 1
 \]
 
-Allora $\rho$ \`e definita da
+Allora \(\rho\) \`e definita da
 \[
 \rho = \sum_i p_i \ket{\psi_i} \bra{\psi_i} \qquad \text{stati misti}
 \]
@@ -92,7 +92,7 @@ quindi
 \[
 \braket{\psi_i|\rho|\psi_i} = p_i \qquad \braket{\psi_i|\rho|\psi_j} = 0
 \]
-inoltre, poich\'e $\braket{A} = \Tr(A\rho)$, vale
+inoltre, poich\'e \(\braket{A} = \Tr(A\rho)\), vale
 \begin{align*}
 \Tr(A\rho) &= \sum_i \braket{\psi_i|A\rho|\psi_i} = \\
 &= \sum_i \braket{\psi_i|A \left( \sum_j p_j \ket{\psi_j} \bra{\psi_j} \right)|\psi_i} = \\
@@ -138,14 +138,14 @@ ma per lo stato misto, nella base degli autostati
 &= \sum_i \left( \sum_j p_i p_j \ket{\psi_i} \braket{\psi_i|\psi_j} \bra{\psi_j} \right) = \\
 &= \sum_i p_i^2 \ket{\psi_i} \bra{\psi_i} \ne \rho
 \end{align*}
-Inoltre, $\Tr(\rho) = \sum_i p_i = 1$, ma
+Inoltre, \(\Tr(\rho) = \sum_i p_i = 1\), ma
 \[
 \Tr \rho = \Tr \rho^2 = \begin{cases}
 1 \qquad \qquad  \qquad\text{stati puri} \\
 \sum_i p_i^2 < 1 \qquad \text{stati misti}
 \end{cases}
 \]
-allora per uno stato puro $p_{i_0} = 1$ e $p_i = 0$ per ogni $i \ne i_0$ e poich\'e vale $\det \rho = \prod_i p_i$,  nel caso bipartito ho
+allora per uno stato puro \(p_{i_0} = 1\) e \(p_i = 0\) per ogni \(i \ne i_0\) e poich\'e vale \(\det \rho = \prod_i p_i\),  nel caso bipartito ho
 \[
 \det \rho \begin{cases}
 = 0 \qquad \text{puro} \\
