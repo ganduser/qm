@@ -1,0 +1,234 @@
+\subsection{Esperimento mentale}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \node (A) at (5,0) {};
+  \node (B) at (5,-2) {$B_1$};
+  \node (C) at (5,-2.1) {};
+  \node (D) at (5,-4.2) {$B_2$};
+  \node (E) at (5,-4.3) {};
+  \node (F) at (5,-6.3) {parete impermeabile};
+  \node (Circle) at (-.3,-3.1) {$A$};
+
+  \node (G) at (10,0) {};
+  \node (H) at (10, -6.3) {schermo};
+
+  \node (I) at (.1,-3.0) {};
+  \node (J) at (2.5,-2.2) {granelli di sabbia};
+  \node (K) at (.15,-3.1) {};
+  \node (L) at (2.0,-3) {};
+  \node (M) at (.1,-3.2) {};
+  \node (N) at (1.5,-3.8) {};
+
+  \draw[thick] (A) -- (B);
+  \draw[thick] (C) -- (D);
+  \draw[thick] (E) -- (F);
+  \draw[thick] (G) -- (H);
+
+  \draw (0,-3.1) circle (1.5pt);
+  \draw (Circle);
+
+  \draw (I) -- (J);
+  \draw (K) -- (L);
+  \draw (M) -- (N);
+\end{tikzpicture}
+\caption{Una sorgente ($A$) emette granelli di sabbia verso una parete permeabile con due fenditure ($B_1$ e $B_2$). Lo schermo registra per ogni punto quanti granelli sono arrivati.}
+\label{doppia_fenditura}
+\end{figure}
+
+Lo schema dell'apparato sperimentale \`e riportato in Figura \ref{doppia_fenditura}. Una fenditura aperta, piccata sulla fenditura (Figura \ref{granelli_una_fenditura}). Due fenditure aperte, ho la somma (Figura \ref{granelli_due_fenditure}). Ho un'equazione del moto deterministica (anche se non la so risolvere). Per\`o ho una probabilit\`a.
+$$
+p(A \rightarrow C_k) = p(A \rightarrow B_1) \; p(B_1 \rightarrow C_k) + p(A \rightarrow B_2) \; p(B_2 \rightarrow C_k)
+$$
+perch\'e la particella passa o in $B_1$ o in $B_2$. Quindi
+\begin{align*}
+N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(B_i \rightarrow C_k) =  \\
+&= \sum_{i = 1}^2 N(A \rightarrow B_i) \; p(B_i \rightarrow C_k) = \\
+&= \sum_{i = 1}^2 N(B_i \rightarrow C_k)
+\end{align*}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \begin{scope}[rotate=270]
+    \draw[color=blue, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1))})    node[right] {};
+    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x-1)*(\x-1))})    node[right] {};
+  \end{scope}
+
+  \node (A) at (-.5,-3) {};
+  \node (B) at (-.5,3) {};
+
+  \node (C) at (-3.5, 3) {};
+  \node (D) at (-3.5, 1.05) {};
+
+  \node (E) at (-3.5, .95) {};
+  \node (F) at (-3.5, -.95) {};
+
+  \node (G) at (-3.5, -1.05) {};
+  \node (H) at (-3.5, -3) {};
+
+  \draw[thick] (A) -- (B);
+  \draw[thick] (C) -- (D);
+  \draw[thick] (E) -- (F);
+  \draw[thick] (G) -- (H);
+\end{tikzpicture}
+\caption{Le due distribuzioni, in colori diversi, nel caso di granelli di sabbia in cui si lasci aperta una sola fenditura per volta. Sono piccate sulle fenditure.}
+\label{granelli_una_fenditura}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \begin{scope}[rotate=270]
+    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1)) + exp(-(\x-1)*(\x-1))})    node[right] {};
+  \end{scope}
+
+  \node (A) at (-.5,-3) {};
+  \node (B) at (-.5,3) {};
+
+  \node (C) at (-3.5, 3) {};
+  \node (D) at (-3.5, 1.05) {};
+
+  \node (E) at (-3.5, .95) {};
+  \node (F) at (-3.5, -.95) {};
+
+  \node (G) at (-3.5, -1) {};
+  \node (H) at (-3.5, -3) {};
+
+  \node (I) at (-.3, -1.2) {};
+  \node (J) at (-.7, -1.2) {};
+
+  \node (K) at (-.3, -1.3) {};
+  \node (L) at (-.7, -1.3) {};
+
+  \node (M) at (-.1, -1.3) {$C_k$};
+
+  \draw[thick] (A) -- (B);
+  \draw[thick] (C) -- (D);
+  \draw[thick] (E) -- (F);
+  \draw[thick] (G) -- (H);
+  \draw[thick] (I) -- (J);
+  \draw[thick] (K) -- (L);
+\end{tikzpicture}
+\caption{In rosso la distribuzione ottenuta con entrambe le fenditure aperte. $p(A \to C_k)$ rappresenta la probabilit\`a che un granello di sabbia arrivi sullo schermo in posizione $C_k$.}
+\label{granelli_due_fenditure}
+\end{figure}
+
+Quando la sorgente emette fullereni, le cose cambiano, bench\'e siano oggetti piuttosto grandi (diametro 1 nm). L'esempio \`e stato fatto anche con molecole pi\`u grandi ($ \text{C}_{60} \text{F}_{48} $ e TPP). L'esperimento \`e stato fatto da M.~Arndt e A.~Zeilinger (Figura \ref{arndt_zeilinger}).
+
+N.B.: spara molecole singole.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-5, 2.7) circle (1.5pt);
+
+  \draw[pattern=north west lines, pattern color=black, draw=black] (0,0) rectangle ++(0.1,2.0);
+  \draw[pattern=north west lines, pattern color=black, draw=black] (0,2.2) rectangle ++(0.1,1.1);
+  \draw[pattern=north west lines, pattern color=black, draw=black] (0,3.5) rectangle ++(0.1,2.0);
+
+  \draw [line width=0.25mm] (3, 5.5) -- (3, 0) node [right] {fascio laser};
+  \draw [->] (3.5, 1.0) -- (3.5, 2.5);
+
+  \node (A) at (0, 5.7) {200 nm};
+  \node (B) at (1, 2.7) {100 nm};
+  \node (C) at (1, 2.1) {52 nm};
+  \node (D) at (0, -.3) {Si N};
+  \node (E) at (4.2, 1.7) {8 $\mu$m};
+  \node (F) at (3.7, 0.7) {2 $\mu$m};
+  \node (G) at (-5.0, 3.0) {C$_{60}$};
+  \node (H) at (-5.0, 2.3) {$v = 220$ km/h};
+\end{tikzpicture}
+\caption{Schema dell'esperimento di Arndt e Zeilinger.}
+\label{arndt_zeilinger}
+\end{figure}
+
+L'istogramma ha un andamento come in Figura \ref{arndt_zeilinger_distro}.
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (0, 0) circle (1.5pt);
+
+  \node (A) at (3.5, 3) {};
+  \node (B) at (3.5, 1.05) {};
+
+  \node (C) at (3.5, .95) {};
+  \node (D) at (3.5, -.95) {};
+
+  \node (E) at (3.5, -1) {};
+  \node (F) at (3.5, -3) {};
+
+  \draw[thick] (A) -- (B);
+  \draw[thick] (C) -- (D);
+  \draw[thick] (E) -- (F);
+
+  \begin{scope}[rotate=270, shift={(0,4)}]
+    \draw[color=blue, domain=-3:3, samples=200, smooth]   plot (\x,{cos(10*\x r)*cos(10*\x r)*exp(-(\x*\x))}) node[right] {};
+    \draw[color=red, domain=-3:3, samples=200, smooth]   plot (\x,{exp(-(\x*\x))}) node[right] {};
+  \end{scope}
+\end{tikzpicture}
+\caption{Distribuzione nell'esperimento di Arndt e Zeilinger.}
+\label{arndt_zeilinger_distro}
+\end{figure}
+
+$$
+p(A \rightarrow C) \sim \left| \sum_i R(A \rightarrow B_i) \; R(B_i \rightarrow C_k)\right|^2 
+$$
+$$
+R = \cos(\omega t + \varphi)
+$$
+figura di interferenza data, per\`o, da una sorgente di onde per il principio di Fresnel. \`E come se sommassi due onde
+$$
+R_1 = A \cos \left( \omega t + \varphi_1 \right) \qquad R_2 = A \cos \left( \omega t + \varphi_2 \right)
+$$
+con uguali ampiezza e frequenza e diverse fasi, dove so che
+$$
+\varphi = 2 \pi \frac{d}{\lambda} - \left[ \frac{2 \pi d}{\lambda} \right] \qquad \varphi_1 - \varphi_2 = 2 \pi \frac{\Delta d}{\lambda}
+$$
+\begin{align*}
+R &= R_1 + R_2 = \\
+&= A \; \mathrm{Re} \left( e^{i (\omega t + \varphi_1)} + e^{i (\omega t + \varphi_2)} \right) = \\
+&= A \; \mathrm{Re} \left( e^{i \omega t}\left( e^{i \varphi_1} + e^{i \varphi_2} \right) \right) = \\
+&= A \; \mathrm{Re} \left( e^{i \frac{\varphi_1 + \varphi_2}{2} + i \omega t} \left( e^{i \frac{\varphi_1 - \varphi_2}{2}} + e^{i \frac{\varphi_2 - \varphi_1}{2}} \right) \right) = \\
+&= A \; \mathrm{Re} \left( e^{i \frac{\varphi_1 + \varphi_2}{2} + i  \omega t} \left( e^{i \frac{\varphi_1 - \varphi_2}{2}} + e^{-i \frac{\varphi_1 - \varphi_2}{2}} \right) \right) = \\
+&= 2 A \; \cos \frac{\varphi_1 - \varphi_2}{2} \; \cos \left( \omega t + \frac{\varphi_1 + \varphi_2}{2}  \right)
+\end{align*}
+e la nuova ampiezza \`e
+$$
+2 A \; \cos \frac{\varphi_1 - \varphi_2}{2} = \sqrt{\left| R_1 + R_2 \right|^2}
+$$
+
+Il fatto \`e che la molecola dovrebbe passare o in una o nell'altra delle fenditure, quindi dovrebbe essere come i granelli di sabbia. Invece ho interferenza, quindi l'onda \`e data dal fatto che sto misurando. Non c'\`e un'onda fisica perch\'e sto lavorando con molecole e perch\'e la figura di interferenza \`e tanto pi\`u visibile quanto pi\`u si riescono ad isolare singole molecole con una certa velocit\`a.
+
+Se per\`o inserisco un rilevatore che dica in quale fenditura passa la singola molecola, sparisce l'interferenza (Figura \ref{rilevatore}).
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \begin{scope}[rotate=270]
+    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1)) + exp(-(\x-1)*(\x-1))})    node[right] {};
+  \end{scope}
+
+  \node (C) at (-1.0, 3) {};
+  \node (D) at (-1.0, 1.05) {};
+
+  \node (E) at (-1.0, .95) {};
+  \node (F) at (-1.0, -.95) {};
+
+  \node (G) at (-1.0, -1) {};
+  \node (H) at (-1.0, -3) {};
+  \node (I) at (-.4,-1.8) {$R$};
+
+  \draw[thick] (C) -- (D);
+  \draw[thick] (E) -- (F);
+  \draw[thick] (G) -- (H);
+
+  \draw[draw=black] (-.8,-2.0) rectangle ++(.2,.5);
+  \draw (-4.0, 0) circle (1.5pt);
+\end{tikzpicture}
+\caption{Se viene utilizzato un rilevatore $R$ per individuare da quale fenditura passa la molecola, si ritrova la distribuzione che ci si aspetterebbe nel caso classico.}
+\label{rilevatore}
+\end{figure}
+
+Allora l'esperimento non viola la causalit\`a e il principio di localit\`a. Secondo l'interpretazione di Copenhagen:
+\begin{quote}
+Esiste un mondo classico ed esiste un mondo quantistico, ma l'oggetto su cui faccio la misura fa parte del mondo quantistico e il rilevatore \`e un oggetto classico. Le leggi che descrivono gli oggetti quindi sono ondulatorie, ma per misurare una grandezza quantistica uso un oggetto classico che fa precipitare il sistema dallo stato quantistico a quello classico.
+\end{quote}

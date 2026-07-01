@@ -1,0 +1,49 @@
+\subsection{Operatori}
+
+\`E un $A \ket{\psi} = \ket{\psi'}$. Mi interesso agli operatori lineari. Quindi sono applicazioni, definite dallo spazio degli stati in s\'e.
+
+Ho la decomposizione nella base $\ket{e_i}$.
+$$
+A\ket{\psi} = \sum_i A \ket{e_i} c_i^{(\psi)}, \qquad \text{dove } A \ket{e_i} = \ket{\psi_i'}
+$$
+Ma anche
+$$
+\ket{\psi_i'} = \sum_j \ket{e_j}c_{ji}, \qquad \text{con } c_{ji} = \braket{e_j|\psi_i'} = \braket{e_j|A|e_i}
+$$
+Allora per lo stato $\ket{\psi}$
+$$
+A\ket{\psi} = \sum_{ij} \ket{e_j} c_{ij} c_i^{(\psi)}
+$$
+Nello stesso modo
+$$
+A\ket{\psi} = \sum_i A \ket{e_i} \braket{e_i|\psi} = \sum_{ij} \ket{e_j} \braket{e_j|A|e_i} \braket{e_i|\psi}
+$$
+$$
+\braket{e_j|A|e_i} \text{elemento } ji \text{ della matrice}
+$$
+Quindi
+$$
+\ket{\psi} = \begin{pmatrix}
+\braket{e_1|\psi} \\
+\braket{e_2|\psi} \\
+\vdots
+\end{pmatrix}
+$$
+$$
+A = \left( \braket{e_i|A|e_j} \right)_{i,j}
+$$
+
+L'operatore aggiunto \`e $A^\dag$ e agisce su
+$$
+\bra{\psi}A = \bra{\psi'}
+$$
+Inoltre
+$$
+\braket{\varphi|A|\psi} = \braket{\varphi|\psi'}
+$$
+$$
+\braket{\psi|A^\dag|\varphi} = \braket{\psi'|\varphi} = \left( \braket{\varphi|\psi'} \right)^*
+$$
+$$
+A_{ij}^\dag = \braket{e_i|A^\dag|e_j} = \left( A_{ji} \right)^*
+$$

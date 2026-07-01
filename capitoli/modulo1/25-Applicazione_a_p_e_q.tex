@@ -1,0 +1,72 @@
+\subsection{Applicazione a $\hat{p}$ e $\hat{q}$}
+Non avendo dipendenza dal tempo,
+$$
+\frac{d \hat{q}^H}{dt} = \frac{1}{i \hbar} \left[ q^H, \mathcal{H}^H \right], \quad \frac{d \hat{p}^H}{dt} = \frac{1}{i \hbar} \left[ p^H, \mathcal{H}^H \right]
+$$
+e specifico $ \mathcal{H} = \frac{\hat{p}^2}{2m} + V(\hat{q}) $. Poi so che $ [A, BC] = B[A, C] + [A, B] C $ e inoltre
+\begin{align*}
+\left[ \hat{q}, f(\hat{p}) \right] &= \left[ \hat{q}, \sum_k a_k \hat{p}^k \right] = \sum_k f_k \left[ \hat{q}, \hat{p}^k \right] = \\
+&= \sum_k f_k \left( \hat{p} \left[ \hat{q} \hat{p}^{k - 1} \right] + \left[ \hat{q}, \hat{p} \right] \hat{p}^{k - 1} \right) = \\
+&= i \hbar \sum_k f_k k \hat{p}^{k - 1} = i \hbar \frac{\partial f}{\partial \hat{p}} (\hat{p}) \\
+\left[ \hat{p}, g(\hat{q}) \right] &= - i \hbar \frac{\partial g}{\partial \hat{q}}(\hat{q})
+\end{align*}
+quindi
+$$
+\frac{d \hat{q}^H}{dt} = \frac{\hat{p}}{m}, \qquad \frac{d \hat{p}^H}{dt} = -\frac{\partial V}{\partial q}.
+$$
+
+Nel caso in cui $ V(\hat{p}, \hat{q}) = \hat{p} f(\hat{q}) + f(\hat{q})\hat{p} $
+\begin{align*}
+\frac{d\hat{q}^H}{dt} &= \frac{1}{i \hbar} \left[ \hat{q}, \frac{\hat{p}^2}{2m} + \hat{p} f(\hat{q}) + f(\hat{q})\hat{p} \right] = \\
+&= \frac{\hat{p}}{m} + \frac{1}{i \hbar} \left[ \hat{q}, \hat{p} f(\hat{q}) + f(\hat{q})\hat{p} \right] = \\
+&= \frac{\hat{p}}{m} + \frac{1}{i \hbar} \left( \; \left[ \hat{q} f(\hat{q}) \right] + \text{MANCANTE} \right)
+\end{align*}
+
+In particolare, se $ A = A(\hat{p}, \hat{q}) $,
+$$
+\frac{d}{dt} \hat{A}_H(\hat{p}, \hat{q}) = \frac{1}{i \hbar} \left[ \hat{A}, \mathcal{H} \right] + \frac{\partial \hat{A}}{\partial t}
+$$
+molto simile all'approccio classico dove
+$$
+\frac{d}{dt} A(p, q) = \left\{ A, \mathcal{H} \right\} + \frac{\partial A}{\partial t}.
+$$
+
+Anche in Meccanica Quantistica ho il \textbf{commutatore fondamentale}
+$$
+\left[ \hat{p}, \hat{q} \right] = -i \hbar.
+$$
+Questo si ripercuote sui valori medi
+$$
+\frac{d}{dt} \braket{\hat{p}} = \braket{-\frac{\partial \mathcal{H}}{\partial \hat{q}}}, \qquad \frac{d}{dt} \braket{\hat{q}} = \braket{\frac{\partial \mathcal{H}}{\partial \hat{p}}}
+$$
+che \`e vero sia per $ H $ che per $ S $.
+
+Esempio: $ \hat{\mathcal{H}} = \frac{\hat{p}^2}{2m} + a\hat{x} $
+$$
+\frac{d}{dt} \hat{x} = \frac{1}{i\hbar} [\hat{x}, \mathcal{H}] = \frac{\hat{p}}{m}, \quad \frac{d}{dt} \hat{p} = \frac{1}{i\hbar} [\hat{p}, \mathcal{H}] = -a
+$$
+$$
+\frac{d}{dt} \hat{x}^2 = \frac{1}{i\hbar} [\hat{x}^2, \mathcal{H}] = \frac{1}{i\hbar} \left( \hat{x} [\hat{x}, \mathcal{H}] + [\hat{x}, \mathcal{H}] \hat{x} \right) = \frac{1}{m} (\hat{x}\hat{p} + \hat{p}\hat{x})
+$$
+$$
+\frac{d}{dt} \hat{p}^2 = \frac{1}{i\hbar} \left( \hat{p}[\hat{p}, \mathcal{H}] + [\hat{p}, \mathcal{H}] \mathcal{H} \right) = -2a\hat{p}
+$$
+
+Esempio: $\mathcal{H} = \frac{\hat{p}^2}{2m} + a\hat{x}$. $ \Delta^2 \hat{x}(t) $ collegandolo all'indetrminazione.
+
+Metodo 1:
+$$
+\frac{d}{dt} \Delta^2 \hat{x}(t) = \frac{1}{i\hbar} [\Delta^2 \hat{x}, \mathcal{H}] \text{ ecc.}
+$$
+
+Metodo 2: $ \Delta^2 \hat{x}(t) = \braket{\hat{x}^2} - (\braket{x})^2 $. So che la soluzione dell'equazione del moto 
+$$
+\hat{x}(t) = \underbrace{\hat{x}(t_0)}_{\hat{x}^S} - \frac{1}{2}\frac{a}{m}t^2 + \frac{\overbrace{\hat{p}_0(t)}^{\hat{p}^S}}{m}t
+$$
+$$
+[\hat{p}^S, \hat{x}^S] = -i\hbar
+$$
+allora esplicitamente
+$$
+\braket{\left( \hat{x}^S +\frac{\hat{p}^S}{m}t - \frac{1}{2} \frac{a}{m} t^2 \right) (\dots)} - \left( \braket{(\dots)} \right)^2.
+$$

@@ -1,0 +1,69 @@
+\subsection{Principio di indeterminazione}
+
+Prendo due operatori $A$ e $B$ applicati allo stato $\ket{\psi}$. Allora
+$$
+\Delta^2 A_\psi \; \Delta^2 B_\psi \geq \frac{1}{4} \left| \braket{\psi|[A, B]|\psi} \right|^2
+$$
+1) Disuguaglianza di Schwarz
+$$
+\left| \braket{\psi|AB|\psi} \right|^2 \leq \braket{\psi|A^2|\psi} \braket{\psi|B^2|\psi}
+$$
+Dimostrazione: definisco $A\ket{\psi} = \ket{\alpha}$ e $B\ket{\psi} = \ket{\beta}$ tali che esiste $\ket{\delta}$ tale che
+$$
+\ket{\alpha} = z\ket{\beta} + \ket{\delta} \qquad \text{e} \qquad \braket{\beta|\delta} = 0
+$$
+Quindi
+$$
+\braket{\beta|\alpha} = z \braket{\beta|\beta} \quad \Rightarrow \quad z = \frac{\braket{\beta|\alpha}}{\braket{\beta|\beta}}
+$$
+Calcolo
+\begin{align*}
+\braket{\alpha|\alpha} & = |z|^2 \braket{\beta|\beta} + \braket{\delta|\delta} = \\
+& = \frac{|\braket{\beta|\alpha}|^2}{(\braket{\beta|\beta})^2} \braket{\beta|\beta}  + \braket{\delta|\delta} = \\
+& = \frac{|\braket{\beta|\alpha}|^2}{\braket{\beta|\beta}}  + \braket{\delta|\delta}
+\end{align*}
+Quindi
+$$
+\braket{\alpha|\alpha} \braket{\beta|\beta} = |\braket{\beta|\alpha}|^2 + \braket{\delta|\delta} \braket{\beta|\beta} \geq |\braket{\beta|\alpha}|^2 \qquad \square
+$$
+2)
+$$
+|\braket{\psi|AB|\psi}|^2 \geq \frac{1}{4} |\braket{\psi|[A,B]|\psi}|^2
+$$
+Dimostrazione:
+$$
+AB = \frac{1}{2} (AB - BA) + \frac{1}{2} (AB + BA) = \frac{1}{2} [A,B] + \frac{1}{2} \{A,B\}
+$$
+$$
+z = \braket{\psi|AB|\psi} = \braket{\psi|\frac{1}{2}[A,B]|\psi} + \braket{\psi|\frac{1}{2}\{A,B\}|\psi} = x + iy
+$$
+$$
+x = \braket{\psi|\frac{1}{2}\{A,B\}|\psi} \qquad \Rightarrow \qquad x^* = \dots
+$$
+$$
+y = \braket{\psi|\frac{1}{2}[A,B]|\psi} \qquad \Rightarrow \qquad (iy)^* = \dots
+$$
+Quindi
+$$
+|z|^2 = x^2 + y^2 \geq y^2 = \frac{1}{4} |\braket{\psi|[A,B]|\psi}|^2 \qquad \square
+$$
+
+Le disuguaglianze 1) e 2) danno
+$$
+\begin{cases}
+\braket{\psi|A^2|\psi} \braket{\psi|B^2|\psi} \geq \frac{1}{4} |\braket{\psi|[A,B]|\psi}|^2 \\
+A = C - \braket{C} \mathbbm{1} \\
+B = D - \braket{D} \mathbbm{1}
+\end{cases} \qquad \Rightarrow
+$$
+$$
+\Rightarrow \qquad
+\begin{cases}
+\braket{\psi|A^2|\psi} \braket{\psi|B^2|\psi} = \Delta^2 C_\psi \Delta^2 D_\psi \\
+[A,B] = [C - \braket{C} \mathbbm{1}, D - \braket{D} \mathbbm{1}] = [C, D]
+\end{cases} \qquad \Rightarrow
+$$
+$$
+\Rightarrow \qquad
+\Delta^2 C_\psi \; \Delta^2 D_\psi \geq \frac{1}{4} |\braket{\psi|[C,D]|\psi}|^2 \qquad \square
+$$

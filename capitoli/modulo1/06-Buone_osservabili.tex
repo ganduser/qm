@@ -1,0 +1,70 @@
+\subsection{Buone osservabili}
+
+Un operatore \`e autoaggiunto (hermitiano) quando
+$$
+A^\dag = A
+$$
+Le osservabili
+$$
+O = \sum_i \lambda_i \ket{e_i}\bra{e_i} \qquad \text{con } \braket{e_i|e_j} = \delta_{ij}
+$$
+sono tutti e soli gli operatori autoaggiunti. Infatti,
+$$
+O^\dag = \left( \sum_i \lambda_i \ket{e_i} \bra{e_i} \right)^\dag = \sum_i \lambda_i^* \ket{e_i} \bra{e_i} = O
+$$
+e quindi una l'ho dimostrata.
+
+Inoltre, se cambio autostati (nuova BON)
+$$
+O = \sum_i \mu_i \ket{e_i'} \bra{e_i'} \qquad \text{con } \braket{e_i'|e_j'} = \delta_{ij}
+$$
+allora
+$$
+\braket{e_i'|\left( \sum_m \mu_m \ket{e_m'} \bra{e_m'} \right)|e_j'} = \begin{pmatrix}
+\mu_1 & 0 \\
+0 & \ddots
+\end{pmatrix}
+$$
+Se vale
+$$
+O \ket{e_i} = \lambda_i \ket{e_i} \quad \Rightarrow \quad \braket{e_i|O|e_i} = \lambda_i \braket{e_i|e_i}\quad \Rightarrow
+$$
+$$
+\quad \Rightarrow \qquad \lambda_i = \frac{\braket{e_i|O|e_i}}{\braket{e_i|e_i}}
+$$
+$$
+\lambda_i^* = \frac{\braket{e_i|O^\dag|e_i}}{\braket{e_i|e_i}} = \frac{\braket{e_i|O|e_i}}{\braket{e_i|e_i}} = \lambda_i \quad \Rightarrow \quad \lambda_i \in \mathbb{R}
+$$
+Se invece vale
+$$
+\braket{e_j|O|e_i} = \lambda_i \braket{e_j|e_i}
+$$
+$$
+\braket{e_i|O^\dag|e_j} = \lambda_i \braket{e_j|e_i}
+$$
+$$
+\braket{e_i|O|e_j} = \lambda_j \braket{e_i|e_j} = \lambda_i \braket{e_i|e_j}
+$$
+$$
+\left( \lambda_i - \lambda_j \right) \braket{e_i|e_j} = 0
+$$
+Allora se i $\lambda_i$ sono tutti diversi, $\braket{e_i|e_j} = 0$; se $\lambda_i = \lambda_j$, ho $\braket{e_i|e_j} \neq 0$. Cio\`e ho ortigonalit\`a, poi normalizzo per avere $= 1$.
+
+Nel caso degenere $\ket{e_i^{(1)}}, \ket{e_i^{(2)}}, \dots$ associati a $\lambda_i$, la chiamo $\ket{e_i^{(a)}}$ e la proiezione
+$$
+\braket{e_j|e_i^{(a)}} = 0
+$$
+Poich\'e invece
+$$
+O \ket{e_i^{(a)}} = \lambda_i \ket{e_i^{(a)}} \quad \Rightarrow \quad O \left( \sum_a c_a \ket{e_i^{(a)}} \right) = \sum_a c_a O \ket{e_i^{(a)}} \quad \text{etc.}
+$$
+
+Riepilogo i due risultati ottenuti.
+\begin{enumerate}
+\item $O$ \`e un'osservabile se e solo se \`e un operatore autoaggiunto.
+\item Se un operatore \`e autoaggiunto allora
+\begin{enumerate}
+\item ha autovalori reali,
+\item ammette BON.
+\end{enumerate}
+\end{enumerate}

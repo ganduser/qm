@@ -1,0 +1,179 @@
+\subsection{Operatore posizione}
+
+Il problema \`e decomporre $\ket{\psi}$ su una base che ne dia la posizione. Allora introduco
+$$
+\hat{x} \ket{x} = x \ket{x}
+$$
+che in generale d\`a
+$$
+\braket{x|\psi} = \psi(x) \qquad \text{funzione d'onda}
+$$
+dove $|\psi(x)|^2 = |\braket{x|\psi}|^2$. Dato che $x$ \`e un parametro reale continuo, vorrei scrivere
+$$
+\ket{\psi} = \int \psi(x) \ket{x} \, dx
+$$
+come estensione del caso discreto. Cos\`{i} $|\psi(x)|^2$ \`e una distribuzione di probabilit\`a $\longrightarrow$ una densit\`a di probabilit\`a del tipo
+$$
+P_\Delta \left( [x, x + \Delta x] \right) = \int_x^{x + \Delta x} |\psi(x)|^2 \, dx
+$$
+con la condizione che
+$$
+\int_A^B |\psi(x)|^2 \, dx = 1
+$$
+che esteso a tutto lo spazio diventa
+$$
+\int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx = 1
+$$
+
+I problemi sorgono nell'esprimere la condizione di ortonormalit\`a, perch\'e
+$$
+\begin{cases}
+\ket{\psi} = \int_{-\infty}^{+\infty} \ket{x} \braket{x|\psi} \, dx \\
+\braket{x'|\psi} = \psi(x')
+\end{cases} \quad \Rightarrow \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \braket{x|\psi} \, dx \quad \Rightarrow
+$$
+$$
+\Rightarrow \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \psi(x) \, dx
+$$
+Cio\`e ho introdotto un oggetto tale che
+$$
+\braket{x'|x} = \delta(x',x)
+$$
+che ha la propriet\`a per definizione
+$$
+\int_{-\infty}^{+\infty} \psi(x) \delta(x, x') \, dx = \psi(x')
+$$
+
+Da questa discende:
+\begin{enumerate}
+\item invarianza per traslazione
+$$
+\delta(x', x) = \delta(x' - x)
+$$
+Poich\'e $\delta(x' - x) = \delta(x' + a, x + a)$
+$$
+\int_{-\infty}^{+\infty} \delta(x' + a, x + a) \psi(x) \, dx = [x'' = x + a] =
+$$
+$$
+= \int_{-\infty}^{+\infty} \delta(x' + a, x'') \psi(x'' - a) \, dx'' = \psi(x' + a - a) = \psi(x')
+$$
+\item simmetria
+$$
+\delta(x' - x)  = \delta(x - x')
+$$
+Infatti
+$$
+\braket{\psi|x'} = \int_{-\infty}^{+\infty} \braket{\psi|x}\braket{x|x'} \, dx = \int_{-\infty}^{+\infty} \psi^*(x) \delta(x,x') \, dx = \psi^*(x')
+$$
+\item $f(x) \delta(x) = f(0) \delta(x)$
+\begin{align*}
+\int_{-\infty}^{+\infty} f(x) \delta(x) \psi(x) \, dx &= f(0) \psi(0) = \\
+&= f(0) \int_{-\infty}^{+\infty} \psi(x) \delta(x) \, dx = \\
+&= \int_{-\infty}^{+\infty} f(0) \psi(x) \delta(x) \, dx
+\end{align*}
+Poich\'e $\psi$ \`e generica, $f(0) \delta(x) = f(x) \delta(x)$.
+\item $\delta(ax) = \frac{1}{a} \delta(x)$
+$$
+\int_{-\infty}^{+\infty} \delta(ax) \psi(x) \, dx = \left[ ax = t \; \Rightarrow \; dx = \frac{dt}{a} \right] = 
+$$
+$$
+= \frac{1}{a} \int_{-\infty}^{+\infty} \delta(t) \psi \left( \frac{t}{a} \right) \, dt = \frac{1}{a} \psi(0) = \frac{1}{a} \int_{-\infty}^{+\infty} \delta(x) \psi(x) \, dx 
+$$
+\item normalizzazione
+$$
+\int_{-\infty}^{+\infty} \delta(x) \, dx = 1
+$$
+$$
+\int_{-\infty}^{+\infty} \delta(x) \cdot 1 \, dx = 1
+$$
+\end{enumerate}
+
+\textbf{Relazione di ortonormalizzazione}
+$$
+\ket{\psi} = \int_{-\infty}^{+\infty} \ket{x}\braket{x|\psi} \, dx
+$$
+Nel caso continuo $\braket{x|x'} = \delta(x - x') \longrightarrow$ ortogonalizzazione impropria, infatti
+$$
+\begin{cases}
+\braket{x|x} = \delta(0) \\
+\int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx = 1
+\end{cases}
+$$
+
+\textbf{Risoluzione dell'identit\`a}
+$$
+\int_{-\infty}^{+\infty} \ket{x} \bra{x} \, dx = \mathbbm{1}
+$$
+il cui elemento
+$$
+\Braket{x'|\int_{-\infty}^{+\infty} \Ket{x} \Bra{x} dx\;|x''} = \int_{-\infty}^{+\infty} \delta(x' - x) \delta(x - x'') \, dx = \delta(x' - x'') = \braket{x'|x''}
+$$
+
+\textbf{Prodotto scalare fra stati}
+$$
+\braket{\varphi|\psi} = \int_{+\infty}^{-\infty} \braket{\varphi|x}\braket{x|\psi} \, dx = \int_{-\infty}^{+\infty} \varphi(x) \psi(x) \, dx
+$$
+$$
+\braket{\psi|\psi} = \int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx
+$$
+
+\textbf{Operatori}
+$$
+A(\hat{x}) = \sum_{i = 0}^\infty a_i \, (\hat{x})^i
+$$
+$$
+\braket{x'|A(\hat{x})|x''} = \sum_i a_i \, (\hat{x})^i \braket{x'|x''} = \delta(x' - x'') \sum_i a_i \, (\hat{x})^i = A(x'') \delta(x' - x'')
+$$
+Ad es.
+$$
+\braket{y|\cos \hat{x}|x} = \cos z \; \delta(y - x) = \cos y \; \delta(y - x)
+$$
+\begin{align*}
+\braket{\psi|\cos \hat{x}| \psi} &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \braket{\psi|y} \braket{y|\cos \hat{x}|z} \braket{z|\psi} \, dz \, dy = \\
+&= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \psi^*(y) \, \cos z \, \delta(y - z) \, \psi(z) \, dy \, dz = \\
+&= \int_{-\infty}^{+\infty} |\psi(z)|^2 \, \cos z \, dz
+\end{align*}
+
+\textbf{Riepilogo}
+\begin{enumerate}
+\item $\braket{q'|\hat{q}|q} = q \braket{q'|q} = q \delta(q' - q)$
+\item $\braket{q'|f(\hat{q})|q} = f(q) \braket{q|q'} = f(q) \, \delta(q - q')$
+\end{enumerate}
+
+\subsubsection{Esempio: ulteriori propriet\`a della $\delta$}
+$$
+\int_{-\infty}^{+\infty} \delta(f(x)) \psi(x) \, dx
+$$
+\begin{align*}
+\int_{-\infty}^{+\infty} \delta(f(x)) \psi(x) \, dx &= \left[ x^\prime = f(x), dx^\prime = f^\prime(x) \, dx, x = f^{-1}(x) \right] = \\
+&= \int_{-\infty}^{+\infty} \frac{\delta^\prime(x)}{f^\prime(x)} \psi(f^{-1}(x)) \, dx^\prime = \\
+\int_{-\infty}^{+\infty} \delta(f(x)) \psi(x) \, dx &= \sum_i \int_{a_i}^{b_i} \delta(f(x)) \psi(x) \, dx \\ 
+\int_{-\infty}^{+\infty} \delta(f(x)) \psi(x) \, dx &= \frac{\psi(x_i)}{f^\prime(x)|_{x : f(x) = 0}} \psi(f^{-1})
+\end{align*}
+
+\subsubsection{Esempio: operatore parit\`a}
+$ \braket{x|\mathcal{P}|\psi} = \psi(-x) $ con $ \braket{x|\psi} = \psi(x) \Rightarrow \bra{x} \mathcal{P} = \bra{-x} $.
+\begin{align*}
+(\braket{\psi|\mathcal{P}|x})^* &= \left( \int_{-\infty}^{+\infty} \braket{\psi|x'} \braket{x'|\mathcal{P}|x} \, dx' \right)^* = \\
+&= \left( \int_{-\infty}^{+\infty} \psi^*(x') \delta(-x' - x) \, dx' \right)^* = \\
+&= \int_{-\infty}^{+\infty} \psi(x') \delta(-x' - x) \, dx' = \\
+&= \psi(-x)
+\end{align*}
+quindi $ \mathcal{P} $ \`e hermitiano $ \Rightarrow \mathcal{P} \ket{x} = \ket{-x} \Rightarrow \mathcal{P}^2 \ket{x} = \ket{x} \Rightarrow \mathcal{P}^2 = \mathbbm{1} \Rightarrow \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \Rightarrow \mathcal{P} $ \`e unitario. $ \mathcal{P}^2 = \mathbbm{1} \Rightarrow $ autovalori $ \pm 1 $.
+
+Le autofunzioni sono
+$$
+\braket{x|\mathcal{P}|\varphi_{-}} = \begin{cases}
+- \varphi_{-}(x) \\
+\varphi_{-}(-x)
+\end{cases} \quad \Rightarrow \quad \varphi_{-} \text{ funzione dispari}
+$$
+$$
+\braket{x|\mathcal{P}|\varphi_{+}} = \begin{cases}
+\varphi_{+}(x) \\
+\varphi_{+}(-x)
+\end{cases} \quad \Rightarrow \quad \varphi_{+} \text{ funzione pari}
+$$
+$$
+f(x) = \frac{f(x) + f(-x)}{2} + \frac{f(x) - f(-x)}{2}.
+$$

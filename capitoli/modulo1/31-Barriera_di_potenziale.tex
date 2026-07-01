@@ -1,0 +1,84 @@
+\subsection{Barriera di potenziale}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-5,0) -- (5,0);
+  \draw (0,-1) -- (0,3);
+
+  \draw[thick] (-4,0) -- (-2,0);
+  \draw[thick] (2,0) -- (4,0);
+  \draw[thick] (-2, 2) -- (2,2);
+
+  \draw[dotted] (-2,-1) -- (-2,3);
+  \draw[dotted] (2,-1) -- (2,3);
+
+  \node (-a) at (-2.3,-.3) {$-a$};
+  \node (a) at (2.2,-.3) {$a$};
+
+  \node (I) at (-3,2.5) {I};
+  \node (II) at (.5,2.5) {II};
+  \node (II) at (3,2.5) {III};
+\end{tikzpicture}
+\caption{Schema della barriera di potenziale.}
+\label{barriera}
+\end{figure}
+Nella regione I e III ho la particella libera (Figura \ref{barriera}), quindi
+$$
+\frac{\hat{p}^2}{2m}\ket{\psi} = E \ket{\psi} \quad \Rightarrow \quad \psi''(x) = -\frac{2m}{\hbar^2} E \psi(x),
+$$
+mentre nella regione II 
+$$
+\left( \frac{\hat{p}^2}{2m} + V_0 \right) \ket{\psi} = E \ket{\psi} \quad \Rightarrow \quad \psi''(x) = \frac{2m}{\hbar^2}(V_0 - E) \psi(x).
+$$
+e come nel caso del gradino, ho varie situazioni a seconda che la particella abbia energia maggiore o minore di $ V_0 $.
+
+Si tratta di raccordare le soluzioni delle tre regioni, ma solo quando $ E > V_0 $? In particolare, c'\`e una probabilit\`a che per $ E < V_0 $ la particella passi al di l\`a di una barriera?
+
+La forma della $ \psi $ \`e data da 
+$$
+\psi_I = A e^{-ikx} + B e^{ikx}, \quad \psi_{III} = F e^{-ikx} + G e^{ikx} \quad (\text{sempre})
+$$
+$$
+\psi_{II} = C e^{-ik'x} + D e^{ik'x}, \qquad \text{se } E > V_0
+$$
+$$
+\psi_{II} = C e^{-\beta x} + D e^{\beta x}, \qquad \text{se } E < V_0
+$$
+con
+$$
+k = \sqrt{\frac{2mE}{\hbar^2}}, \quad k' = \sqrt{\frac{2m(E - V_0)}{\hbar^2}}, \quad \beta = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}
+$$
+con le condizioni ai bordi
+$$
+\psi_I(-a) = \psi_{II}(-a), \; \psi_I'(-a) = \psi_{II}'(-a), \; \psi_{II}(a) = \psi_{III}(a), \; \psi_{II}'(a) = \psi_{III}'(a).
+$$
+
+Anche in questo caso ho sei costanti arbitrarie, le quattro condizioni pi\`u quella di normalizzazione, quindi resta un parametro: allora ho due soluzioni indipendenti che si combinano per dare la soluzione generica. Mettiamo a 0 una delle due costatnti di $ \psi_{III} $ a seconda che l'onda provenga da destra o da sinistra. Poniamo che sia $ F = 0 $.
+
+Vogliamo gli indici di riflessione e trasmissione, quindi 
+$$
+\begin{cases}
+B \text{ incidente} \\
+A \text{ riflessa} \\
+G \text{ trasmessa}
+\end{cases}, \quad T = \frac{J_T}{J_I}, \quad R = \frac{J_R}{J_I}.
+$$
+Poich\'e le $ J $ e le $ \rho $ sono termini del tipo $ \psi^* \psi $, allora 
+$$
+T = \left| \frac{G}{B} \right|^2, \qquad R = \left| \frac{A}{B} \right|^2
+$$
+e poi $ J_I = J_R + J_T $ e costruisco $ R $, ecc. Operando le sostituzioni
+$$
+\xi = \frac{\beta}{k} - \frac{k}{\beta}, \qquad \eta = \frac{\beta}{k} + \frac{k}{\beta}
+$$
+ho i coefficienti
+$$
+T = \left[ 1 + \left( 1 + \frac{\xi^2}{4} \right) + \sinh(2\beta a) \right]^{-1}
+$$
+Se $ \beta a \gg 1 $, allora
+$$
+T \simeq \alpha e^{-2\beta a}
+$$
+cio\`e quando la barriera \`e molto grande rispetto a $ E $ la probabilit\`a che la particella passi dall'altra parte della barriera diminuisce (effetto tunnel).
+
+Il caso di $ E > V_0 $ \`e quello della trasmissione della buca attraverso due mezzi diversi.

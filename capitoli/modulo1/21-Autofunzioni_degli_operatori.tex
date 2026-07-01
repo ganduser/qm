@@ -1,0 +1,77 @@
+\subsection{Autofunzioni degli operatori}
+So che $ \hat{q} \ket{q} = q \ket{q} $, dunque
+$$
+\braket{q^\prime|q} = \psi_q(q^\prime) = \delta(q - q^\prime) \; \rightarrow \; \text{autofunzione della posizione.}
+$$
+
+Per l'impulso voglio che esista $ \ket{k} $ tale che $ \hat{p} \ket{k} = \hbar k \ket{k} $. Scelgo la base dei $ \ket{q} $ e faccio
+$$
+\braket{q|\hat{p}|k} = \hbar k \braket{q|k}, \quad \text{con } \braket{q|k} = \psi_k(q) \quad \Rightarrow
+$$
+$$
+\Rightarrow \quad -i \hbar \frac{d}{dq} \psi_k(q) = \hbar k \psi_k(q) \quad \Rightarrow \quad \psi_k(q) = N_k e^{ikq}.
+$$
+Poich\'e
+$$
+\int_{-\infty}^{+\infty} \left| \psi_k(q) \right|^2 \, dq = |N_k|^2 \int_{-\infty}^{+\infty} 1 \, dq,
+$$
+non posso normalizzare in senso proprio. Coerentemente con le autofunzioni della posizione, ho $ \braket{k|k^\prime} = \delta(k - k^\prime) $, cio\`e
+\begin{align*}
+\braket{k|k^\prime} &= \int_{-\infty}^{+\infty} \braket{k^\prime|q} \braket{q|k} \, dq = |N_k|^2 \int_{-\infty}^{+\infty} e^{-i k^\prime q} e^{ikq} \, dq = \\
+&= |N_k|^2 \int_{-\infty}^{+\infty} e^{i (k - k^\prime) q} \, dq = \delta(k^\prime - k).
+\end{align*}
+Allora
+\begin{align*}
+1 &= \int_{-\infty}^{+\infty} \braket{k|k'} \, dk = \int_{-\infty}^{+\infty} \delta(k - k') \, dk = \\
+&= \int_{\mathbb{R}^2} |N_k|^2 e^{i (k - k^\prime) q} \, dq \, dk = \\
+&= \lim_{\lambda \rightarrow +\infty} \int_{-\infty}^{+\infty} |N_k|^2 \left[ \frac{e^{i (k - k^\prime) q}}{i (k - k^\prime)} \right]_{-\lambda}^{+\lambda} \, dk = \\
+&= \lim_{\lambda \rightarrow +\infty} \int_{-\infty}^{+\infty} |N_k|^2 \frac{e^{i (k - k^\prime) \lambda} - e^{-i (k - k^\prime) \lambda}}{i (k - k^\prime)} \, dk = \\
+&= 2 \pi |N_k|^2 \qquad \Rightarrow \qquad |N_k|^2 = \frac{1}{2\pi}
+\end{align*}
+$$
+\psi_k(q) = \frac{1}{\sqrt{2\pi}} e^{ikq}
+$$
+e ridefinisco
+$$
+\delta(x) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} e^{ipx} \, dp.
+$$
+Dalla definizione di aggiunto,
+$$
+\braket{q|k} = \frac{1}{\sqrt{2\pi}} e^{ikq}, \qquad \braket{k|q} = \frac{1}{\sqrt{2\pi}} e^{-ikq}
+$$
+quindi analogo ad $ U^\dag U = \mathbbm{1} $, cio\`e matrici di cambio di base
+$$
+\braket{q|\psi} = \psi(q), \qquad \braket{k|\psi} = \tilde{\psi}(k)
+$$
+legate da
+\begin{align*}
+\braket{k|\psi} &= \tilde{\psi}(k) = \int_{-\infty}^{+\infty} \braket{k|q} \braket{q|\psi} \, dq = \\
+&= \int_{-\infty}^{+\infty} \frac{e^{-ikq}}{\sqrt{2\pi}} \psi(q) \, dq \\
+\braket{q|\psi} &= \int_{-\infty}^{+\infty} \braket{q|k} \braket{k|\psi} \, dk = \int_{-\infty}^{+\infty} \frac{e^{ikq}}{\sqrt{2\pi}} \tilde{\psi}(k) \, dk.
+\end{align*}
+N.B.: in generale, $ \tilde{\psi} \neq \psi $.
+
+Poich\'e
+$$
+\psi(q) = \braket{q|\psi} = \int_{-\infty}^{+\infty} \braket{q|k} \braket{k|\psi} \, dk = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-ikq} \psi(k) \, dk
+$$
+$$
+\psi(k) = \braket{k|\psi} = \int_{-\infty}^{+\infty} \braket{k|q} \braket{q|\psi} \, dq = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{ikq} \psi(q) \, dq
+$$
+ottengo che $ \ket{q} $ e $ \ket{k} $ sono \textbf{linearmente dipendenti}.
+
+Gli elementi di matrice
+$$
+\braket{k|\hat{p}|\psi} = \hbar k \psi(k).
+$$
+N.B.: $ \hat{p}\ket{p} = p \ket{p} \Leftrightarrow \braket{p|\hat{p}|\psi}  = p \psi(p) $ con $ \psi(p) = \braket{p|\psi} $, ma allora
+$$
+\braket{q|p} = \frac{1}{\sqrt{2\pi}} e^{i \frac{pq}{\hbar}}.
+$$
+
+\begin{align*}
+\braket{k|\hat{q}|\psi} &= \int_{-\infty}^{+\infty} \braket{k|\hat{q}|q} \braket{q|\psi} \, dq = \\
+&= \int_{-\infty}^{+\infty} q \braket{k|q} \psi(q) \, dq = \\
+&= \int_{-\infty}^{+\infty} q \frac{e^{-ikq}}{\sqrt{2\pi}} \psi(q) \, dq = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} i \frac{d}{dk} e^{-ikq} \psi(q) \, dq = \\
+&= i \frac{1}{\sqrt{2\pi}} \frac{d}{dk} \underbrace{\int_{-\infty}^{+\infty} e^{-ikq} \psi(q) \, dq}_{\psi(k)} = i \frac{1}{\sqrt{2\pi}}\frac{d}{dk} \psi(k).
+\end{align*}

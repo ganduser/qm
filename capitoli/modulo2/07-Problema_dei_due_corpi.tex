@@ -1,0 +1,178 @@
+\subsection{Problema dei due corpi}
+$$
+\mathcal{H} = \frac{{\vec{p}_1}^2}{2m_1} + \frac{{\vec{p}_2}^2}{2m_2} + V(\vec{x_1} - \vec{x_2}), \quad \text{corpi 1 e 2.}
+$$
+Voglio ridurmi al problema ad un solo corpo e poi passo al potenziale centrale, dove uso le coordinate sferiche.
+
+So che
+$$
+[\hat{p}_a^{(i)}, \hat{x}_b^{(j)}] = -i\hbar \delta^{ij} \delta^{ab},
+$$
+$$
+[\hat{p}_a^{(i)}, \hat{p}_b^{(j)}] = [\hat{x}_a^{(i)}, \hat{x}_b^{(j)}] = 0.
+$$
+Poi introduco
+$$
+\begin{dcases}
+\vec{r} = \vec{x}_1 - \vec{x}_2 \\
+\vec{R} = \frac{m_1 \vec{x}_1 + m_2 \vec{x}_2}{m_1 + m_2}
+\end{dcases} \quad \text{come nuove coordinate}
+$$
+e poi costruisco i momenti coniugati tali che
+$$
+\begin{cases}
+[\hat{p}^{(i)}, \hat{r}^{(j)}] = -i\hbar\delta_{ij} = [P^{(i)}, R^{(j)}] \\
+[\hat{p}^{(i)}, R^{(j)}] = [P^{(i)}, r^{(j)}] = 0
+\end{cases}.
+$$
+La scelta che funziona \`e
+$$
+\begin{dcases}
+\hat{\vec{p}} = \frac{m_2 \vec{p}_1 - m_1 \vec{p}_2}{m_1 + m_2} \\
+\vec{P} = \hat{\vec{p}}_1 + \hat{\vec{p}}_2
+\end{dcases}
+$$
+che verificano le regole di commutazione (cambio di variabili canonico). In generale
+$$
+\begin{cases}
+\vec{x_1'} = \vec{r} \\
+\vec{x_2'} = \vec{R}
+\end{cases}, \quad \begin{cases}
+\vec{p_1'} = \vec{p} \\
+\vec{p_2'} = \vec{P}
+\end{cases}
+$$
+le scrivo come 
+$$
+\begin{pmatrix}
+\vec{x_1'} \\
+\vec{x_2'}
+\end{pmatrix} = M \begin{pmatrix}
+\vec{x_1} \\
+\vec{x_2}
+\end{pmatrix}, \quad \begin{pmatrix}
+\vec{p_1'} & \vec{p_2'}
+\end{pmatrix} = N \begin{pmatrix}
+\vec{p_1} & \vec{p_2}
+\end{pmatrix}, \quad \text{con } N = M^{-1}
+$$
+$$
+\boxed{N = M^{-1} \Leftrightarrow [p_a^{(i)}, p_b^{(j)}] = -i\hbar\delta_{ij}\delta_{ab}} \quad \text{(voglio verificarlo)}.
+$$
+\begin{align*}
+[{p'}_{a'}^{(i)}, {x'}_{b'}^{(j)}] &= [p_a^{(i)}N_{aa'}, M_{b'b} x_b^{(j)}] = \\
+&= [p_a^{(i)}, x_b^{(j)}] M_{b'b} N_{aa'} = \\
+&= -i\hbar\delta_{ij}\delta_{ab}N_{aa'}M_{b'b} = \\
+&= -i\hbar\delta_{ij}M_{b'a}N_{aa'} = \\
+&= i\hbar\delta_{ij} (MN)_{b'a'} \stackrel{\text{per ipotesi}}{=} -i\hbar\delta_{ij}(\mathbbm{1})_{b'a'} \Leftrightarrow M = N^{-1}.
+\end{align*}
+Quindi, come avevo prima,
+$$
+{p'}_{a'}^{(i)} = -i\hbar\frac{\partial}{\partial {x'}_{a'}^{(i)}},
+$$
+infatti, per $ (i) $ fissato,
+$$
+-i\hbar \frac{\partial}{\partial {x'}_{a'}^{(i)}} = -i\hbar \frac{\partial}{\partial x_a^{(i)}} \frac{\partial x_a^{(i)}}{\partial {x'}_{a'}^{(i)}} \quad \Rightarrow \quad M_{aa'} = M_{aa'}^{-1}
+$$
+$$
+\frac{\partial {x'}_{a'}^{(i)}}{\partial x_a^{(i)}} = M_{aa'} \Rightarrow -i\hbar\frac{\partial}{\partial {x'}_{a'}^{(i)}} = -i\hbar \frac{\partial}{\partial x_a^{(i)}} M_{a'a} = p_a^{(i)} M_{aa'}^{-1}
+$$
+e poi si dimostra che 
+$$
+\mathcal{H} = \frac{\vec{P}^2}{2M} + \frac{\vec{p}^2}{2\mu} + V(\vec{r}), \quad M = m_1 + m_2, \quad \mu = \frac{m_1 m_2}{m_1 + m_2}.
+$$
+
+D'ora in poi studier\`o solo sistemi ad un corpo, infatti, nel sistema del centro di massa,
+$$
+\mathcal{H} = \frac{\vec{p}^2}{2m} + V(r)
+$$
+e tipicamente user\`o coordinate sferiche 
+$$
+\begin{cases}
+x = r \sin \theta \cos \varphi \\
+y = r \sin \theta \sin \varphi \\
+z = r \cos \theta
+\end{cases}
+$$
+per\`o adesso devo sepapare $ \vec{p} = -i\hbar \vec{\nabla} $. Per l'impostazione radiale
+$$
+\hat{p} = \frac{\vec{x}}{\left\Vert \vec{x} \right\Vert} \mathbf{\cdot} \vec{p}
+$$
+e vedo se vado da qualche parte. Introduco 
+$$
+\frac{\vec{x}}{\left\Vert \vec{x} \right\Vert} \mathbf{\cdot} \vec{\nabla} = ?
+$$
+Prendo la componente $ \partial_i $
+$$
+\begin{cases}
+\partial_i = \frac{\partial}{\partial r} \partial_i r + \frac{\partial}{\partial \theta} \partial_i \theta + \frac{\partial}{\partial \varphi} \partial_i \varphi \\
+\frac{\partial \theta}{\partial x_i} x^i = \frac{\partial \varphi}{\partial x_i} x_i = 0
+\end{cases} \quad \Rightarrow
+$$
+$$
+\Rightarrow \quad \frac{x_i}{r} \frac{\partial}{\partial r} \frac{\partial}{\partial x_i} |\vec{x}| = \frac{x_i}{r} \frac{\partial}{\partial r} \frac{x_i}{|\vec{x}|} = \frac{x_i^2}{r^2} \frac{\partial}{\partial r} = \frac{\partial}{\partial r}.
+$$
+
+Quindi ottengo che $ [\tilde{p}_r, r] = -i\hbar $. Noto che anche $ [\tilde{p}_r + f(r), r] = -i\hbar $. Il secondo termine \`e critico, quindi 
+$$
+T = \frac{{\vec{p}}^2}{2m} = \frac{\Delta}{2m} = \sum_i \frac{\partial_i^2}{2m}.
+$$
+Uso l'equazione classica
+$$
+(a \mathbf{\cdot} b) = \left\Vert \vec{a} \right\Vert^2 \left\Vert \vec{b} \right\Vert^2 - \left\Vert \vec{a} \wedge \vec{b} \right\Vert^2
+$$
+e la dimostro, introducendo
+$$
+\varepsilon^{ijk} = \begin{cases}
+0 \quad \text{se due indici hanno lo stesso valore} \\
+1 \quad \varepsilon^{123} \\
+\text{antisimmetrico rispetto a scambio di indici}
+\end{cases} .
+$$
+Allora
+$$
+\left( \vec{a} \wedge \vec{b} \right)_i = \varepsilon_{ijk} a_j b_k
+$$
+$$
+\varepsilon^{ijk} \varepsilon^{iab} = \delta^{ia}\delta^{kb} - \delta^{jb} \delta^{ka}
+$$
+$$
+\left\Vert \vec{a} \wedge \vec{b} \right\Vert^2 = \varepsilon^{imn} \varepsilon^{ijk} a_n b_n a_i b_k
+$$
+
+Voglio sapere che cos'\`e $ \hat{\vec{p}}^2 $, partendo dal caso classico, per arrivare a quello quantistico. Uso l'identit\`a vettoriale, che nel caso classico \`e 
+$$
+(\vec{a} \mathbf{\cdot} \vec{b})^2 = |\vec{a}|^2 + |\vec{b}|^2 - |\vec{a} \wedge \vec{b}|^2 \quad (\text{da dimostrare}).
+$$
+Con ci\`o visto sopra
+$$
+\varepsilon^{ijk} \varepsilon^{iab} = \delta^{ja} \delta^{kb} - \delta^{jb} \delta^{ka},
+$$
+$$
+(\vec{a} \mathbf{\cdot} \vec{b})_i = \varepsilon_{ijk} a^j b_k
+$$
+\begin{align*}
+|\vec{a} \wedge \vec{b}|^2 &= \varepsilon^{ijk} \varepsilon^{ilm} a^j b^l a^k b^k = \\
+&= (\delta^{jl} \delta^{km} - \delta^{jm} \delta^{kl}) a^j b^k a^l b^m = \\
+&= a^j a^j b^k b^k - a^j b^j a^k b^k = \\
+&= |\vec{a}|^2 + |\vec{b}|^2 - (\vec{a} \mathbf{\cdot} \vec{b})^2
+\end{align*}
+e ho ci\`o che cercavo. Poi sostituisco $ \vec{a} $ e $ \vec{b} $ con $ \vec{x} $ e $ \vec{p} $ e ho la relazione classica 
+$$
+\vec{p}^2 = \vec{p}_r^2 + \frac{\vec{L}^2}{r^2}.
+$$
+
+Passo alla quantistica, con $ \hat{\vec{x}} $ e $ \hat{\vec{p}} $ (che non commutano)
+\begin{align*}
+\varepsilon^{ijk} \varepsilon^{ilm} \hat{x}^j \hat{p}^m &= (\delta^{jl}\delta^{km} - \delta^{jm}\delta^{kl}) \hat{x}^j \hat{p}^k \hat{x}^l \hat{p}^m = \\
+&= \hat{x}^j \hat{p}^k \hat{x}^j \hat{p}^k - \hat{x}^j \hat{p}^k \hat{x}^k \hat{p}^j = \\
+&= \hat{x}^j \hat{x}^j \hat{p}^k \hat{p}^k + \hat{x}^j [\hat{p}^k, \hat{x}^j] \hat{p}^k - (\hat{x}^j \hat{p}^k \hat{p^j} \hat{x}^k + \hat{x}^j \hat{p}^k [\hat{x}^k, \hat{p}^j]) = \\
+&= \hat{r}^2 \hat{\vec{p}}^2 - i\hbar \hat{x}^j \hat{p}^j - (\hat{x}^j \hat{p}^j \hat{p}^k \hat{x}^k + i\hbar \hat{x}^j \hat{p}^j) = \\
+&= \hat{r}^2 \hat{\vec{p}}^2 - i\hbar \hat{x}^j \hat{p}^j - ((\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}})(\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) + \hat{x}^j \hat{p}^j [\hat{p}^k, \hat{x}^k] + i\hbar \hat{x}^j \hat{p}^j) = \\
+&= \hat{r}^2 \hat{\vec{p}}^2 -i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) - (-3i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} + i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) = \\
+&= \hat{r}^2 \hat{\vec{p}}^2 + i\hbar \hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}})^2 = |\vec{x} \wedge \vec{p}|^2 \equiv \vec{L}^2
+\end{align*}
+dove $ \vec{L} $ ha la propriet\`a che
+$$
+\vec{x} \mathbf{\cdot} \vec{L} = \varepsilon^{ijk} x^i x^j p^k = \frac{1}{2} \varepsilon^{ijk} [x^i, x^j] p^k = 0.
+$$

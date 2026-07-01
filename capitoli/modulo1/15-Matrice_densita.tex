@@ -1,0 +1,192 @@
+\subsection{Matrice densit\`a}
+
+Sistema a due livelli
+$$
+\ket{\psi} = a_+ \ket{+} + a_- \ket{-}
+$$
+e costruisco
+$$
+\ket{\psi'} = e^{i \theta} \ket{\psi}
+$$
+Allora le probabilit\`a (fase globale)
+$$
+P_i = |\braket{e_i|\psi}|^2 = |\braket{e_i|\psi'}|^2
+$$
+fanno perdere informazione  sulla fase di $\ket{\psi'}$ rispetto a  $\ket{\psi}$ e anche per un generico operatore $A$
+$$
+\braket{\psi|A|\psi} = \braket{\psi'|A|\psi'}
+$$
+
+Ho una classe di equivalenze (\textit{raggio}) fra quelli che differiscono per la fase globale $\rightarrow$ sono lo stesso stato.
+
+Parto dalla considerazione che se non posso ricostruire il sistema con le sue condizioni iniziali,  non ho informazioni sul sistema. Devo poter riprodurre pi\`u volte le codizioni iniziali.
+
+Suppongo di avere un'osservabile e voglio capire quanta informazione sullo stato posso ricostruire partendo dalle caratteristiche dell'osservabile.
+
+Da $A$ ottengo
+$$
+\begin{cases}
+\braket{A} = \lambda_1 P_1 + \lambda_2 P_2 \\
+P_1 + P_2 = 1 \\
+P_1 = |a_1|^2 \\
+P_2 = |a_2|^2
+\end{cases} \qquad \Rightarrow \qquad P_1, P_2 \text{ deterministiche}
+$$
+Scrivo
+$$
+A = \lambda_1 \ket{1}\bra{1} + \lambda_2 \ket{2}\bra{2}
+$$
+$$
+A' = \lambda_1' \ket{1}\bra{1} + \lambda_2' \ket{2}\bra{2}
+$$
+$$
+\begin{cases}
+\braket{A'} = \lambda_1' P_1 + \lambda_2' P_2 \\
+P_1 + P_2 = 1 \\
+\qquad \vdots
+\end{cases} \qquad \Rightarrow \qquad P_1, P_2 \text{ deterministiche}
+$$
+Quindi due variabili compatibili danno la stessa informazione. Dovr\`o prenderne due incompatibili.
+
+Introduco l'operatore densit\`a
+$$
+\rho_\psi = P_\psi = \ket{\psi}\bra{\psi} \qquad \text{stati puri}
+$$
+Allora
+$$
+\braket{A} = \Tr(A\rho)
+$$
+e ricordo che
+\begin{enumerate}
+\item \`e invariante per cambio di base,
+\item $\Tr(A\rho) = \Tr(\rho A)$,
+\item $\Tr(A) = \sum_i \mu_i$ autovalori.
+\end{enumerate}
+Dimostrazione che $\braket{A} = \Tr(A\rho)$
+$$
+\begin{cases}
+\Tr(A\rho) = \sum_i \braket{e_i|A\rho|e_i} \\
+A \ket{e_i} = \lambda_i \ket{e_i}
+\end{cases}
+$$
+$$
+\Tr(A\rho) = \sum_i \braket{e_i|A|\psi} \braket{\psi|e_i} = \sum_i \lambda_i \braket{e_i|\psi} \braket{\psi|e_i} = \sum_i \lambda_i |a_i|^2 = \braket{A}
+$$
+
+In particolare, l'operatore densit\`a \`e utile quando di un sistema conosco solo le probabilit\`a associate agli stati.
+$$
+p_i \longrightarrow \ket{\psi_i}
+$$
+$$
+\braket{\psi_i|\psi_j} = 0
+$$
+$$
+\braket{\psi_i|\psi_i} = 1
+$$
+
+Allora $\rho$ \`e definita da
+$$
+\rho = \sum_i p_i \ket{\psi_i} \bra{\psi_i} \qquad \text{stati misti}
+$$
+quindi
+$$
+\braket{\psi_i|\rho|\psi_i} = p_i \qquad \braket{\psi_i|\rho|\psi_j} = 0
+$$
+inoltre, poich\'e $\braket{A} = \Tr(A\rho)$, vale
+\begin{align*}
+\Tr(A\rho) &= \sum_i \braket{\psi_i|A\rho|\psi_i} = \\
+&= \sum_i \braket{\psi_i|A \left( \sum_j p_j \ket{\psi_j} \bra{\psi_j} \right)|\psi_i} = \\
+&= \sum_i \braket{\psi_i|A p_i|\psi_i} = \\
+&= \sum_i p_i \braket{\psi_i|A|\psi_i} \qquad \Rightarrow
+\end{align*}
+$$
+\Rightarrow \qquad \braket{A} = \sum_i p_i \braket{\psi_i|A|\psi_i}
+$$
+In generale, l'operatore densit\`a associato allo stato puro  \`e diverso da quello associato allo stato misto: nel primo sopravvivono i termini di interferenza, nel secondo no.
+
+\subsubsection{Esempio: matrice densit\`a e stati}
+$$
+\ket{\psi_1} = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-})
+$$
+$$
+\rho_{\psi_1} = \ket{\psi_1} \bra{\psi_1} \qquad \text{stato puro}
+$$
+$$
+A = \begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix} \quad \Rightarrow \quad A \ket{\psi_1} = \ket{\psi_1} \quad \Rightarrow \quad \braket{A}_{\psi_1} = \braket{\psi_1|A|\psi_1}
+$$
+Se invece ho lo stato misto, in cui
+$$
+p_{\ket{+}} = \frac{1}{2} \qquad p_{\ket{-}} = \frac{1}{2}
+$$
+$$
+\rho_m = \frac{1}{2} \ket{+} \bra{+} + \frac{1}{2} \ket{-} \bra{-}
+$$
+$$
+\braket{A}_m = \Tr(A\rho_m) = \frac{1}{2} \braket{+|A|+} + \frac{1}{2} \braket{-|A|-} = 0
+$$
+
+In particolare, per gli stati puri ho
+$$
+\rho^2 = \ket{\psi} \braket{\psi|\psi} \bra{\psi} = \ket{\psi} \bra{\psi} = \rho
+$$
+ma per lo stato misto, nella base degli autostati
+\begin{align*}
+\rho^2 &= \left( \sum_i p_i \ket{\psi_i} \bra{\psi_i} \right) \left( \sum_j p_j \ket{\psi_j} \bra{\psi_j} \right) = \\
+&= \sum_i \left( \sum_j p_i p_j \ket{\psi_i} \braket{\psi_i|\psi_j} \bra{\psi_j} \right) = \\
+&= \sum_i p_i^2 \ket{\psi_i} \bra{\psi_i} \ne \rho
+\end{align*}
+Inoltre, $\Tr(\rho) = \sum_i p_i = 1$, ma
+$$
+\Tr \rho = \Tr \rho^2 = \begin{cases}
+1 \qquad \qquad  \qquad\text{stati puri} \\
+\sum_i p_i^2 < 1 \qquad \text{stati misti}
+\end{cases}
+$$
+allora per uno stato puro $p_{i_0} = 1$ e $p_i = 0$ per ogni $i \ne i_0$ e poich\'e vale $\det \rho = \prod_i p_i$,  nel caso bipartito ho
+$$
+\det \rho \begin{cases}
+= 0 \qquad \text{puro} \\
+\ne 0 \qquad \text{misto}
+\end{cases}
+$$
+
+\subsubsection{Esempio: ancora matrice densit\`a}
+$$
+\ket{\psi} = N \left( \left( 1 + \sqrt{2} \right) i \ket{+} + \ket{-} \right)
+$$
+$$
+\rho_\psi = \ket{\psi} \bra{\psi} = |N|^2 \begin{pmatrix}
+\left( 1 + \sqrt{2} \right)^2 & \left( 1 + \sqrt{2} \right) i \\
+-\left( 1 + \sqrt{2} \right) i & 1
+\end{pmatrix}
+$$
+$$
+\Tr(\rho_\psi) = |N|^2 \left[ \left( 1 + \sqrt{2} \right) + 1 \right] = 1 \quad \Rightarrow \quad |N|^2 = \frac{1}{2(2 + \sqrt{2})}
+$$
+$$
+\det \rho_\psi = 0
+$$
+$$
+B = \begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix} \qquad B \ket{\psi} = N \left[ \left( 1 + \sqrt{2} \right) i \ket{+} - \ket{-} \right]
+$$
+$$
+C = \begin{pmatrix}
+0 & i \\
+-i & 0
+\end{pmatrix} = \sigma_2
+$$
+$$
+\rho_\psi = \frac{1}{2} \left( \mathbbm{1} + \sum_i p_i \sigma_i \right) \qquad p_1 = p_3 = \frac{1}{\sqrt{2}}
+$$
+$$
+\mathrm{misura} \Rightarrow \begin{cases}
+\ket{+}\bra{+} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \\
+\ket{-}\bra{-} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+\end{cases}.
+$$

@@ -1,0 +1,194 @@
+\subsection{Trattazione qualitativa di un particolare potenziale}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-5,0) -- (5,0);
+  \draw (0,-3) -- (0,1);
+
+  \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+\end{tikzpicture}
+\caption{Andamento di un potenziale simmetrico, nullo all'infinito e con un punto di equilibrio stabile.}
+\label{particolare}
+\end{figure}
+Il potenziale (Figura \ref{particolare}) \`e attrattivo e tale che
+$$
+V(x) = V(-x), \quad \lim_{x \to \pm \infty} V(x) = 0, \quad V(x) < 0.
+$$
+Quindi il solito $ \hat{\mathcal{H}} \ket{\psi} = E \ket{\psi} $, cio\`e 
+$$
+\psi''(x) = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi(x).
+$$
+
+Da quello che gi\`a conosco mi aspetto uno spettro discreto non degenere, cio\`e degli stati legati (cio\`e normalizzabili), per quello che ottengo dalla buca infinita di potenziale. Inoltre ci sar\`a anche una parte continua dello spettro (cio\`e stati non normalizzabili).
+
+$ \boxed{V(x) > E} $ se $ \psi > 0 $, allora $ \psi'' > 0 $; se $ \psi < 0 $, allora $ \psi'' < 0 $ (Figura \ref{potenziale_generico_V_gt_E}).
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-2,3) -- (-2,-3);
+  \node[draw] at (1,3) {$ \psi > 0 $};
+  \draw (-1.8,0.5) -- (1.8,0.5);
+  \draw (0,0.2) -- (0,3);
+  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{1/\x});
+  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-1/\x});
+
+  \draw (-1.8,-2.7) -- (1.8,-2.7);
+  \draw (0,-0.2) -- (0,-3);
+  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{\x*\x/3 - 2.6});
+  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{\x*\x/3 - 2.6});
+
+  \draw (2,3) -- (2,-3);
+  \node[draw] at (5,3) {$ \psi < 0 $};
+  \draw (2.2,2.5) -- (5.8,2.5);
+  \draw (4,0.2) -- (4,3);
+  \begin{scope}[shift={(4,2.5)}]
+    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-1/\x});
+    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{1/\x});
+  \end{scope}
+
+  \draw (2.2,-0.7) -- (5.8,-0.7);
+  \draw (4,-0.2) -- (4,-3);
+  \begin{scope}[shift={(4,0)}]
+    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-\x*\x/3 - 1});
+    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-\x*\x/3 - 1});
+  \end{scope}
+
+  \node[draw] at (-3,3) {$ V > E $};
+  \draw (-5.8,0) -- (-2.2,0);
+  \draw (-5.8,-.5) -- (-2.2,-.5);
+  \node (E) at (-2.5,-.8) {$E$};
+  \draw (-4,-1) -- (-4,.5);
+  \begin{scope}[scale=0.4, shift={(-10,0)}]
+    \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+  \end{scope}
+\end{tikzpicture}
+\caption{Trattazione qualitativa delle funzioni d'onda per potenziali $ V(x) > E $.}
+\label{potenziale_generico_V_gt_E}
+\end{figure}
+
+$ \boxed{V(x) < E} $ se $ \psi > 0 $, allora $ \psi'' < 0 $; se $ \psi < 0 $, allora $ \psi'' > 0 $ (Figura \ref{potenziale_generico_V_lt_E}).
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-2,3) -- (-2,-3);
+  \node[draw] at (1,3) {$ \psi > 0 $};
+  \draw (-1.8,0.5) -- (1.8,0.5);
+  \draw (0,0.2) -- (0,3);
+  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-\x*\x/3 + 2});
+  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-\x*\x/3 + 2});
+
+  \draw (-1.8,-2.7) -- (1.8,-2.7);
+  \draw (0,-0.2) -- (0,-3);
+  \begin{scope}[shift={(4,1)}]
+    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{\x*\x/3});
+    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{\x*\x/3});
+  \end{scope}
+  \draw (2,3) -- (2,-3);
+  \node[draw] at (5,3) {$ \psi < 0 $};
+  \draw (2.2,2.5) -- (5.8,2.5);
+  \draw (4,0.2) -- (4,3);
+  \begin{scope}[shift={(0,-0.5)}]
+    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-1/\x});
+    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{1/\x});
+  \end{scope}
+
+  \draw (2.2,-0.7) -- (5.8,-0.7);
+  \draw (4,-0.2) -- (4,-3);
+  \begin{scope}[shift={(4,-3)}]
+    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{1/\x});
+    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-1/\x});
+  \end{scope}
+
+  \node[draw] at (-3,3) {$ V < E $};
+  \draw (-5.8,0) -- (-2.2,0);
+  \draw (-5.8,-.5) -- (-2.2,-.5);
+  \node (E) at (-2.5,-.8) {$E$};
+  \draw (-4,-1) -- (-4,.5);
+  \begin{scope}[scale=0.4, shift={(-10,0)}]
+    \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+  \end{scope}
+\end{tikzpicture}
+\caption{Trattazione qualitativa delle funzioni d'onda per potenziali $ V(x) < E $.}
+\label{potenziale_generico_V_lt_E}
+\end{figure}
+
+Se $ V(x) - E > 0 $ sempre, allora ho Figura \ref{V_gt_E_sempre} quindi non c'\`e alcuna soluzione.
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-5,0) -- (-1,0);
+  \draw (-3,3) -- (-3,-.5);
+  \begin{scope}[shift={(-3,1)}]
+    \draw[thick, domain=0:2, samples=200, smooth] plot(\x,{exp(-\x)});
+    \draw[thick, domain=-2:0, samples=200, smooth] plot(\x,{exp(\x)});
+  \end{scope}
+  \node (A) at (-3,-1) {non derivabile};
+
+  \draw (1,0) -- (5,0);
+  \draw (3,3) -- (3,-.5);
+  \begin{scope}[shift={(3,1)}]
+    \draw[thick, domain=-2:2, samples=200, smooth] plot(\x,{.25*\x*\x});
+  \end{scope}
+  \node (B) at (3,-1) {non normalizzabile};
+\end{tikzpicture}
+\caption{Soluzioni nel caso $V(x) > E$ sempre. Nessuna di esse \`e accettabile.}
+\label{V_gt_E_sempre}
+\end{figure}
+
+Se $ V(x) - E > 0 $ o $ V(x) - E < 0 $ a seconda delle regioni, ho Figura \ref{potenziale_variabile}.
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw (-5,0) -- (5,0);
+  \draw (0,3) -- (0,-3);
+
+  \draw[thick, domain=-5:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*\x*\x)});
+  \draw[thick, dashed, domain=-5:5, samples=200, smooth] plot(\x,{3*\x*exp(-.25*\x*\x)});
+  \draw[thick, dotted, domain=0:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*(\x-1)*(\x-1))});
+
+  \draw[dashed] (-4,-3) -- (-4,3);
+  \node (mx0) at (-4.5,-.5) {$-x_0$};
+
+  \draw[dashed] (4,-3) -- (4,3);
+  \node (x0) at (4.5,-.5) {$x_0$};
+
+  \draw[thick, dotted] (.5,-2) -- (2,-2);
+  \node (disc) at (1.5,-2.5) {discontinua};
+\end{tikzpicture}
+\caption{$ V(x) - E > 0 $ o $ V(x) - E < 0 $ a seconda delle regioni.}
+\label{potenziale_variabile}
+\end{figure}
+
+Poich\'e se $ E $ cresce, cresce anche $ x_0 $, lo stato a minima energia \`e quello che ha meno oscillazione.
+
+Nel caso $ V(x) > E $ sempre, ho soluzioni oscillanti $ \Rightarrow $ spettro continuo, cio\`e c'\`e almeno uno stato legato.
+
+Quindi ho:
+\begin{enumerate}
+\item almeno uno stato legato;
+\item $ E_0 > V_0 $, quindi $\Delta x$ \`e massimo solo localmente e $\Delta p$ \`e minimo nello stato fondamentale;
+\item spettro non degenere, quindi ogni operatore che commuta con $ \hat{\mathcal{H}} $ \`e diagonale nella base degli $ \ket{E} $, cio\`e 
+$$
+[A, \hat{\mathcal{H}}] = 0 \quad \Rightarrow \quad A \ket{E} = a_E \ket{E}
+$$
+\end{enumerate}
+Infatti se ho $ \psi_1 $ e $ \psi_2 $ tali che
+$$
+\psi_1'' = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi_1, \quad \psi_2'' = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi_2
+$$
+e sono normalizzabili, ho che
+$$
+\psi_2 \psi_1'' - \psi_1 \psi_2'' = 0 = \frac{d}{dx} (\psi_2 \psi_1' - \psi_1 \psi_2') \; \Rightarrow \; \psi_2 \psi_1' - \psi_1 \psi_2' = \text{ costante}
+$$
+e poich\'e $ \psi_1 $ e $ \psi_2 $ sono normalizzate,
+$$
+\lim_{x \to \pm \infty} \psi_1(x) = \lim_{x \to \pm \infty} \psi_2(x) = 0
+$$
+Quindi la costante \`e 0. Allora 
+$$
+\frac{\psi_1'}{\psi_1} = \frac{\psi_2'}{\psi_2} \; \Rightarrow \; \frac{d}{dx} \ln \psi_1(x) = \frac{d}{dx} \ln \psi_2(x) \; \Rightarrow \; \ln \psi_1(x) = \ln \psi_2(x) + \text{ cost.} \; \Rightarrow
+$$
+$$
+\; \Rightarrow \psi_1(x) = e^{\text{cost.}} \psi_2(x)
+$$
+quindi $ \psi_1 $ e $ \psi_2 $ sono la stessa autofunzione e ho spettro non degenere.

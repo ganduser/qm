@@ -1,0 +1,61 @@
+\subsection{Particella libera}
+$$
+\braket{q|\psi} = \psi(q) \quad \text{e} \quad \mathcal{H} = \frac{\hat{p}^2}{2m}.
+$$
+$$
+\hat{p}\ket{k} = \hbar k \ket{k} \quad \Rightarrow \quad \mathcal{H} \ket{k} = \frac{\hbar^2 k^2}{2m} \ket{k}.
+$$
+Adesso passo agli autostati $ \ket{q} $ con $ \braket{q|\mathcal{H}|k} = E_k \braket{q|k} $, dove
+\begin{align*}
+\braket{q|k} &= \frac{1}{\sqrt{2\pi}} e^{ikq} \\
+\braket{k|k'} &= \delta(k - k') \\
+E_k &= \frac{\hbar^2 k^2}{2m}
+\end{align*}
+In rappresentazione di Schr\"odinger
+\begin{align*}
+\braket{q|k; t} &= \braket{q|e^{\frac{1}{i \hbar}t \mathcal{H}}|k; t_0 = 0} = \\
+&= e^{\frac{1}{i \hbar}t E_k} \braket{q|k; t_0 = 0} = \\
+&= \frac{1}{\sqrt{2\pi}} \exp \left\{ i \left( kq - \frac{E_k t}{\hbar} \right) \right\}, \qquad \omega_k = \frac{\hbar k^2}{2m} = \frac{E_k}{\hbar}.
+\end{align*}
+In rappresentazione di Heisenberg
+$$
+\braket{q|k} = \frac{1}{\sqrt{2\pi}} e^{ikq} \; \text{indipendente da } t,
+$$
+$$
+\hat{p}_H(t) = \hat{p}_S,
+$$
+$$
+\hat{q}_H(t) = \hat{q}_H(t_0) + (t - t_0) \frac{\hat{p}_H}{m} = \hat{q}_S(t_0) + (t - t_0) \frac{\hat{p}_S}{m}.
+$$
+
+In concreto, se risolvo alla Schr\"odinger l'elemento di matrice nella BON degli autostati di $ \mathcal{H} $
+\begin{align*}
+\braket{k'; t|\hat{p}|k; t} &= \hbar k \braket{k'; t|k; t} = \\
+&= \hbar k \int_{-\infty}^{+\infty} \braket{k'; t|q} \braket{q|k; t} \, dq = \\
+&= \frac{\hbar k}{2\pi} \int_{-\infty}^{+\infty} \exp \left\{ i \left[ (k - k')q - (\omega_k - \omega_{k'})t \right] \right\} \, dq = \\
+&= \frac{\hbar k}{2\pi} e^{-i(\omega_k - \omega_{k'})t} \int_{-\infty}^{+\infty} e^{i(k - k')q} \, dq = \\
+&= \hbar k \delta(k - k') e^{-i(\omega_k - \omega_{k'})t} = \\
+&= \hbar k \delta(k - k') = \\
+&= \hbar k' \delta(k - k')
+\end{align*}
+che era ovvio nella rappresentazione di Heisenberg.
+\begin{align*}
+\braket{k'; t|\hat{q}|k; t} &= \int_{-\infty}^{+\infty} \braket{k'; t|\hat{q}|q} \braket{q|k; t} \, dq = \\
+&= \int_{-\infty}^{+\infty} q \braket{k'; t|q} \braket{q|k; t} \, dq = \\
+&= \frac{1}{2\pi} \int_{-\infty}^{+\infty} q \exp \left\{ i \left[ (k - k')q - (\omega_k - \omega_{k'})t \right] \right\} \, dq = \\
+&= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{1}{i} \frac{d}{dk} \left( \exp \left\{ i(k - k')q \right\} \right) \exp \left\{ -i(\omega_k - \omega_{k'})t \right\} \, dq = \\
+&=  \frac{1}{2\pi i} \int_{-\infty}^{+\infty} \left[ \frac{d}{dk} \left( \exp \left\{ i(k - k')q \right\} \exp \left\{ -i(\omega_k - \omega_{k'})t \right\} \right)  + \right. \\
+&\quad + \left. \exp \left\{ i(k - k')q \right\} \frac{i\hbar k t}{m} \exp \left\{ -i(\omega_k - \omega_{k'})t \right\} \right] \, dq = \\
+&= \int_{-\infty}^{+\infty} \frac{1}{2\pi} \left( -i \frac{d}{dk} + \frac{\hbar k t}{m} \right) \exp \left\{ i \left[ (k - k')q - (\omega_k - \omega_{k'})t \right] \right\} \, dq = \\
+&= -i \frac{d}{dk} \delta(k - k') + \frac{\hbar k t}{m} \delta(k - k') = \\
+&= \braket{k|\hat{q}_S|k'} + \frac{t}{m} \braket{k|\hat{p}_S|k'}
+\end{align*}
+
+La cosa interessante \`e che
+$$
+\left[ \hat{q}_H(t), \hat{q}_H(t') \right] = \frac{t - t'}{m} \left[ \hat{q}_S, \hat{p}_S \right] = i \frac{\hbar(t - t')}{m}
+$$
+e per il principio di indeterminazione
+$$
+\Delta^2 q(t) \, \Delta^2 q(t') \geq \frac{\hbar^2 (t - t')^2}{4m^2}.
+$$

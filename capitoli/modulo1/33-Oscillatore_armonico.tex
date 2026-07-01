@@ -1,0 +1,67 @@
+\subsection{Oscillatore armonico}
+Se prendo un potenziale continuo con un minimo locale stabile, allora
+$$
+V(x) = V(x_0) + \frac{1}{2}(x - x_0)^2 V''(x_0) + \mathcal{O}((x - x_0)^2),
+$$
+$$
+\mathcal{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2,
+$$
+pongo $ x_0 = 0 $ e $ V(x_0) = 0 $, allora determino gli autostati dell'energia
+$$
+\mathcal{H} \ket{n} = E_n \ket{n}
+$$
+e anche $ \braket{x|n} = \psi_n(x) $.
+
+\textbf{Metodo di Heisenberg}: avr\`o alcune propriet\`a sugli $ E_n $.
+\begin{enumerate}
+\item $ \left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right) \ket{n} = E_n \ket{n}  \Rightarrow \braket{n|\left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right)|n} = E_n \braket{n|n} $. 
+$$
+E_n = \sum_k \frac{1}{2m} \braket{n|\hat{p}|k} \braket{k|\hat{p}|n} + \sum_k \frac{1}{2} m \omega^2 \braket{n|\hat{x}|k} \braket{k|\hat{x}|n} =
+$$
+$$
+= \frac{1}{2m} \sum_k \left| \braket{n|\hat{p}|k} \right|^2 + \frac{1}{2} m \omega^2 \sum_k \left| \braket{n|\hat{x}|k} \right|^2 \geq 0.
+$$
+Ma se per assurdo $ E_n = 0 \Rightarrow \braket{n|\hat{p}|k} = \braket{n|\hat{x}|k} = 0, \forall \ket{k} $, quindi
+$$
+\sum_k \left( \braket{n|\hat{x}|k} \braket{k|\hat{p}|n} - \braket{n|\hat{p}|k} \braket{k|\hat{x}|n} \right) = 0,
+$$
+quindi $ [\hat{p}, \hat{x}] = 0 $, che \`e falso. Quindi $ \boxed{E_n > 0} $.
+\item Sulla base degli $ \ket{n} $, voglio costruire $ \braket{n|\hat{x}|k} $ e $ \braket{n|\hat{p}|k} $. Costruisco i commutatori
+\begin{align*}
+[\hat{x}, \mathcal{H}] &= \frac{1}{2m} [\hat{x}, \hat{p}^2] = i\hbar \frac{\hat{p}}{m} \\
+[\hat{p}, \mathcal{H}] &= \frac{1}{2} m \omega^2 [\hat{p}, \hat{x}^2] = -i\hbar m \omega^2 \hat{x}
+\end{align*}
+e poi so che
+\begin{align*}
+\braket{n|[\hat{x}, \mathcal{H}]|k} &=  \braket{n|(\hat{x}\mathcal{H} - \mathcal{H}\hat{x})|k} = \\
+&= \braket{n|\hat{x}|k}(E_k - E_n) \\
+&= i\hbar \braket{n|\frac{\hat{p}}{m}|k}
+\end{align*}
+\begin{align*}
+\braket{n|[\hat{p}, \mathcal{H}]|k} &= \braket{n|\hat{p}|k} (E_k - E_n) \\
+&= -i\hbar m \omega^2 \braket{n|\hat{x}|k}.
+\end{align*}
+Allora ho due equazioni, da cui 
+$$
+\braket{n|\hat{x}|k} = \frac{i\hbar}{m(E_k - E_n)} \frac{(-i\hbar m \omega^2)}{E_k - E_n} \braket{n|\hat{x}|k} \; \Rightarrow
+$$
+$$ \Rightarrow \; (E_k - E_n)^2 \braket{n|\hat{x}|k} = \hbar^2\omega^2 \braket{n|\hat{x}|k}
+$$
+cio\`e l'elemento
+$$
+\braket{n|\hat{x}|k} \begin{cases}
+= 0 \text{ sulla diagonale e anche dove la differenza \`e da } (\hbar \omega) \\
+\neq 0 \text{ dove } E_k - E_n = \pm \hbar \omega
+\end{cases}
+$$
+Introduco l'operatore
+$$
+\hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + i\frac{\hat{p}}{m\omega} \right), \quad \hat{a}^\dag = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - i\frac{\hat{p}}{m\omega} \right)
+$$
+\begin{align*}
+[\hat{a}^\dag, \hat{a}] &= \frac{m\omega}{2\hbar} \left[ \hat{x} - i\frac{\hat{p}}{m\omega}, \hat{x} + i\frac{\hat{p}}{m\omega} \right] = \frac{m\omega}{\hbar} i \left[ \hat{x}, \frac{\hat{p}}{m\omega} \right] = -1 \\
+\hat{a}^\dag\hat{a} &= \frac{m\omega}{2\hbar} \left( \hat{x} - i\frac{\hat{p}}{m\omega} \right) \left( \hat{x} + i\frac{\hat{p}}{m\omega} \right) = \\
+&= \frac{m\omega}{2\hbar} \left( \hat{x}^2 + \frac{\hat{p}^2}{m^2\omega^2} - \frac{\hbar}{m\omega} \right) = \\
+&= \frac{1}{\hbar\omega} \mathcal{H} - \frac{1}{2} \equiv N.
+\end{align*}
+\end{enumerate}

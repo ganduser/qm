@@ -1,0 +1,155 @@
+\subsection{Particella libera (parte 2)}
+$$
+\braket{x|\psi(t)} = \psi(x, t), \quad \hat{\mathcal{H}} = \frac{\hat{p}}{2m} \rightarrow \begin{cases} 
+\hat{p} \ket{k} = \hbar k \ket{k} \\
+\hat{\mathcal{H}} \ket{k} = \hbar \omega_k \ket{k}
+\end{cases}, \quad \hbar \omega_k = \frac{\hbar^2 k^2}{2m}
+$$
+$$
+S = e^{(t - t_0)\frac{\mathcal{H}}{i \hbar}} \quad \braket{x|k} = \frac{1}{\sqrt{2\pi}} e^{ikx} \quad \braket{x|k; t} = \frac{1}{\sqrt{2\pi}} e^{i(kx - \omega_k t)}
+$$
+\begin{align*}
+\psi(x, t) &= \int_{-\infty}^{+\infty} \braket{x|k} \braket{k|\psi(t)} \, dk \\
+&= \int_{-\infty}^{+\infty} \braket{x|k} \braket{k|S(t, 0)|\psi(0)} \, dk \\
+&= \int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}} e^{i(kx - \omega_k t)} \psi(k; 0) \, dk
+\end{align*}
+$ \psi(x, t) $ pacchetto d'onda. Pacchetto d'onda ad indeterminazione minima $ \Delta^2 \hat{x} \Delta^2 \hat{p} = \frac{\hbar^2}{4} $, in $ t = 0 $.
+$$
+\psi(x, 0) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{ikx} \psi(k; 0) \, dk
+$$
+Allora anche la disuguaglianza di Schwarz deve diventare un'uguaglianza, cio\`e
+$$
+\Delta \hat{x} = \hat{x} - \braket{\hat{x}}, \qquad \Delta \hat{p} = \hat{p} - \braket{\hat{p}}
+$$
+cio\`e per $ \ket{\psi} $
+$$
+\left( \hat{p} - \braket{\hat{p}} \right) \ket{\psi} = i \lambda \left( \hat{x} - \braket{\hat{x}} \right) \ket{\psi}.
+$$
+Anche l'altra deve essere uguale, quindi $ \lambda \in \mathbb{R} $.
+$$
+\braket{x|(\hat{p} - \underbrace{\braket{\hat{p}}}_{p_0})|\psi} = i \lambda \braket{x|(\hat{x} - \underbrace{\braket{\hat{x}}}_{x_0})| \psi}
+$$
+$$
+-i \hbar \frac{d}{dx} \psi(x) - p_0 \psi(x) = i \lambda \left( x\psi(x) - x_0 \psi(x) \right)
+$$
+$$
+\frac{d}{dx} \psi(x) = i \frac{p_0}{\hbar} \psi(x) - \frac{\lambda}{\hbar} (x - x_0) \psi(x)
+$$
+$$
+\psi(x) = N \exp \left\{ i\frac{p_0}{\hbar} x - \frac{\lambda}{2\hbar} (x - x_0)^2 \right\}
+$$
+che \`e una gaussiana modulata (Figura \ref{gaussiana_modulata}).
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \draw[color=red, domain=-3:4,  samples=200, smooth] plot(\x,{cos(15*\x r)*exp(-(\x-1)*(\x-1))}) node[right] {};
+  \draw[thick] (-3,0) -- (4,0);
+  \draw[thick] (0,-2) -- (0,2);
+\end{tikzpicture}
+\caption{Andamento qualitativo della funzione d'onda $\psi$ per la particella libera. \`E una gaussiana modulata, pertanto la distribuzione \`e quella tipica del pacchetto d'onda.}
+\label{gaussiana_modulata}
+\end{figure}
+\begin{align*}
+\braket{\hat{x}} &= \braket{\psi|\hat{x}|\psi} = \int_{-\infty}^{+\infty} x \braket{\psi|x} \braket{x|\psi} \, dx = \\
+&= \int_{-\infty}^{+\infty} x \left| \psi(x) \right|^2 \, dx = \\
+&= |N|^2 \int_{-\infty}^{+\infty} e^{-\frac{\lambda}{\hbar}(x - x_0)^2} (x - x_0 + x_0) \, dx \\
+&= |N|^2 \int_{-\infty}^{+\infty} e^{-\frac{\lambda}{\hbar} {x'}^2} (x' + x_0) \, dx' = \\
+&= x_0 \braket{\psi|\psi} = x_0
+\end{align*}
+\begin{align*}
+\braket{\hat{p}} &= \int_{-\infty}^{+\infty} \psi^*(x) (-i\hbar) \frac{d}{dx} \psi(x) \, dx = \\
+&= \int_{-\infty}^{+\infty} \left[ \psi^*(x) \left( -i\hbar \frac{i p_0}{\hbar} \right) \psi(x) + \psi^*(x) (-i\hbar) \left(\frac{-\lambda}{2\hbar}\right)(x - x_0) 2 \psi(x) \right] \, dx = \\
+&= p_0 \braket{\psi|\psi} = p_0
+\end{align*}
+$$
+\braket{\psi|\left( \hat{p} - p_0 \right)^2|\psi} = \int_{-\infty}^{+\infty} \psi^*(x) \left( -i\hbar \frac{d}{dx} - p_0 \right) \left( -i\hbar \frac{d}{dx} - p_0 \right) \psi(x) \, dx =
+$$
+MANCANTE
+
+Per un pacchetto gaussiano calcolo la dipendenza di indeterminazione dal tempo. In rappresentazione di Schr\"odinger MANCANTE.
+
+In rappresentazione di Heisenberg in $ t = 0 $ ($ \psi_H(t_0) = \psi_S(0) $)
+$$
+\braket{x|\psi} = \psi(x) = N \exp \left\{ i k_0 x \right\} \exp \left\{ -\frac{\lambda}{2} \frac{(x - x_0)^2}{\hbar} \right\}
+$$
+$$
+\Delta^2 x = \Delta_0^2 x = \frac{\hbar}{2\lambda}, \; \Delta^2 p = \frac{\hbar^2}{4 \Delta_0^2 x} = \Delta_0^2 p \; \Rightarrow \; \braket{x} = x_0, \; \braket{p} = \hbar k_0
+$$
+Al $ t $ generico
+$$
+\braket{p} = \braket{\psi|p_H|\psi} = \braket{\psi|p_S|\psi} = \hbar k_0
+$$
+$$
+\braket{x} = \braket{\psi|x_S|\psi} + \frac{t}{m} \braket{\psi|p_S|\psi} = x_0 + v_G t, \quad v_G = \frac{\hbar k_0}{m} \text{ velocit\`a di gruppo}
+$$
+$$
+\frac{d}{dt} p_H^2 = \frac{1}{i\hbar} \left[ p_H^2, \mathcal{H} \right] = 0
+$$
+$$
+\frac{d}{dt} \Delta^2 p_H = 0 \quad \Rightarrow \quad \Delta_0^2 p = \Delta^2 p = \frac{\hbar^2}{4 \Delta_0^2 x}
+$$
+$$
+\braket{\Delta^2 x} = \braket{x^2} - (\braket{x})^2 = \braket{\left( x_H(t) \right)^2} - \left( \braket{x}(t) \right)^2 = \braket{\left( x_H(t) - \braket{x}(t) \right)^2}
+$$
+$$
+\frac{d}{dt} \braket{\Delta^2 x} = \braket{\frac{d}{dt} x_H^2(t)} - 2 \braket{x} \frac{d}{dt} \braket{x}(t)
+$$
+\begin{align*}
+\braket{\frac{d}{dt} x_H^2(t)} &= \frac{1}{\hbar} [x_H^2, \mathcal{H}] = \\
+&= \frac{1}{i\hbar} \left( [x_H, \mathcal{H}] x_H + x_H [x_H, \mathcal{H}] \right) = \\
+&= \frac{1}{m} (p_H x_H + x_H p_H) = \\
+&= \frac{1}{m} \left[ p_S \left( x_S + \frac{p_S}{m} t \right) + \left( x_S + \frac{p_S}{m} t \right) p_S \right] = \\
+&= \frac{1}{m} \left( x_S p_S + p_S x_S \right) + \frac{2}{m} p_S^2 t
+\end{align*}
+$$
+\braket{x} \frac{d}{dt} \braket{x}(t) = \left( \braket{x_S} + \frac{t}{m} \braket{p_S} \right) \frac{1}{m} \braket{p_S}
+$$
+$$
+\frac{d}{dt} \braket{\Delta^2 x} = \frac{1}{m} \braket{x_S p_S + p_S x_S} - \frac{2}{m} \braket{x_S} \braket{p_S} + \frac{2t}{m^2} \underbrace{\left( \braket{p_S^2 - (\braket{p_S})^2} \right)}_{\Delta_0^2 p}
+$$
+
+Nel caso gaussiano
+$$
+\frac{d}{dt} \braket{\psi|\Delta^2 x|\psi} = \frac{1}{m} \braket{\psi|(x_S p_S + p_S x_S)|\psi} - \text{ecc.}
+$$
+\begin{align*}
+\braket{x_S p_S + p_S x_S} &= \underbrace{2 \text{Re} \braket{x_S p_S}}_{2 x_0 p_0} \\
+(p_S - p_0) \ket{\psi} &= i \lambda (x - x_0) \ket{\psi} \\
+p_S \ket{\psi} &= p_0 \ket{\psi} + \lambda (x - x_0) \ket{\psi} 
+\end{align*}
+$$
+\frac{d}{dt} \braket{\psi|\Delta^2 x|\psi} = \frac{2t}{m} \Delta_0^2 p 
+$$
+Impongo la condizione iniziale $ \Delta_0^2 x $
+$$
+\Delta^2 x = \Delta_0^2 x + \frac{t^2}{m^2} \Delta_0^2 p
+$$
+Poich\'e
+$$
+\begin{cases}
+\Delta^2 x(t) \Delta^2 x(0) \geq \frac{\hbar^2 t^2}{4m^2} \\
+\Delta_0^2 x = \frac{\hbar^2}{4 \Delta_0^2 p} \text{ (minima indeterminazione)}
+\end{cases} \Rightarrow \quad \Delta^2 x(t) \geq \frac{t^2}{m^2} \Delta_0^2 p
+$$
+
+Esempio: particella libera con 
+$$
+\psi(x) = N e^{-\frac{x^2}{\beta - i\gamma}}, \qquad \omega = \frac{\hbar k^2}{2m}.
+$$
+\begin{align*}
+\psi(x, t) &= N' \int_{-\infty}^{+\infty} e^{-\frac{k^2}{4}(\beta - i\gamma)} e^{ikx} e^{-i\frac{\hbar k^2}{2m}t} \, dk = \\
+&= \text{ MANCANTE} \\
+\tilde{\psi}(k, t) &= \text{ MANCANTE}.
+\end{align*}
+
+Esempio:
+$$
+\psi(x, t) = \int_{-\infty}^{+\infty} e^{i(kx - \omega(k) t)} \tilde{\psi}(k) \, dk
+$$
+velocit\`a di gruppo
+$$
+v_G = \frac{d}{dt} \braket{\hat{x}}(t)
+$$
+$$
+\braket{\hat{x}} = \int_{-\infty}^{+\infty} \psi^*(k) i \frac{d}{dk} \psi(k) \, dk.
+$$
