@@ -35,7 +35,6 @@
 \caption{Una sorgente ($A$) emette granelli di sabbia verso una parete permeabile con due fenditure ($B_1$ e $B_2$). Lo schermo registra per ogni punto quanti granelli sono arrivati.}
 \label{doppia_fenditura}
 \end{figure}
-
 Lo schema dell'apparato sperimentale \`e riportato in Figura \ref{doppia_fenditura}. Una fenditura aperta, piccata sulla fenditura (Figura \ref{granelli_una_fenditura}). Due fenditure aperte, ho la somma (Figura \ref{granelli_due_fenditure}). Ho un'equazione del moto deterministica (anche se non la so risolvere). Per\`o ho una probabilit\`a.
 \[
 p(A \rightarrow C_k) = p(A \rightarrow B_1) \; p(B_1 \rightarrow C_k) + p(A \rightarrow B_2) \; p(B_2 \rightarrow C_k)
@@ -74,7 +73,6 @@ N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(
 \caption{Le due distribuzioni, in colori diversi, nel caso di granelli di sabbia in cui si lasci aperta una sola fenditura per volta. Sono piccate sulle fenditure.}
 \label{granelli_una_fenditura}
 \end{figure}
-
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -113,10 +111,13 @@ N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(
 \label{granelli_due_fenditure}
 \end{figure}
 
+\bigskip
+\noindent
 Quando la sorgente emette fullereni, le cose cambiano, bench\'e siano oggetti piuttosto grandi (diametro 1 nm). L'esempio \`e stato fatto anche con molecole pi\`u grandi ($ \text{C}_{60} \text{F}_{48} $ e TPP). L'esperimento \`e stato fatto da M.~Arndt e A.~Zeilinger (Figura \ref{arndt_zeilinger}).
 
-N.B.: spara molecole singole.
-
+\bigskip
+\noindent
+\textbf{N.B.:} spara molecole singole.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -142,6 +143,8 @@ N.B.: spara molecole singole.
 \label{arndt_zeilinger}
 \end{figure}
 
+\bigskip
+\noindent
 L'istogramma ha un andamento come in Figura \ref{arndt_zeilinger_distro}.
 \begin{figure}
 \centering
@@ -169,7 +172,6 @@ L'istogramma ha un andamento come in Figura \ref{arndt_zeilinger_distro}.
 \caption{Distribuzione nell'esperimento di Arndt e Zeilinger.}
 \label{arndt_zeilinger_distro}
 \end{figure}
-
 \[
 p(A \rightarrow C) \sim \left| \sum_i R(A \rightarrow B_i) \; R(B_i \rightarrow C_k)\right|^2 
 \]
@@ -196,9 +198,10 @@ e la nuova ampiezza \`e
 \[
 2 A \; \cos \frac{\varphi_1 - \varphi_2}{2} = \sqrt{\left| R_1 + R_2 \right|^2}
 \]
-
 Il fatto \`e che la molecola dovrebbe passare o in una o nell'altra delle fenditure, quindi dovrebbe essere come i granelli di sabbia. Invece ho interferenza, quindi l'onda \`e data dal fatto che sto misurando. Non c'\`e un'onda fisica perch\'e sto lavorando con molecole e perch\'e la figura di interferenza \`e tanto pi\`u visibile quanto pi\`u si riescono ad isolare singole molecole con una certa velocit\`a.
 
+\bigskip
+\noindent
 Se per\`o inserisco un rilevatore che dica in quale fenditura passa la singola molecola, sparisce l'interferenza (Figura \ref{rilevatore}).
 \begin{figure}
 \centering
@@ -227,7 +230,6 @@ Se per\`o inserisco un rilevatore che dica in quale fenditura passa la singola m
 \caption{Se viene utilizzato un rilevatore $R$ per individuare da quale fenditura passa la molecola, si ritrova la distribuzione che ci si aspetterebbe nel caso classico.}
 \label{rilevatore}
 \end{figure}
-
 Allora l'esperimento non viola la causalit\`a e il principio di localit\`a. Secondo l'interpretazione di Copenhagen:
 \begin{quote}
 Esiste un mondo classico ed esiste un mondo quantistico, ma l'oggetto su cui faccio la misura fa parte del mondo quantistico e il rilevatore \`e un oggetto classico. Le leggi che descrivono gli oggetti quindi sono ondulatorie, ma per misurare una grandezza quantistica uso un oggetto classico che fa precipitare il sistema dallo stato quantistico a quello classico.
