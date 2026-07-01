@@ -6,9 +6,9 @@ $A_1$ e $A_2$ hermitiani sono
 \item incompatibili altrimenti.
 \end{enumerate}
 Teorema sul commutatore: $A$ e $B$ hermitiani sono compatibili se e solo se $BA = AB$.
-$$
+\[
 \left[ A, B \right] = AB - BA \qquad \text{commutatore}
-$$
+\]
 
 Dimostrazione: caso non degenere ($\lambda_i \neq \lambda_j$).
 
@@ -19,64 +19,64 @@ $A \ket{e_k} = \lambda_k \ket{e_k}$ sono autovettori e autovalori e
 0 &= \Braket{e_k|\left[ A, B \right]|e_k} = \braket{e_k|AB|e_k} - \braket{e_k|BA|e_k} = \\
 &= \lambda_k \left( \braket{e_k|B|e_k} - \braket{e_k|B|e_k} \right) = 0
 \end{align*}
-$$
+\[
 0 = \braket{e_i|\left[ A, B \right]|e_k} = \braket{e_i|B|e_k} \left( \lambda_i - \lambda_k \right) \quad \Rightarrow \quad  \braket{e_i|B|e_k} = 0
-$$
+\]
 cio\`e $B$ \`e diagonale con autovettore $\ket{e_k}$, infatti
-$$
+\[
 B\ket{e_k} = \left( \sum_j \lambda_j \ket{e_j} \bra{e_j} \right) \ket{e_k} = \lambda_k \ket{e_k}
-$$
+\]
 
 $\Rightarrow$ |
 
-$$
+\[
 \left( AB - BA \right) \ket{e_j} = \left( \lambda_i \mu_j - \lambda_i \mu_j \right) \ket{e_j} = 0
-$$
+\]
 
 Dimostrazione: caso degenere
 
 $\Leftarrow$ |
-$$
+\[
 A \ket{e_i} = \lambda_i \ket{e_i} \quad \text{con } \ket{e_i^a} \text{ tale che} 
-$$
-$$
+\]
+\[
 A \ket{e_i^a} = \lambda_i \ket{e_i^a}
-$$
-$$
+\]
+\[
 O = \braket{e_i^a|[A,B]|e_i^b} = (\lambda_i - \lambda_i) \braket{e_i^a|B|e_i^a} = 0
-$$
+\]
 Fabbrico un nuovo
-$$
+\[
 \ket{e_i'^c} = \sum_{a \text{ degeneri}} \ket{e_i^a}\braket{e_i^a|e_i'^c}
-$$
+\]
 e allora
-$$
+\[
 A \ket{e_i'^c} = \lambda_i \ket{e_i'^c}
-$$
-$$
+\]
+\[
 B \ket{e_i'^c} = B \sum_{a \text{ degeneri}} \ket{e_i^a}\braket{e_i^a|e_i'^c} = \mu_i^c \ket{e_i'^c}
-$$
-$$
+\]
+\[
 \braket{e_i'^d|B|e_i'^c} = \mu_i^c \braket{e_i'^d|e_i'^c}
-$$
-$$
+\]
+\[
 B \ket{e_i'^c} = \mu_i^c \ket{e_i'^c} \qquad \square
-$$
+\]
 
 \subsubsection{Esempio: operatori unitari e generatori}
 $U = e^{iH}$ operatore unitario.
-$$
+\[
 U = \sum_{k = 0}^\infty \frac{1}{k!} \left( iH \right)^k \qquad \Rightarrow \qquad U^\dag = \sum_{k = 0}^\infty \frac{1}{k!} \left[ \left( iH \right)^k \right]^\dag
-$$
+\]
 Sapendo che $(z A)^\dag = z^* A^\dag$ e che
-$$
+\[
 AB \ket{\psi} = \left( B \ket{\psi} \right)^\dag A^\dag = \bra{\psi} B^\dag A^\dag
-$$
+\]
 risulta
-$$
+\[
 U^\dag = \sum_{k = 0}^\infty \frac{1}{k!} \left( -iH^\dag \right)^k = e^{-iH^\dag}
-$$
+\]
 Allora
-$$
+\[
 U \, U^\dag = \mathbbm{1}.
-$$
+\]

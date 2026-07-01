@@ -1,15 +1,15 @@
 \subsection{Potenziali separabili in coordinate cartesiane}
 Il problema $ n $-dimensionale si riduce a $ n $ problemi 1-dimensionali.
-$$
+\[
 V(\vec{x}) = \sum_i V_i(x^{(i)})
-$$
+\]
 N.B.: $ \hat{T} $ \`e sempre separabile.
-$$
+\[
 \mathcal{H} = \frac{{\hat{\vec{p}}}^2}{2m} + \sum_i V_i(\hat{x}^{(i)}) = \sum_i \mathcal{H}_i,
-$$
-$$
+\]
+\[
 \mathcal{H}_i = \frac{{\hat{p}^{(i)}}^2}{2m} + V_i(\hat{x}^{(i)}).
-$$
+\]
 
 Allora faccio
 \begin{align*}
@@ -19,9 +19,9 @@ Allora faccio
 \end{align*}
 
 Se inoltre ho $ \mathcal{H} \ket{\psi} = E \ket{\psi} $,
-$$
+\[
 \mathcal{H} \ket{\psi_n} = E_n \ket{\psi_n}, \quad \braket{x^{(i)}|\psi_n} = \psi_n(x^{(i)}).
-$$
+\]
 Se \`e $ d $ il numero di dimensioni, allora 
 \begin{align*}
 \psi_{n_1, \dots, n_d}(\vec{x}) &= \psi_{n_1}(x^{(1)}) \cdots \psi_{n_d}(x^{(d)}) \\
@@ -30,6 +30,6 @@ Se \`e $ d $ il numero di dimensioni, allora
 &- \frac{\hbar^2}{2m} \psi_{n_1}(x^{(1)}) \left( \frac{d^2}{d{x^{(2)}}^2} \psi_{n_2}(x^{(2)}) \right) \psi_{n_3}(x^{(3)}) \cdots \psi_{n_d}(x^{(d)}) + \cdots \\
 &= (E_{n_1} + \cdots + E_{n_d}) \psi_{n_1, n_2, \dots, n_d}(\vec{x}) \quad \Rightarrow
 \end{align*}
-$$
+\[
 \Rightarrow \quad -\frac{\hbar^2}{2m} \frac{d^2}{d{x^{(i)}}^2} \psi_{n_i}(x^{(i)}) + V_i(x^{(i)})\psi_{n_i}(x^{(i)}) = E_{n_i} \psi_{n_i}(x^{(i)})
-$$
+\]

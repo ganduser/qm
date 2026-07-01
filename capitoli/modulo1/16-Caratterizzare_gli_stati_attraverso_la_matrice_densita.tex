@@ -1,18 +1,18 @@
 \subsection{Caratterizzare gli stati attraverso la matrice densit\`a}
 
 Per una matrice $2 \times 2$ hermitiana vale
-$$
+\[
 M = a \mathbbm{1} + \vec{b} \cdot \vec{\sigma} = \begin{pmatrix}
 a + b_3 & b_1 - ib_2 \\
 b_1 + ib_2 & a - b_3
 \end{pmatrix}
-$$
+\]
 e poich\'e una matrice densit\`a ha $\Tr M = 1 = 2a$
-$$
+\[
 \rho = \frac{1}{2} (\mathbbm{1} + \vec{p} \cdot \vec{\sigma})
-$$
+\]
 con $\sigma_i$ Matrici di Pauli
-$$
+\[
 \sigma_1 = \begin{pmatrix}
 0 & 1 \\
 1 & 0
@@ -25,17 +25,17 @@ i & 0
 1 & 0 \\
 0 & -1
 \end{pmatrix}
-$$
+\]
 dove $\vec{p}$ \`e tale che
-$$
+\[
 \det \rho = \frac{1}{4} (1 - p_3^2 + p_1^2 -p_2^2) = \frac{1}{4} (1 - ||\vec{p}||^2) = 0 \; \Rightarrow \;  ||\vec{p}|| = 1
-$$
+\]
 
 Una propriet\`a interessante della matrici di Pauli \`e
-$$
+\[
 \Tr(\sigma_i \sigma_j) = 2 \delta_{ij}
-$$
+\]
 quindi
-$$
+\[
 \Tr(\rho \sigma_i) = \Tr \left( \frac{1}{2} \mathbbm{1} \right) + \frac{1}{2} \Tr \left[ (\vec{p} \cdot \vec{\sigma}) \sigma_i \right] \quad \Rightarrow \quad \braket{\sigma_i}_\psi = \Tr(\rho_\psi \sigma_i)
-$$
+\]

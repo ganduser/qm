@@ -1,18 +1,18 @@
 \subsection{Elementi di matrice}
-$$
+\[
 \braket{q^\prime|\hat{p}|q} = \text{?}, \qquad \braket{q^\prime|\hat{q}|q} = \text{?}
-$$
+\]
 Poinch\'e $ \braket{q^\prime|q} = \delta(q - q^\prime) = \delta(q^\prime - q) $, esprimo
-$$
+\[
 \ket{q} \equiv \ket{\psi_q} \quad \Rightarrow \quad \braket{q^\prime|\psi_q} = \delta(q - q^\prime) = \psi_q(q^\prime)
-$$
+\]
 da cui
-$$
+\[
 \braket{q^\prime|\hat{p}|q} = -i \hbar \frac{d}{dq^\prime} \delta(q - q^\prime) = i \hbar \frac{d}{dq} \delta(q - q^\prime)
-$$
-$$
+\]
+\[
 \braket{q^\prime|\hat{q}|q} = q \, \delta(q - q^\prime) = q^\prime \, \delta(q - q^\prime).
-$$
+\]
 
 Verifico $ \hat{p} $ e $ \hat{q} $ hermitiani.
 \begin{align*}
@@ -26,22 +26,22 @@ Verifico $ \hat{p} $ e $ \hat{q} $ hermitiani.
 \end{align*}
 
 Allora per $ \ket{\psi} $ e $ \ket{\varphi} $ ho $ \braket{q|\psi} = \psi(q) $ e $ \braket{q|\varphi} = \varphi(q) $.
-$$
+\[
 \braket{\varphi|\hat{p}|\psi} = \int_{-\infty}^{+\infty} \braket{\varphi|q} \braket{q|\hat{p}|\psi} \, dq = \int_{-\infty}^{+\infty} \varphi^*(q) (-i \hbar) \frac{d}{dq} \psi(q) \, dq,
-$$
+\]
 ma $ \braket{\varphi|\hat{p}|\psi} = (\braket{\psi|\hat{p}|\varphi})^* $, cio\`e
-$$
+\[
 \left( \braket{\psi|\hat{p}|\varphi} \right)^* = \left( \int_{-\infty}^{+\infty} \psi^*(q) (-i \hbar) \frac{d}{dq} \varphi(q) \right)^* dq = \int_{-\infty}^{+\infty} \psi(q) i \hbar \frac{d}{dq} \varphi^*(q) \, dq.
-$$
+\]
 Quindi
-$$
+\[
 \int_{-\infty}^{+\infty} \varphi^*(q) (-i \hbar) \frac{d}{dq} \psi(q) \, dq = \int_{-\infty}^{+\infty} \psi(q) i \hbar \frac{d}{dq} \varphi^*(q) \, dq,
-$$
+\]
 che integrando per parti d\`a
-$$
+\[
 i \hbar \int_{-\infty}^{+\infty} \varphi^*(q) \, \psi(q) \, dq = 0
-$$
+\]
 allora devo imporre che $ f \rightarrow 0 $ e $ g \rightarrow 0 $, cio\`e in particolare devo
-$$
+\[
 \int_{-\infty}^{+\infty} \left| \psi(q) \right|^2 \, dq < + \infty.
-$$
+\]

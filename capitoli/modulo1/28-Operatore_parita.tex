@@ -1,38 +1,38 @@
 \subsection{Operatore parit\`a}
 Si indica con $ \hat{\mathcal{P}} $ e per ogni stato nella base delle posizioni, \`e tale che
-$$
+\[
 \braket{x|\hat{\mathcal{P}}|\psi} = \braket{-x|\psi}.
-$$
+\]
 Questo operatore \`e di grande importanza nella Meccanica Quantistica perch\'e \`e allo stesso tempo autoaggiunto e unitario e agisce in modo particolare sugli operatori posizione, impulso e hamiltoniano.
 
 Vediamo la sua autoaggiuntezza:
-$$
+\[
 \braket{x|\hat{\mathcal{P}}^\dag|\psi} = \int_{-\infty}^{+\infty} \braket{x|-x'} \psi(x') \, dx' = \braket{-x|\psi}
-$$
+\]
 quindi $ \hat{\mathcal{P}} = \hat{\mathcal{P}}^\dag $. L'unitariet\`a discende da 
-$$
+\[
 \braket{x|\hat{\mathcal{P}}\hat{\mathcal{P}}^\dag|\psi} = \int_{-\infty}^{+\infty} \braket{-x|-x'} \psi(x') \, dx' = \braket{x|\psi}
-$$
+\]
 da cui $ \hat{\mathcal{P}}\hat{\mathcal{P}}^\dag = \hat{\mathbb{I}} $. Un'altra propriet\`a interessante \`e l'idempotenza:
-$$
+\[
 \braket{x|\hat{\mathcal{P}}^2|\psi} = \int_{-\infty}^{+\infty} \braket{-x|x'} \psi(-x') \, dx' = \braket{x|\psi}
-$$
+\]
 quindi anche $ \hat{\mathcal{P}}^2 = \hat{\mathbb{I}} $, cos\`{i} si ha
-$$
+\[
 \hat{\mathcal{P}} = \hat{\mathcal{P}}^{-1} = \hat{\mathcal{P}}^\dag.
-$$
+\]
 Dall'idempotenza discende immediatamente che gli autovalori di $ \hat{\mathcal{P}} $ sono $ \pm 1 $ e per trovare le autofunzioni
-$$
+\[
 \braket{x|\hat{\mathcal{P}}|\psi} = \braket{x|\psi} \quad \Rightarrow \quad \psi \text{ funzione pari},
-$$
-$$
+\]
+\[
 \braket{x|\hat{\mathcal{P}}|\psi} = -\braket{x|\psi} \quad \Rightarrow \quad \psi \text{ funzione dispari}.
-$$
+\]
 
 Per quanto riguarda gli operatori posizione e impulso, studiamo l'azione degli operatori composti (vogliamo arrivare a dire qualcosa sui commutatori) $ \hat{\mathcal{P}} \hat{x} \hat{\mathcal{P}}^{-1} $ e $ \hat{\mathcal{P}} \hat{p} \hat{\mathcal{P}}^{-1} $ attraverso la decomposizione dello stato sulla base delle coordinate.
-$$
+\[
 \braket{x|\hat{\mathcal{P}} \hat{x} \hat{\mathcal{P}}^{-1}|\psi} = -x \int_{-\infty}^{+\infty} \braket{-x|x'} \psi(x') = -x \braket{x|\psi} = - \braket{x|\hat{x}|\psi}
-$$
+\]
 \begin{align*}
 \braket{x|\hat{\mathcal{P}} \hat{p} \hat{\mathcal{P}}^{-1}|\psi} &= \int_{-\infty}^{+\infty} \braket{-x|\hat{p}|x'} \braket{x'|\psi} \, dx' = \\
 &= i \hbar \int_{-\infty}^{+\infty} \frac{d}{d(-x')} \delta(x - x') \psi(x') \, dx' = \\
@@ -41,44 +41,44 @@ $$
 &= -i \hbar \frac{d}{dx} \psi(x) = -\braket{x|\hat{p}|\psi}
 \end{align*}
 da cui risulta $ \hat{\mathcal{P}} \hat{x} \hat{\mathcal{P}}^{-1} = -\hat{x} $ e $ \hat{\mathcal{P}} \hat{p} \hat{\mathcal{P}}^{-1} = -\hat{p} $. Da ci\`o segue che l'operatore parit\`a non commuta con gli operatori posizione e impulso. Esplicitamente
-$$
+\[
 [\hat{x}, \hat{\mathcal{P}}] = \hat{x} \hat{\mathcal{P}} - \hat{\mathcal{P}} \hat{x} = 2 \hat{x} \hat{\mathcal{P}}, \quad [\hat{p}, \hat{\mathcal{P}}] = \hat{p} \hat{\mathcal{P}} - \hat{\mathcal{P}} \hat{p} = 2 \hat{p} \hat{\mathcal{P}}.
-$$
+\]
 
 Scrivendo la formula completa dell'operatore hamiltoniano come 
-$$
+\[
 \mathcal{H} = \frac{\hat{p}^2}{2m} + V(\hat{x}) = \frac{\hat{p}^2}{2m} + \sum_j V_j \hat{x}^j
-$$
+\]
 e studiando l'operatore composto $ \hat{\mathcal{P}} \mathcal{H} \hat{\mathcal{P}}^{-1} $, si ha
-$$
+\[
 \hat{\mathcal{P}} \hat{\mathcal{H}} \hat{\mathcal{P}}^{-1} = \frac{1}{2m} \hat{\mathcal{P}} \hat{p} \hat{\mathcal{P}}^{-1} \hat{\mathcal{P}} \hat{p} \hat{\mathcal{P}}^{-1} + \sum_j \hat{\mathcal{P}} \hat{x}^j \hat{\mathcal{P}}^{-1} = \frac{\hat{p}^2}{2m} + \sum_j (-1)^j V_j \hat{x}^j
-$$
+\]
 che \`e uguale ad $ \mathcal{H} $ se e solo se il potenziale \`e una funzione pari (cfr. particella libera, oscillatore armonico, ecc.).
 
 Nel caso degli operatori creazione e distruzione definiti da 
-$$
+\[
 \hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + i \frac{\hat{p}}{m\omega} \right), \qquad \hat{a}^\dag = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - i \frac{\hat{p}}{m\omega} \right)
-$$
+\]
 si vede subito che 
-$$
+\[
 \hat{\mathcal{P}} \hat{a} \hat{\mathcal{P}}^{-1} = -\hat{a}, \qquad \hat{\mathcal{P}} \hat{a}^\dag \hat{\mathcal{P}}^{-1} = -\hat{a}^\dag
-$$
+\]
 quindi presi gli autostati $ \ket{n} $ dell'energia nell'oscillatore armonico, sapendo che 
-$$
+\[
 \hat{\mathcal{P}} \ket{0} = -\hat{a} \hat{\mathcal{P}} \ket{1} = \hat{a} \hat{a}^\dag \hat{\mathcal{P}} \ket{0} = \left( \frac{\hat{\mathcal{H}}}{\hbar \omega} + \frac{1}{2} \hat{\mathbb{I}} \right) \hat{\mathcal{P}} \ket{0} = \left( \frac{1}{2} \hat{\mathbb{I}} \frac{1}{2} \hat{\mathcal{P}} \right) \ket{0},
-$$
+\]
 cio\`e $ \hat{\mathcal{P}} \ket{0} = \ket{0} $, si ha
-$$
+\[
 \hat{\mathcal{P}} = \frac{1}{\sqrt{n!}} \hat{\mathcal{P}} \left( \hat{a}^\dag \right)^n \ket{0} = \frac{(-1)^n}{\sqrt{n!}} \left( \hat{a}^\dag \right)^n \ket{0} = (-1)^n \ket{n}.
-$$
+\]
 
 Esempio: ancora sul commutatore $ [\hat{p}, \mathcal{P}] $.
-$$
+\[
 \braket{q|[\hat{p}, \mathcal{P}]|\psi} = \braket{q|\hat{p} \mathcal{P}|\psi} - \braket{q|\mathcal{P} \hat{p}|\psi}
-$$
-$$
+\]
+\[
 [\hat{p}, \mathcal{P}] = \mathcal{P} (\mathcal{P}\hat{p}\mathcal{P} - \hat{p}) = -2 \mathcal{P}\hat{p}
-$$
-$$
+\]
+\[
 \braket{q|[\hat{p}, \mathcal{P}]|\psi} = -2 \braket{q|\mathcal{P}\hat{p}|\psi} = -2\braket{-q|\hat{p}|\psi} = 2i \hbar \frac{d}{dq} \psi(-q)
-$$
+\]

@@ -2,51 +2,51 @@
 
 \subsection{Sistemi $n$-dimensionali}
 
-$$
+\[
 \hat{x} \ket{x} = x \ket{x}, \quad p_\psi = |\braket{x|\psi}|^2, \quad \braket{x|\psi} = \psi(x).
-$$
+\]
 Introduco vettore di operatori
-$$
+\[
 \hat{\vec{x}} = \begin{pmatrix}
 \hat{x}_{(1)} \\ \hat{x}_{(2)} \\ \vdots \\ \hat{x}_{(n)}
 \end{pmatrix}
-$$
+\]
 e agisce
-$$
+\[
 \hat{\vec{x}}\ket{\vec{x}} = \vec{x} \ket{\vec{x}}, \quad \text{dove } \ket{\vec{x}} = \ket{x^{(1)}} \otimes \ket{x^{(2)}} \otimes \cdots \otimes \ket{x^{(n)}}.
-$$
+\]
 Ma allora per
-$$
+\[
 \braket{\vec{x}|\psi} = \psi(x^{(1)}, x^{(2)}, \dots, x^{(n)}) = \psi(\vec{x}),
-$$
+\]
 per\`o in generale
-$$
+\[
 \psi(\vec{x}) \neq \psi^{(1)}(x_1) \psi^{(2)}(x_2) \cdots \psi^{(n)}(x_n).
-$$
+\]
 Nel caso di $ n $ paricelle, all'$i$-esima particella associo
-$$
+\[
 \ket{e_i^{(1)}} \otimes \cdots \otimes \ket{e_i^{(n)}}.
-$$
+\]
 
 Ad esempio, per il qubit ho $ \ket{+} $ e $ \ket{-} $, ma quattro possibili stati se ho due qubit:
-$$
+\[
 \ket{+} \otimes \ket{+}, \ket{+} \otimes \ket{-}, \ket{-} \otimes \ket{+}, \ket{-} \otimes \ket{-}
-$$
-$$
+\]
+\[
 \ket{++}, \quad \ket{+-}, \quad \ket{-+}, \quad \ket{--}
-$$
+\]
 e un operatore $ \hat{A} $ che agisce su questo sistema
-$$
+\[
 \braket{mn|\hat{A}|ij} = A_{mn,ij} \quad \rightarrow \quad A_{ab} \begin{cases}
 \ket{ij} = \ket{b} \\
 \ket{mn} = \ket{a}
 \end{cases}.
-$$
+\]
 
 Allora $ \mathcal{H} $ va generalizzato
-$$
+\[
 \mathcal{H} = \frac{\left| \hat{\vec{p}} \right|^2}{2m} + V(\hat{\vec{x}}).
-$$
+\]
 Partendo da 1 dimensione
 \begin{align*}
 \braket{x|\hat{p}|\psi} &= -i\hbar \frac{d}{dx} \psi(x), \quad \braket{\vec{x}|\hat{\vec{p}}|\psi} = -i\hbar \vec{\nabla} \psi(\vec{x}), \\

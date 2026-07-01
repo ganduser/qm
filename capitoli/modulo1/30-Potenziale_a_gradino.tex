@@ -16,16 +16,16 @@
 \label{gradino}
 \end{figure}
 Lo schema \`e riportato in Figura \ref{gradino}.
-$$
+\[
 V(x) = \left\{ \begin{matrix}
 V_0 & x > 0 \\
 0 & x < 0
 \end{matrix} \right..
-$$
+\]
 Supponendo che
-$$
+\[
 \delta(x) = \frac{1}{V_0} \frac{d}{dx} V(x),
-$$
+\]
 perch\'e
 \begin{align*}
 \int_{-\infty}^{+\infty} V(x) f'(x) \, dx &= \left[ V(x) f(x) \right]_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f(x) \frac{d}{dx}V(x) \, dx = \\
@@ -34,18 +34,18 @@ perch\'e
 \end{align*}
 
 Scrivo l'equazione di Schr\"odinger
-$$
+\[
 -\frac{\hbar^2}{2m} \psi''(x) + V(x) \psi(x) = E \psi(x)
-$$
-$$
+\]
+\[
 \psi''(x) = -\frac{2m}{\hbar^2} (E - V(x)) \psi(x).
-$$
+\]
 Allora la $ \psi'' $ \`e discontinua perch\'e lo \`e $ V $, ma quindi $ \psi $ e $ \psi' $ sono continue, cos\`{i} posso dividere il problema in due parti e poi imporre delle condizioni di raccordo.
 
 Per $ x < 0 $ ho $ \psi_1 $ tale che 
-$$
+\[
 \psi_1''(x) = -\frac{2m}{\hbar^2} E \psi_1(x) \; \Rightarrow \; \psi_1(x) = A e^{ikx} + B e^{-ikx}, \; k = \frac{\sqrt{2mE}}{\hbar}.
-$$
+\]
 
 Per $ x > 0 $
 \begin{align*}
@@ -55,7 +55,7 @@ Per $ x > 0 $
 e per ora impongo $ E > V_0 $.
 
 Poich\'e $ \psi_1(0) = \psi_2(0) $ e $ \psi_1'(0) = \psi_2'(0) $, allora mi restano due condizioni da imporre. Sfrutto la normalizzazione per la terza equazione e poi impongo $ D = 0 $. Allora 
-$$
+\[
 \begin{cases}
 A + B = C \\
 ik(A - B) = ik'C 
@@ -63,29 +63,29 @@ ik(A - B) = ik'C
 B = \frac{k - k'}{k + k'} A \\
 C = \frac{2k}{k + k'} A
 \end{cases}.
-$$
+\]
 
 Introduco la \textbf{corrente di probabilit\`a}
-$$
+\[
 J(x, t) = -\frac{i\hbar}{2m} \left( \psi^*(x, t) \frac{\partial}{\partial x} \psi(x, t) - \left( \frac{\partial}{\partial x} \psi^*(x, t) \right) \psi(x, t) \right)
-$$
+\]
 tale che
-$$
+\[
 \frac{\partial}{\partial x} J(x, t) + \frac{\partial}{\partial t} \rho(x, t) = 0, \quad \text{con } \rho(x, t) = |\psi(x, t)|^2 = |\braket{x|\psi(t)}|^2.
-$$
+\]
 Infatti
-$$
+\[
 \frac{\partial J}{\partial x} = -\frac{i\hbar}{2m} \left( \cancel{\frac{\partial \psi^*}{\partial x} \frac{\partial \psi}{\partial x}} + \psi^* \frac{\partial^2 \psi}{\partial x^2} - \frac{\partial^2 \psi^*}{\partial x^2} \psi - \cancel{\frac{\partial \psi^*}{\partial x} \frac{\partial \psi}{\partial x}} \right)
-$$
+\]
 poi per l'equazione di Schr\"odinger
-$$
+\[
 \frac{\partial^2 \psi}{\partial x^2} = \left( i\hbar\frac{\partial \psi}{\partial t} -V(x)\psi \right) \left( -\frac{2m}{\hbar^2} \right).
-$$
+\]
 
 Essendo $ \mathcal{H} $ hermitiano, $ \mathcal{H} = \mathcal{H}^\dag $, quindi 
-$$
+\[
 \frac{\partial^2 \psi^*}{\partial x^2} = \left( -i\hbar\frac{\partial \psi^*}{\partial t} - V(x) \psi^* \right) \left( -\frac{2m}{\hbar^2} \right)
-$$
+\]
 allora 
 \begin{align*}
 \frac{\partial}{\partial x} J(x, t) &= -\frac{i\hbar}{2m} \left( \psi^* \left( i\hbar\frac{\partial \psi}{\partial t} - V \psi \right) - \left( -i\hbar\frac{\partial \psi^*}{\partial t} - V \psi^* \right) \psi \right) \left( -\frac{2m}{\hbar^2} \right) = \\
@@ -94,12 +94,12 @@ allora
 \end{align*}
 
 Integrando
-$$
+\[
 \int_a^b \frac{\partial \rho}{\partial t} \, dx = -\int_a^b \frac{\partial J}{ \partial x} \, dx = - \left( J(b) - J(a) \right)
-$$
-$$
+\]
+\[
 \frac{\partial \rho}{\partial t} > 0 \qquad \Rightarrow \qquad J(a) > J(b).
-$$
+\]
 
 Il valore medio di $ J $
 \begin{align*}
@@ -108,13 +108,13 @@ Il valore medio di $ J $
 &= \frac{\braket{\hat{p}}_\psi}{m}
 \end{align*}
 corrispondente al valore medio di $ \hat{p} $ diviso per $ m $
-$$
+\[
 \braket{J} = \frac{1}{m} \braket{k|\hat{p}|k} = \frac{k}{m} \braket{k|k}.
-$$
+\]
 Quindi data
-$$
+\[
 \psi(x, t) = A \exp \left\{ \frac{i}{\hbar} (kx - \omega t) \right\} + B \exp \left\{ -\frac{i}{\hbar} (kx - \omega t) \right\}
-$$
+\]
 la $ J $ associata \`e 
 \begin{align*}
 J(x, t) &= -\frac{i\hbar}{2m} \left( \left( A^* \exp \left\{ -\frac{i}{\hbar} (kx - \omega t) \right\} + B^* \exp \left\{ \frac{i}{\hbar} (kx - \omega t) \right\} \right) \right. \cdot \\
@@ -126,32 +126,32 @@ J(x, t) &= -\frac{i\hbar}{2m} \left( \left( A^* \exp \left\{ -\frac{i}{\hbar} (k
 \end{align*}
 
 Poich\'e $ \ket{\psi} = \ket{k} \braket{k|\psi} + \ket{-k} \braket{-k|\psi} $, allora 
-$$
+\[
 \braket{J} = \frac{k}{m} \left( |\braket{k|\psi}|^2 - |\braket{-k|\psi}|^2 \right).
-$$
+\]
 Inoltre, essendo 
-$$
+\[
 \rho = |\psi|^2 \; \Rightarrow \; \frac{\partial \rho}{\partial t} = 0 \; \Rightarrow \; \frac{\partial J}{\partial x} = 0,
-$$
+\]
 quindi $ J $ \`e invariante per spostamento, quindi 
-$$
+\[
 J_A + J_B = J_C \text{ costante}
-$$
+\]
 e questa condizione deve valere nella prima e nella seconda regione su cui poi impongo le equazioni di continuit\`a. Allora 
-$$
+\[
 J_{\text{inc.}} + J_{\text{rifl.}} = J_{\text{trasm.}}
-$$
+\]
 e i coefficienti
-$$
+\[
 T = \left| \frac{C}{A} \right|^2, \qquad R = \left| \frac{B}{A} \right|^2.
-$$
+\]
 
 Nel caso in cui $ E < V_0 $
-$$
+\[
 k' = \sqrt{\frac{2m}{\hbar}(E - V_0)} \quad \Rightarrow \quad k' = i \beta, \, \beta \in \mathbb{R}
-$$
+\]
 quindi $ \psi_2(x) = C e^{-\beta x} $, cio\`e l'andamento \`e esponenziale e la corrente $ J_C(x, t) = 0 $, quindi $ J_A = - J_B $ e 
-$$
+\[
 R = \left| \frac{B}{A} \right|^2 = \left| \frac{k - i\beta}{k + i\beta} \right|^2 = 1.
-$$
+\]
 Se $ V_0 \to +\infty $, allora $ \beta \to +\infty $, allora $ \psi_2(x) = 0 $, quindi essendo $ \psi_1(0) = \psi_2(0) $, $ A + B = 0 $, $ \psi_1(x) = A' (e^{ikx} - e^{-ikx}) $.

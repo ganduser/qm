@@ -1,23 +1,23 @@
 \subsection{Spettro dell'oscillatore armonico}
 Le relazioni che ho ottenuto sono 
-$$
+\[
 [\hat{a}^\dag, \hat{a}] = -1, \qquad \mathcal{H} = \hbar \omega \left( N + \frac{1}{2} \right).
-$$
+\]
 Voglio determinare lo spettro di $ \mathcal{H} $ e passo attraverso $ [N, \hat{a}] $ e $ [N, \hat{a}^\dag] $.
-$$
+\[
 [N, \hat{a}] = [\hat{a}^\dag \hat{a}, \hat{a}] = [\hat{a}^\dag, \hat{a}]\hat{a} = -\hat{a},
-$$
-$$
+\]
+\[
 [N, \hat{a}^\dag] = [\hat{a}^\dag \hat{a}, \hat{a}^\dag] = \hat{a}^\dag[\hat{a}, \hat{a}^\dag] = \hat{a}^\dag.
-$$
+\]
 
 Se conosco un autostato di $ N $, sia $ \ket{z} $, allora
-$$
+\[
 N \ket{z} = \lambda_z \ket{z} \; \Rightarrow \; \begin{cases}
 N \hat{a}^\dag \ket{z} = (\lambda_z + 1) \hat{a}^\dag \ket{z} \\
 N \hat{a} \ket{z} = (\lambda_z - 1) \hat{a} \ket{z}
 \end{cases}.
-$$
+\]
 Dimostrazione:
 \begin{align*}
 N \hat{a}^\dag \ket{z} &= [N \hat{a}^\dag = \hat{a}^\dag N + \hat{a}^\dag] = (\hat{a}^\dag N + \hat{a}^\dag) \ket{z} = \\
@@ -35,31 +35,31 @@ Dimostrazione: $ \braket{z|N|z} = \lambda_z $ quando $ \braket{z|z} = 1 $, quind
 \end{align*}
 
 Deve esistere $ \ket{0} $ tale che $ \hat{a} \ket{0} = 0 $, perch\'e se non esistesse, cosiderando
-$$
+\[
 N \hat{a}^P \ket{z} = (\lambda_z - P) \hat{a}^P \ket{z},
-$$
+\]
 per $ P $ abbastanza grande avrei autovalori negativi. Inoltre, se $ \hat{a} \ket{0} = 0 $, allora $ N \ket{0} = \hat{a}^\dag \hat{a} \ket{0} = \lambda_0 \ket{0} $, cio\`e $ \lambda_0 = 0 $.
 
 Allora posso definire
-$$
+\[
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0}
-$$
+\]
 $ K_n $ costante di normalizzazione tale che 
-$$
+\[
 N \ket{n} = n \ket{n},
-$$
-$$
+\]
+\[
 \hat{a}^\dag \ket{n} = \frac{K_n}{K_{n + 1}} \ket{n + 1}, \qquad \hat{a} \ket{n} = n \frac{K_n}{K_{n - 1}}\ket{n - 1}.
-$$
+\]
 Dico che $ \ket{0} $ \`e il \textbf{vuoto}, $ N $ \`e l'\textbf{operatore numero}, $ \hat{a} $ e $ \hat{a}^\dag $ sono gli \textbf{operatori di ditruzione e creazione}.
 
 Per calcolare $ K_n $ normalizzo $ \braket{0|0} = 1 $. Allora
-$$
+\[
 \begin{cases}
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0} \\
 \braket{n|n} = 1
 \end{cases} \quad \Rightarrow
-$$
+\]
 \begin{align*}
 \Rightarrow \quad 1 &= |K_n|^2 \braket{0|(\hat{a})^n(\hat{a}^\dag)^n|0} = \\
 &= |K_n|^2 \braket{0|(\hat{a})^{n - 1} \hat{a} \hat{a}^\dag (\hat{a}^\dag)^{n - 1}|0} = \\
@@ -69,46 +69,46 @@ $$
 &= |K_n|^2 n (n - 1) \braket{0|(\hat{a})^{n - 2} (\hat{a}^\dag)^{n - 2}|0} = \\
 &= |K_n|^2 n! \braket{0|0}
 \end{align*}
-$$
+\[
 \boxed{K_n = \frac{1}{\sqrt{n!}}} 
-$$
+\]
 da cui segue
-$$
+\[
 \ket{n} = \frac{1}{\sqrt{n!}} (a^\dag)^n \ket{0}
-$$
-$$
+\]
+\[
 \hat{a}^\dag \ket{n} = \sqrt{n + 1} \ket{n + 1}
-$$
-$$
+\]
+\[
 \hat{a} \ket{n} = \sqrt{n} \ket{n - 1}
-$$
-$$
+\]
+\[
 E_n = \hbar \omega \left( n + \frac{1}{2} \right) \text{ autovalori di } \mathcal{H}.
-$$
+\]
 
 N.B.: il formalismo di Heisenberg ha permesso di riscrivere tutto senza dover scegliere una base.
 
 Gli elementi di matrice li calcolo attraverso $ \hat{a} \pm \hat{a}^\dag $
-$$
+\[
 \hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dag), \qquad \hat{p} = -i \sqrt{\frac{m\omega\hbar}{2}}(\hat{a} - \hat{a}^\dag)
-$$
+\]
 e usando $ \braket{n|m} = \delta_{nm} $, allora
-$$
+\[
 \begin{cases}
 \braket{m|\hat{a}^\dag|n} = \delta_{m, n + 1}\sqrt{n + 1} \\
 \braket{m|\hat{a}|n} = \delta_{m, n - 1}\sqrt{n}
 \end{cases} \quad \Rightarrow 
-$$
-$$
+\]
+\[
 \Rightarrow \quad \begin{cases}
 \braket{m|\hat{x}|n} = \sqrt{\frac{\hbar}{2m\omega}} (\delta_{m, n - 1}\sqrt{n} + \delta_{m, n + 1}\sqrt{n + 1}) \\
 \braket{m|\hat{p}|n} = -i \sqrt{\frac{m\hbar\omega}{2}} (\delta_{m, n - 1}\sqrt{n} - \delta_{m, n + 1}\sqrt{n + 1})
 \end{cases}
-$$
+\]
 Allora i valori medi
-$$
+\[
 \braket{n|\hat{x}|n} = \braket{n|\hat{p}|n} = 0.
-$$
+\]
 Per gli operatori al quadrato
 \begin{align*}
 \braket{n|\hat{x}^2|n} &= \frac{\hbar}{2m\omega} \braket{n|(\hat{a} + \hat{a}^\dag)(\hat{a} + \hat{a}^\dag)|n} = \\
@@ -120,22 +120,22 @@ Per gli operatori al quadrato
 \end{align*}
 
 Passo all'energia cinetica e al potenziale (valori medi)
-$$
+\[
 \braket{T} = \frac{\omega\hbar}{2}\left( n + \frac{1}{2} \right),
-$$
-$$
+\]
+\[
 \braket{V} = \frac{1}{2} m\omega^2 \frac{\hbar}{m\omega} \left( n + \frac{1}{2} \right) = \braket{T},
-$$
+\]
 cio\`e un caso di equipartizione dell'energia.
 
 Le indeterminazioni sono 
-$$
+\[
 \begin{cases}
 \braket{n|\Delta^2 \hat{x}|n} = \braket{n|\hat{x}^2|n} \\
 \braket{n|\Delta^2 \hat{p}|n} = \braket{n|\hat{p}^2|n}
 \end{cases} \quad \Rightarrow
-$$
-$$
+\]
+\[
 \Rightarrow \quad \Delta^2 \hat{x} \Delta^2 \hat{p} = \hbar^2 \left( n + \frac{1}{2} \right)^2 \geq \frac{\hbar^2}{4}
-$$
+\]
 e $ n = 0 $ d\`a lo stato a minima indeterminazione.

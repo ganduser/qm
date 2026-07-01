@@ -11,13 +11,13 @@
 \label{particolare}
 \end{figure}
 Il potenziale (Figura \ref{particolare}) \`e attrattivo e tale che
-$$
+\[
 V(x) = V(-x), \quad \lim_{x \to \pm \infty} V(x) = 0, \quad V(x) < 0.
-$$
+\]
 Quindi il solito $ \hat{\mathcal{H}} \ket{\psi} = E \ket{\psi} $, cio\`e 
-$$
+\[
 \psi''(x) = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi(x).
-$$
+\]
 
 Da quello che gi\`a conosco mi aspetto uno spettro discreto non degenere, cio\`e degli stati legati (cio\`e normalizzabili), per quello che ottengo dalla buca infinita di potenziale. Inoltre ci sar\`a anche una parte continua dello spettro (cio\`e stati non normalizzabili).
 
@@ -168,27 +168,27 @@ Quindi ho:
 \item almeno uno stato legato;
 \item $ E_0 > V_0 $, quindi $\Delta x$ \`e massimo solo localmente e $\Delta p$ \`e minimo nello stato fondamentale;
 \item spettro non degenere, quindi ogni operatore che commuta con $ \hat{\mathcal{H}} $ \`e diagonale nella base degli $ \ket{E} $, cio\`e 
-$$
+\[
 [A, \hat{\mathcal{H}}] = 0 \quad \Rightarrow \quad A \ket{E} = a_E \ket{E}
-$$
+\]
 \end{enumerate}
 Infatti se ho $ \psi_1 $ e $ \psi_2 $ tali che
-$$
+\[
 \psi_1'' = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi_1, \quad \psi_2'' = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi_2
-$$
+\]
 e sono normalizzabili, ho che
-$$
+\[
 \psi_2 \psi_1'' - \psi_1 \psi_2'' = 0 = \frac{d}{dx} (\psi_2 \psi_1' - \psi_1 \psi_2') \; \Rightarrow \; \psi_2 \psi_1' - \psi_1 \psi_2' = \text{ costante}
-$$
+\]
 e poich\'e $ \psi_1 $ e $ \psi_2 $ sono normalizzate,
-$$
+\[
 \lim_{x \to \pm \infty} \psi_1(x) = \lim_{x \to \pm \infty} \psi_2(x) = 0
-$$
+\]
 Quindi la costante \`e 0. Allora 
-$$
+\[
 \frac{\psi_1'}{\psi_1} = \frac{\psi_2'}{\psi_2} \; \Rightarrow \; \frac{d}{dx} \ln \psi_1(x) = \frac{d}{dx} \ln \psi_2(x) \; \Rightarrow \; \ln \psi_1(x) = \ln \psi_2(x) + \text{ cost.} \; \Rightarrow
-$$
-$$
+\]
+\[
 \; \Rightarrow \psi_1(x) = e^{\text{cost.}} \psi_2(x)
-$$
+\]
 quindi $ \psi_1 $ e $ \psi_2 $ sono la stessa autofunzione e ho spettro non degenere.

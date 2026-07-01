@@ -1,27 +1,27 @@
 \subsection{Legge di evoluzione temporale}
 Uso il tempo per parametrizzare (non relativistica), quindi gli stati sono $ \ket{\psi(t)} $. Allora
-$$
+\[
 \braket{q|\psi(t_1)} = \psi(q; t_1) = e^{(t_1 - t_0) \frac{d}{dt}} \psi(q; t)|_{t = t_0}
-$$
+\]
 e vorrei descrivere questa evoluzione temporale con un operatore tale che
-$$
+\[
 \ket{\psi(t_1)} = e^{(t_1 - t_0) \frac{d}{dt}} \ket{\psi(t)}|_{t = t_0} = S(t_1, t_0) \ket{\psi(t)}|_{t = t_0}
-$$
+\]
 dove mi aspetto che $ S \equiv S(\hat{q}, \hat{p}; t_1, t_0) $.
 
 Inoltre devo pretendere $ S^\dag S = \mathbbm{1} $ perch\'e
-$$
+\[
 \braket{\psi(t_1)|\psi(t_1)} = \braket{\psi(t_0)|S^\dag S|\psi(t_0)} = \braket{\psi(t_0)|\psi(t_0)}.
-$$
+\]
 Allora \`e comodo passare all'esponenziale
-$$
+\[
 S(t_0, t_1) = e^{i O_H(t_1, t_0)}
-$$
+\]
 e fermarmi allo sviluppo al primo ordine $ (t_1 - t_0) = t $
-$$
+\[
 S(t_0, t_1) = \mathbbm{1} + i \varepsilon \underbrace{\left. \frac{d}{dt_1} O_H(t_1, t_0)\right|_{t_1 = t_0}}_{\hat{\mathcal{H}}(t_0)}
-$$
+\]
 e in generale
-$$
+\[
 S(t + \varepsilon, t) = \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(\hat{p}, \hat{q}; t).
-$$
+\]
