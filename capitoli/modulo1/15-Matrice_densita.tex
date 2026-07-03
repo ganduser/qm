@@ -1,4 +1,4 @@
-\subsection{Matrice densit\`a}
+\subsection{Matrice densità}
 
 Sistema a due livelli
 \[
@@ -8,7 +8,7 @@ e costruisco
 \[
 \ket{\psi'} = e^{i \theta} \ket{\psi}
 \]
-Allora le probabilit\`a (fase globale)
+Allora le probabilità (fase globale)
 \[
 P_i = |\braket{e_i|\psi}|^2 = |\braket{e_i|\psi'}|^2
 \]
@@ -19,7 +19,7 @@ fanno perdere informazione  sulla fase di \(\ket{\psi'}\) rispetto a  \(\ket{\ps
 
 Ho una classe di equivalenze (\textit{raggio}) fra quelli che differiscono per la fase globale \(\rightarrow\) sono lo stesso stato.
 
-Parto dalla considerazione che se non posso ricostruire il sistema con le sue condizioni iniziali,  non ho informazioni sul sistema. Devo poter riprodurre pi\`u volte le codizioni iniziali.
+Parto dalla considerazione che se non posso ricostruire il sistema con le sue condizioni iniziali,  non ho informazioni sul sistema. Devo poter riprodurre più volte le codizioni iniziali.
 
 Suppongo di avere un'osservabile e voglio capire quanta informazione sullo stato posso ricostruire partendo dalle caratteristiche dell'osservabile.
 
@@ -46,9 +46,9 @@ P_1 + P_2 = 1 \\
 \qquad \vdots
 \end{cases} \qquad \Rightarrow \qquad P_1, P_2 \text{ deterministiche}
 \]
-Quindi due variabili compatibili danno la stessa informazione. Dovr\`o prenderne due incompatibili.
+Quindi due variabili compatibili danno la stessa informazione. Dovrò prenderne due incompatibili.
 
-Introduco l'operatore densit\`a
+Introduco l'operatore densità
 \[
 \rho_\psi = P_\psi = \ket{\psi}\bra{\psi} \qquad \text{stati puri}
 \]
@@ -58,7 +58,7 @@ Allora
 \]
 e ricordo che
 \begin{enumerate}
-\item \`e invariante per cambio di base,
+\item è invariante per cambio di base,
 \item \(\Tr(A\rho) = \Tr(\rho A)\),
 \item \(\Tr(A) = \sum_i \mu_i\) autovalori.
 \end{enumerate}
@@ -73,7 +73,7 @@ A \ket{e_i} = \lambda_i \ket{e_i}
 \Tr(A\rho) = \sum_i \braket{e_i|A|\psi} \braket{\psi|e_i} = \sum_i \lambda_i \braket{e_i|\psi} \braket{\psi|e_i} = \sum_i \lambda_i |a_i|^2 = \braket{A}
 \]
 
-In particolare, l'operatore densit\`a \`e utile quando di un sistema conosco solo le probabilit\`a associate agli stati.
+In particolare, l'operatore densità è utile quando di un sistema conosco solo le probabilità associate agli stati.
 \[
 p_i \longrightarrow \ket{\psi_i}
 \]
@@ -84,7 +84,7 @@ p_i \longrightarrow \ket{\psi_i}
 \braket{\psi_i|\psi_i} = 1
 \]
 
-Allora \(\rho\) \`e definita da
+Allora \(\rho\) è definita da
 \[
 \rho = \sum_i p_i \ket{\psi_i} \bra{\psi_i} \qquad \text{stati misti}
 \]
@@ -92,7 +92,7 @@ quindi
 \[
 \braket{\psi_i|\rho|\psi_i} = p_i \qquad \braket{\psi_i|\rho|\psi_j} = 0
 \]
-inoltre, poich\'e \(\braket{A} = \Tr(A\rho)\), vale
+inoltre, poiché \(\braket{A} = \Tr(A\rho)\), vale
 \begin{align*}
 \Tr(A\rho) &= \sum_i \braket{\psi_i|A\rho|\psi_i} = \\
 &= \sum_i \braket{\psi_i|A \left( \sum_j p_j \ket{\psi_j} \bra{\psi_j} \right)|\psi_i} = \\
@@ -102,9 +102,9 @@ inoltre, poich\'e \(\braket{A} = \Tr(A\rho)\), vale
 \[
 \Rightarrow \qquad \braket{A} = \sum_i p_i \braket{\psi_i|A|\psi_i}
 \]
-In generale, l'operatore densit\`a associato allo stato puro  \`e diverso da quello associato allo stato misto: nel primo sopravvivono i termini di interferenza, nel secondo no.
+In generale, l'operatore densità associato allo stato puro  è diverso da quello associato allo stato misto: nel primo sopravvivono i termini di interferenza, nel secondo no.
 
-\subsubsection{Esempio: matrice densit\`a e stati}
+\subsubsection{Esempio: matrice densità e stati}
 \[
 \ket{\psi_1} = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-})
 \]
@@ -145,7 +145,7 @@ Inoltre, \(\Tr(\rho) = \sum_i p_i = 1\), ma
 \sum_i p_i^2 < 1 \qquad \text{stati misti}
 \end{cases}
 \]
-allora per uno stato puro \(p_{i_0} = 1\) e \(p_i = 0\) per ogni \(i \ne i_0\) e poich\'e vale \(\det \rho = \prod_i p_i\),  nel caso bipartito ho
+allora per uno stato puro \(p_{i_0} = 1\) e \(p_i = 0\) per ogni \(i \ne i_0\) e poiché vale \(\det \rho = \prod_i p_i\),  nel caso bipartito ho
 \[
 \det \rho \begin{cases}
 = 0 \qquad \text{puro} \\
@@ -153,7 +153,7 @@ allora per uno stato puro \(p_{i_0} = 1\) e \(p_i = 0\) per ogni \(i \ne i_0\) e
 \end{cases}
 \]
 
-\subsubsection{Esempio: ancora matrice densit\`a}
+\subsubsection{Esempio: ancora matrice densità}
 \[
 \ket{\psi} = N \left( \left( 1 + \sqrt{2} \right) i \ket{+} + \ket{-} \right)
 \]

@@ -15,7 +15,7 @@
 \caption{Schema del potenziale a gradino.}
 \label{gradino}
 \end{figure}
-Lo schema \`e riportato in Figura \ref{gradino}.
+Lo schema è riportato in Figura \ref{gradino}.
 \[
 V(x) = \left\{ \begin{matrix}
 V_0 & x > 0 \\
@@ -26,7 +26,7 @@ Supponendo che
 \[
 \delta(x) = \frac{1}{V_0} \frac{d}{dx} V(x),
 \]
-perch\'e
+perché
 \begin{align*}
 \int_{-\infty}^{+\infty} V(x) f'(x) \, dx &= \left[ V(x) f(x) \right]_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f(x) \frac{d}{dx}V(x) \, dx = \\
 &= f(+\infty) - \int_{-\infty}^{+\infty} f(x) \frac{d}{dx}V(x) \, dx \\
@@ -40,7 +40,7 @@ Scrivo l'equazione di Schr\"odinger
 \[
 \psi''(x) = -\frac{2m}{\hbar^2} (E - V(x)) \psi(x).
 \]
-Allora la \( \psi'' \) \`e discontinua perch\'e lo \`e \( V \), ma quindi \( \psi \) e \( \psi' \) sono continue, cos\`{i} posso dividere il problema in due parti e poi imporre delle condizioni di raccordo.
+Allora la \( \psi'' \) è discontinua perché lo è \( V \), ma quindi \( \psi \) e \( \psi' \) sono continue, così posso dividere il problema in due parti e poi imporre delle condizioni di raccordo.
 
 Per \( x < 0 \) ho \( \psi_1 \) tale che 
 \[
@@ -54,7 +54,7 @@ Per \( x > 0 \)
 \end{align*}
 e per ora impongo \( E > V_0 \).
 
-Poich\'e \( \psi_1(0) = \psi_2(0) \) e \( \psi_1'(0) = \psi_2'(0) \), allora mi restano due condizioni da imporre. Sfrutto la normalizzazione per la terza equazione e poi impongo \( D = 0 \). Allora 
+Poiché \( \psi_1(0) = \psi_2(0) \) e \( \psi_1'(0) = \psi_2'(0) \), allora mi restano due condizioni da imporre. Sfrutto la normalizzazione per la terza equazione e poi impongo \( D = 0 \). Allora 
 \[
 \begin{cases}
 A + B = C \\
@@ -65,7 +65,7 @@ C = \frac{2k}{k + k'} A
 \end{cases}.
 \]
 
-Introduco la \textbf{corrente di probabilit\`a}
+Introduco la \textbf{corrente di probabilità}
 \[
 J(x, t) = -\frac{i\hbar}{2m} \left( \psi^*(x, t) \frac{\partial}{\partial x} \psi(x, t) - \left( \frac{\partial}{\partial x} \psi^*(x, t) \right) \psi(x, t) \right)
 \]
@@ -115,7 +115,7 @@ Quindi data
 \[
 \psi(x, t) = A \exp \left\{ \frac{i}{\hbar} (kx - \omega t) \right\} + B \exp \left\{ -\frac{i}{\hbar} (kx - \omega t) \right\}
 \]
-la \( J \) associata \`e 
+la \( J \) associata è 
 \begin{align*}
 J(x, t) &= -\frac{i\hbar}{2m} \left( \left( A^* \exp \left\{ -\frac{i}{\hbar} (kx - \omega t) \right\} + B^* \exp \left\{ \frac{i}{\hbar} (kx - \omega t) \right\} \right) \right. \cdot \\
 &\cdot \frac{ik}{\hbar} \left( A \exp \left\{ \frac{i}{\hbar} (\dots) \right\} + B \exp \left\{ -\frac{i}{\hbar} (\dots) \right\} \right) + \\
@@ -125,7 +125,7 @@ J(x, t) &= -\frac{i\hbar}{2m} \left( \left( A^* \exp \left\{ -\frac{i}{\hbar} (k
 &= J_A(x, t) + J_B(x, t).
 \end{align*}
 
-Poich\'e \( \ket{\psi} = \ket{k} \braket{k|\psi} + \ket{-k} \braket{-k|\psi} \), allora 
+Poiché \( \ket{\psi} = \ket{k} \braket{k|\psi} + \ket{-k} \braket{-k|\psi} \), allora 
 \[
 \braket{J} = \frac{k}{m} \left( |\braket{k|\psi}|^2 - |\braket{-k|\psi}|^2 \right).
 \]
@@ -133,11 +133,11 @@ Inoltre, essendo
 \[
 \rho = |\psi|^2 \; \Rightarrow \; \frac{\partial \rho}{\partial t} = 0 \; \Rightarrow \; \frac{\partial J}{\partial x} = 0,
 \]
-quindi \( J \) \`e invariante per spostamento, quindi 
+quindi \( J \) è invariante per spostamento, quindi 
 \[
 J_A + J_B = J_C \text{ costante}
 \]
-e questa condizione deve valere nella prima e nella seconda regione su cui poi impongo le equazioni di continuit\`a. Allora 
+e questa condizione deve valere nella prima e nella seconda regione su cui poi impongo le equazioni di continuità. Allora 
 \[
 J_{\text{inc.}} + J_{\text{rifl.}} = J_{\text{trasm.}}
 \]
@@ -150,7 +150,7 @@ Nel caso in cui \( E < V_0 \)
 \[
 k' = \sqrt{\frac{2m}{\hbar}(E - V_0)} \quad \Rightarrow \quad k' = i \beta, \, \beta \in \mathbb{R}
 \]
-quindi \( \psi_2(x) = C e^{-\beta x} \), cio\`e l'andamento \`e esponenziale e la corrente \( J_C(x, t) = 0 \), quindi \( J_A = - J_B \) e 
+quindi \( \psi_2(x) = C e^{-\beta x} \), cioè l'andamento è esponenziale e la corrente \( J_C(x, t) = 0 \), quindi \( J_A = - J_B \) e 
 \[
 R = \left| \frac{B}{A} \right|^2 = \left| \frac{k - i\beta}{k + i\beta} \right|^2 = 1.
 \]

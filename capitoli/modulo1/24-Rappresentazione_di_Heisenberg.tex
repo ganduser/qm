@@ -7,7 +7,7 @@ Per \( \ket{\psi} \) ho \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \) e ho ele
 \braket{\psi_H(t_0)|A^H(t)|\psi_H(t_0)} &= \braket{\psi_S(t_0)|S^{-1}(t, t_0) A^S(t_0) S(t, t_0)|\psi_S(t_0)} = \\
 &= \braket{\psi_S(t)|A^S(t_0)|\psi_S(t)}
 \end{align*}
-Quindi passo da \( S \) ad \( H \) e nel primo l'operatore \`e costante nel tempo ed evolvono gli stati, nel secondo \`e il contrario.
+Quindi passo da \( S \) ad \( H \) e nel primo l'operatore è costante nel tempo ed evolvono gli stati, nel secondo è il contrario.
 
 Allora posso prendere gli \( \ket{n(t)} \) (fissi nel tempo) e uso
 \[
@@ -40,7 +40,7 @@ quindi
 \[
 \frac{d}{dt} A^H(t) = -\frac{1}{i \hbar} S^{-1} \mathcal{H} A^S S + S^{-1} A^S \frac{\mathcal{H} S}{i \hbar} + \frac{\partial}{\partial t} A^H(t).
 \]
-Poich\'e per definizione \( S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) \), ho
+Poiché per definizione \( S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) \), ho
 \begin{align*}
 \frac{d}{dt} A^H(t) &= -\frac{1}{i \hbar} S^{-1} \mathcal{H} S A^H + \frac{1}{i \hbar} A^H S^{-1} \mathcal{H} S + \frac{\partial}{\partial t} A^H(t) = \\
 &= \frac{1}{i \hbar} \left[ A^H, \underbrace{S^{-1} \mathcal{H} S}_{\mathcal{H}^H} \right] + \frac{\partial}{\partial t} A^H(t)
@@ -50,7 +50,7 @@ Poich\'e per definizione \( S(t, t_0) A^H(t) = A^S(t_0) S(t, t_0) \), ho
 &= \frac{d}{dt} \braket{\psi_i^H(t_0)|A^H(t)|\psi_j^H(t_0)} = \\
 &= \frac{1}{i \hbar} \braket{\psi_i^H(t_0)|\left\{ \left[ A^H(t), \mathcal{H}^H \right] + \frac{\partial}{\partial t} A^H(t) \right\}|\psi_j^H(t_0)}
 \end{align*}
-per\`o \( A^H = S^{-1} A^S S \) e \( A^H \mathcal{H}^H = S A^S S S^{-1} \mathcal{H} S = S A^S \mathcal{H} S \)
+però \( A^H = S^{-1} A^S S \) e \( A^H \mathcal{H}^H = S A^S S S^{-1} \mathcal{H} S = S A^S \mathcal{H} S \)
 \[
 \frac{d}{dt} A_{ij}(t) = \braket{\psi_i^S(t)|\frac{1}{i \hbar} \left[ A^S(t_0), \mathcal{H}^S \right]|\psi_j^S(t)} + \braket{\psi_i^S(t)|\frac{\partial A^S}{\partial t}|\psi_j^S(t)}.
 \]

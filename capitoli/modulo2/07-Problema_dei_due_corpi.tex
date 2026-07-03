@@ -25,7 +25,7 @@ e poi costruisco i momenti coniugati tali che
 [\hat{p}^{(i)}, R^{(j)}] = [P^{(i)}, r^{(j)}] = 0
 \end{cases}.
 \]
-La scelta che funziona \`e
+La scelta che funziona è
 \[
 \begin{dcases}
 \hat{\vec{p}} = \frac{m_2 \vec{p}_1 - m_1 \vec{p}_2}{m_1 + m_2} \\
@@ -82,11 +82,11 @@ e poi si dimostra che
 \mathcal{H} = \frac{\vec{P}^2}{2M} + \frac{\vec{p}^2}{2\mu} + V(\vec{r}), \quad M = m_1 + m_2, \quad \mu = \frac{m_1 m_2}{m_1 + m_2}.
 \]
 
-D'ora in poi studier\`o solo sistemi ad un corpo, infatti, nel sistema del centro di massa,
+D'ora in poi studierò solo sistemi ad un corpo, infatti, nel sistema del centro di massa,
 \[
 \mathcal{H} = \frac{\vec{p}^2}{2m} + V(r)
 \]
-e tipicamente user\`o coordinate sferiche 
+e tipicamente userò coordinate sferiche 
 \[
 \begin{cases}
 x = r \sin \theta \cos \varphi \\
@@ -94,7 +94,7 @@ y = r \sin \theta \sin \varphi \\
 z = r \cos \theta
 \end{cases}
 \]
-per\`o adesso devo sepapare \( \vec{p} = -i\hbar \vec{\nabla} \). Per l'impostazione radiale
+però adesso devo sepapare \( \vec{p} = -i\hbar \vec{\nabla} \). Per l'impostazione radiale
 \[
 \hat{p} = \frac{\vec{x}}{\left\Vert \vec{x} \right\Vert} \mathbf{\cdot} \vec{p}
 \]
@@ -113,7 +113,7 @@ Prendo la componente \( \partial_i \)
 \Rightarrow \quad \frac{x_i}{r} \frac{\partial}{\partial r} \frac{\partial}{\partial x_i} |\vec{x}| = \frac{x_i}{r} \frac{\partial}{\partial r} \frac{x_i}{|\vec{x}|} = \frac{x_i^2}{r^2} \frac{\partial}{\partial r} = \frac{\partial}{\partial r}.
 \]
 
-Quindi ottengo che \( [\tilde{p}_r, r] = -i\hbar \). Noto che anche \( [\tilde{p}_r + f(r), r] = -i\hbar \). Il secondo termine \`e critico, quindi 
+Quindi ottengo che \( [\tilde{p}_r, r] = -i\hbar \). Noto che anche \( [\tilde{p}_r + f(r), r] = -i\hbar \). Il secondo termine è critico, quindi 
 \[
 T = \frac{{\vec{p}}^2}{2m} = \frac{\Delta}{2m} = \sum_i \frac{\partial_i^2}{2m}.
 \]
@@ -140,11 +140,11 @@ Allora
 \left\Vert \vec{a} \wedge \vec{b} \right\Vert^2 = \varepsilon^{imn} \varepsilon^{ijk} a_n b_n a_i b_k
 \]
 
-Voglio sapere che cos'\`e \( \hat{\vec{p}}^2 \), partendo dal caso classico, per arrivare a quello quantistico. Uso l'identit\`a vettoriale, che nel caso classico \`e 
+Voglio sapere che cos'è \( \hat{\vec{p}}^2 \), partendo dal caso classico, per arrivare a quello quantistico. Uso l'identità vettoriale, che nel caso classico è 
 \[
 (\vec{a} \mathbf{\cdot} \vec{b})^2 = |\vec{a}|^2 + |\vec{b}|^2 - |\vec{a} \wedge \vec{b}|^2 \quad (\text{da dimostrare}).
 \]
-Con ci\`o visto sopra
+Con ciò visto sopra
 \[
 \varepsilon^{ijk} \varepsilon^{iab} = \delta^{ja} \delta^{kb} - \delta^{jb} \delta^{ka},
 \]
@@ -157,7 +157,7 @@ Con ci\`o visto sopra
 &= a^j a^j b^k b^k - a^j b^j a^k b^k = \\
 &= |\vec{a}|^2 + |\vec{b}|^2 - (\vec{a} \mathbf{\cdot} \vec{b})^2
 \end{align*}
-e ho ci\`o che cercavo. Poi sostituisco \( \vec{a} \) e \( \vec{b} \) con \( \vec{x} \) e \( \vec{p} \) e ho la relazione classica 
+e ho ciò che cercavo. Poi sostituisco \( \vec{a} \) e \( \vec{b} \) con \( \vec{x} \) e \( \vec{p} \) e ho la relazione classica 
 \[
 \vec{p}^2 = \vec{p}_r^2 + \frac{\vec{L}^2}{r^2}.
 \]
@@ -172,7 +172,7 @@ Passo alla quantistica, con \( \hat{\vec{x}} \) e \( \hat{\vec{p}} \) (che non c
 &= \hat{r}^2 \hat{\vec{p}}^2 -i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) - (-3i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} + i\hbar\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}}) = \\
 &= \hat{r}^2 \hat{\vec{p}}^2 + i\hbar \hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}} - (\hat{\vec{x}} \mathbf{\cdot} \hat{\vec{p}})^2 = |\vec{x} \wedge \vec{p}|^2 \equiv \vec{L}^2
 \end{align*}
-dove \( \vec{L} \) ha la propriet\`a che
+dove \( \vec{L} \) ha la proprietà che
 \[
 \vec{x} \mathbf{\cdot} \vec{L} = \varepsilon^{ijk} x^i x^j p^k = \frac{1}{2} \varepsilon^{ijk} [x^i, x^j] p^k = 0.
 \]

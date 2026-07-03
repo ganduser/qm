@@ -1,5 +1,5 @@
 \subsection{Sistema QUBIT}
-Sistema che pu\`o esistere in due stati \(\rightarrow\) notazione di Dirac. \(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
+Sistema che può esistere in due stati \(\rightarrow\) notazione di Dirac. \(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -24,18 +24,18 @@ Sistema che pu\`o esistere in due stati \(\rightarrow\) notazione di Dirac. \(\k
   \draw[thick] (E) -- (F);
   \draw[thick] (G) -- (H);
 \end{tikzpicture}
-\caption{Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) \`e la combinazione degli stati \( \ket{+} \) e \( \ket{-} \).}
+\caption{Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) è la combinazione degli stati \( \ket{+} \) e \( \ket{-} \).}
 \label{stati_qubit}
 \end{figure}
 In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\) \(\Rightarrow \ket{\pm}\) (figura \ref{stati_qubit}).
 
 \bigskip
 \noindent
-Se non misuro da quale fenditura passa la particella allora ho sovrapposizione, cio\`e
+Se non misuro da quale fenditura passa la particella allora ho sovrapposizione, cioè
 \[
 \ket{\psi} = a_+ \ket{+} + a_- \ket{-} \qquad \text{con } a_+, a_- \in \mathbb{C}, \mathrm{ampiezze}
 \]
-e \(\ket{\psi}\) \`e ancora uno stato del sistema. La probabilit\`a allora \`e definita come
+e \(\ket{\psi}\) è ancora uno stato del sistema. La probabilità allora è definita come
 \[
 P_\pm = |a_\pm|^2
 \]
@@ -43,11 +43,11 @@ quando sto misurando.
 
 \bigskip
 \noindent
-Questa probabilit\`a \`e tale che \(P_+ + P_- = 1\), condizione di normalizzazione su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
+Questa probabilità è tale che \(P_+ + P_- = 1\), condizione di normalizzazione su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
 
 \bigskip
 \noindent
-Una peculiarit\`a \`e quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (figura \ref{sovrapposizione_stati}).
+Una peculiarità è quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (figura \ref{sovrapposizione_stati}).
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -99,11 +99,11 @@ Quando misuro, sapendo che
 \[
 c_1 = c_2 = \frac{1}{\sqrt{2}}
 \]
-per semplicit\`a, e 
+per semplicità, e 
 \[
 \ket{\psi} = \frac{1}{\sqrt{2}} \left( \left( a_+^{(1)} + a_+^{(2)} \right) \ket{+} + \left( a_-^{(1)} + a_-^{(2)} \right) \ket{-} \right)
 \]
-ricavo le probabilit\`a
+ricavo le probabilità
 \begin{align*}
 P_\pm &= \left| a_\pm^{(1)} + a_\pm^{(2)} \right|^2 = \\
 &= \left| a_\pm^{(1)} \right|^2 + \left| a_\pm^{(2)} \right|^2 + \left( a_+^{(1)}\right)^* a_\pm^{(2)} + \left( a_\pm^{(2)} \right)^* a_\pm^{(1)} \neq \\
@@ -119,7 +119,7 @@ Allora suppongo che ci sia un prodotto scalare: bra-ket.
 \[
 \text{prodotto scalare} \braket{\varphi|\psi}
 \]
-e lo definisco con le propriet\`a
+e lo definisco con le proprietà
 \begin{enumerate}
 \item \(\braket{\varphi|\psi} = (\braket{\psi|\varphi})^*\)
 \item \(\braket{\varphi|\varphi} \geq 0\)
@@ -128,18 +128,18 @@ e lo definisco con le propriet\`a
 \braket{\varphi|\psi} = a \braket{\varphi|1} + b \braket{\varphi|2}
 \]
 \end{enumerate}
-Cos\`{i} \(\ket{\psi} = a \ket{1} + b \ket{2}\) d\`a
+Così \(\ket{\psi} = a \ket{1} + b \ket{2}\) dà
 \begin{align*}
 \braket{\psi|w} &\stackrel{(1)}{=} \left( \braket{w|\psi} \right)^* \\
 &\stackrel{(3)}{=} \left( a \braket{w|1} + b \braket{w|2} \right)^* \\
 &\stackrel{(2)}{=} a^* \braket{1|w} + b^* \braket{2|w} \\
 &\stackrel{(3)}{=} \left( a^* \bra{1} + b^* \bra{2} \right) \ket{w}
 \end{align*}
-cio\`e
+cioè
 \[
 \bra{\psi} = a^* \bra{1} + b^* \bra{2}
 \]
-Stati esaustivi ed esclusivi \`e dato da
+Stati esaustivi ed esclusivi è dato da
 \[
 \braket{+|+} = \braket{-|-}  = 1 \quad \text{esaustivo}
 \]
@@ -164,21 +164,21 @@ tuttavia non so se \(\psi_1\) e \(\psi_2\) sono uguali. Infatti,
 \[
 \braket{\psi_1|\psi_2} = \frac{1}{2} (\bra{+} + \bra{-})(\ket{+} - \ket{-}) = \frac{1}{2} (1 + 0 + 0 - 1) = 0
 \]
-cio\`e sono ortogonali, quindi sono diversi pur avendo la stessa probabilit\`a. Inoltre,
+cioè sono ortogonali, quindi sono diversi pur avendo la stessa probabilità. Inoltre,
 \[
 \braket{\psi_1|\psi_1} = \braket{\psi_2|\psi_2} = 1
 \]
-Quindi se dallo stato \(\ket{\psi_1}\) misuro \(\ket{+}\) e da qui misuro la probabilit\`a associata allo stato \(\ket{\psi_2}\), classicamente otterrei 0, mentre qui ho la rigenerazione di \(\ket{\psi_2}\).
+Quindi se dallo stato \(\ket{\psi_1}\) misuro \(\ket{+}\) e da qui misuro la probabilità associata allo stato \(\ket{\psi_2}\), classicamente otterrei 0, mentre qui ho la rigenerazione di \(\ket{\psi_2}\).
 \[
-\left| \braket{\psi_2|+} \right|^2 = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}, \quad \text{cio\`e il 50\%}.
+\left| \braket{\psi_2|+} \right|^2 = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}, \quad \text{cioè il 50\%}.
 \]
-La misura quindi modifica lo stato. Allo stesso modo, se non eseguo nessuna misura, la sovrapposizione \`e data da
+La misura quindi modifica lo stato. Allo stesso modo, se non eseguo nessuna misura, la sovrapposizione è data da
 \begin{align*}
 \ket{\varphi} &= \frac{1}{\sqrt{2}} \left( \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right) + \frac{1}{\sqrt{2}} \left( \ket{+} - \ket{-} \right) \right) = \\
 &= \frac{1}{2} \left( \ket{+} + \ket{+} + \ket{-} - \ket{-} \right) = \\
 &= \ket{+}
 \end{align*}
-cio\`e \`e sparito \(\ket{-}\) (cfr. le onde in controfase).
+cioè è sparito \(\ket{-}\) (cfr. le onde in controfase).
 
 \bigskip
 \noindent
@@ -211,15 +211,15 @@ allora
 \[
 \braket{\varphi|\psi} = \left( b_+^* \bra{+} + b_-^* \bra{-} \right) \left( a_+ \ket{+} + a_- \ket{-} \right) = a_+ b_+^* + a_- b_-^*
 \]
-e questo \`e leggibile in termini di sovrapposizione
+e questo è leggibile in termini di sovrapposizione
 \[
 \ket{w} = N \left( c \ket{\varphi} + d \ket{\psi} \right)
 \]
-Allora \(\left| \braket{\varphi|\psi} \right|^2\) \`e una probabilit\`a che ci sia la sovrapposizione degli stati.
+Allora \(\left| \braket{\varphi|\psi} \right|^2\) è una probabilità che ci sia la sovrapposizione degli stati.
 
 \bigskip
 \noindent
-Un altro esempio \`e
+Un altro esempio è
 \[
 \ket{\psi} = \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right)
 \]
@@ -233,4 +233,4 @@ Se faccio la misura
 \[
 \left| \braket{\varphi|+} \right|^2 = \frac{1}{2}
 \]
-\`e sparita la fase, quindi \`e cambiato lo stato.
+è sparita la fase, quindi è cambiato lo stato.

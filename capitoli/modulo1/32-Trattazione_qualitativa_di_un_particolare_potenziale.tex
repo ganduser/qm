@@ -10,16 +10,16 @@
 \caption{Andamento di un potenziale simmetrico, nullo all'infinito e con un punto di equilibrio stabile.}
 \label{particolare}
 \end{figure}
-Il potenziale (Figura \ref{particolare}) \`e attrattivo e tale che
+Il potenziale (Figura \ref{particolare}) è attrattivo e tale che
 \[
 V(x) = V(-x), \quad \lim_{x \to \pm \infty} V(x) = 0, \quad V(x) < 0.
 \]
-Quindi il solito \( \hat{\mathcal{H}} \ket{\psi} = E \ket{\psi} \), cio\`e 
+Quindi il solito \( \hat{\mathcal{H}} \ket{\psi} = E \ket{\psi} \), cioè 
 \[
 \psi''(x) = \frac{2m}{\hbar^2} \left( V(x) - E \right) \psi(x).
 \]
 
-Da quello che gi\`a conosco mi aspetto uno spettro discreto non degenere, cio\`e degli stati legati (cio\`e normalizzabili), per quello che ottengo dalla buca infinita di potenziale. Inoltre ci sar\`a anche una parte continua dello spettro (cio\`e stati non normalizzabili).
+Da quello che già conosco mi aspetto uno spettro discreto non degenere, cioè degli stati legati (cioè normalizzabili), per quello che ottengo dalla buca infinita di potenziale. Inoltre ci sarà anche una parte continua dello spettro (cioè stati non normalizzabili).
 
 \( \boxed{V(x) > E} \) se \( \psi > 0 \), allora \( \psi'' > 0 \); se \( \psi < 0 \), allora \( \psi'' < 0 \) (Figura \ref{potenziale_generico_V_gt_E}).
 \begin{figure}
@@ -112,7 +112,7 @@ Da quello che gi\`a conosco mi aspetto uno spettro discreto non degenere, cio\`e
 \label{potenziale_generico_V_lt_E}
 \end{figure}
 
-Se \( V(x) - E > 0 \) sempre, allora ho Figura \ref{V_gt_E_sempre} quindi non c'\`e alcuna soluzione.
+Se \( V(x) - E > 0 \) sempre, allora ho Figura \ref{V_gt_E_sempre} quindi non c'è alcuna soluzione.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -131,7 +131,7 @@ Se \( V(x) - E > 0 \) sempre, allora ho Figura \ref{V_gt_E_sempre} quindi non c'
   \end{scope}
   \node (B) at (3,-1) {non normalizzabile};
 \end{tikzpicture}
-\caption{Soluzioni nel caso \(V(x) > E\) sempre. Nessuna di esse \`e accettabile.}
+\caption{Soluzioni nel caso \(V(x) > E\) sempre. Nessuna di esse è accettabile.}
 \label{V_gt_E_sempre}
 \end{figure}
 
@@ -159,15 +159,15 @@ Se \( V(x) - E > 0 \) o \( V(x) - E < 0 \) a seconda delle regioni, ho Figura \r
 \label{potenziale_variabile}
 \end{figure}
 
-Poich\'e se \( E \) cresce, cresce anche \( x_0 \), lo stato a minima energia \`e quello che ha meno oscillazione.
+Poiché se \( E \) cresce, cresce anche \( x_0 \), lo stato a minima energia è quello che ha meno oscillazione.
 
-Nel caso \( V(x) > E \) sempre, ho soluzioni oscillanti \( \Rightarrow \) spettro continuo, cio\`e c'\`e almeno uno stato legato.
+Nel caso \( V(x) > E \) sempre, ho soluzioni oscillanti \( \Rightarrow \) spettro continuo, cioè c'è almeno uno stato legato.
 
 Quindi ho:
 \begin{enumerate}
 \item almeno uno stato legato;
-\item \( E_0 > V_0 \), quindi \(\Delta x\) \`e massimo solo localmente e \(\Delta p\) \`e minimo nello stato fondamentale;
-\item spettro non degenere, quindi ogni operatore che commuta con \( \hat{\mathcal{H}} \) \`e diagonale nella base degli \( \ket{E} \), cio\`e 
+\item \( E_0 > V_0 \), quindi \(\Delta x\) è massimo solo localmente e \(\Delta p\) è minimo nello stato fondamentale;
+\item spettro non degenere, quindi ogni operatore che commuta con \( \hat{\mathcal{H}} \) è diagonale nella base degli \( \ket{E} \), cioè 
 \[
 [A, \hat{\mathcal{H}}] = 0 \quad \Rightarrow \quad A \ket{E} = a_E \ket{E}
 \]
@@ -180,11 +180,11 @@ e sono normalizzabili, ho che
 \[
 \psi_2 \psi_1'' - \psi_1 \psi_2'' = 0 = \frac{d}{dx} (\psi_2 \psi_1' - \psi_1 \psi_2') \; \Rightarrow \; \psi_2 \psi_1' - \psi_1 \psi_2' = \text{ costante}
 \]
-e poich\'e \( \psi_1 \) e \( \psi_2 \) sono normalizzate,
+e poiché \( \psi_1 \) e \( \psi_2 \) sono normalizzate,
 \[
 \lim_{x \to \pm \infty} \psi_1(x) = \lim_{x \to \pm \infty} \psi_2(x) = 0
 \]
-Quindi la costante \`e 0. Allora 
+Quindi la costante è 0. Allora 
 \[
 \frac{\psi_1'}{\psi_1} = \frac{\psi_2'}{\psi_2} \; \Rightarrow \; \frac{d}{dx} \ln \psi_1(x) = \frac{d}{dx} \ln \psi_2(x) \; \Rightarrow \; \ln \psi_1(x) = \ln \psi_2(x) + \text{ cost.} \; \Rightarrow
 \]

@@ -11,11 +11,11 @@ Per l'impulso voglio che esista \( \ket{k} \) tale che \( \hat{p} \ket{k} = \hba
 \[
 \Rightarrow \quad -i \hbar \frac{d}{dq} \psi_k(q) = \hbar k \psi_k(q) \quad \Rightarrow \quad \psi_k(q) = N_k e^{ikq}.
 \]
-Poich\'e
+Poiché
 \[
 \int_{-\infty}^{+\infty} \left| \psi_k(q) \right|^2 \, dq = |N_k|^2 \int_{-\infty}^{+\infty} 1 \, dq,
 \]
-non posso normalizzare in senso proprio. Coerentemente con le autofunzioni della posizione, ho \( \braket{k|k^\prime} = \delta(k - k^\prime) \), cio\`e
+non posso normalizzare in senso proprio. Coerentemente con le autofunzioni della posizione, ho \( \braket{k|k^\prime} = \delta(k - k^\prime) \), cioè
 \begin{align*}
 \braket{k|k^\prime} &= \int_{-\infty}^{+\infty} \braket{k^\prime|q} \braket{q|k} \, dq = |N_k|^2 \int_{-\infty}^{+\infty} e^{-i k^\prime q} e^{ikq} \, dq = \\
 &= |N_k|^2 \int_{-\infty}^{+\infty} e^{i (k - k^\prime) q} \, dq = \delta(k^\prime - k).
@@ -39,7 +39,7 @@ Dalla definizione di aggiunto,
 \[
 \braket{q|k} = \frac{1}{\sqrt{2\pi}} e^{ikq}, \qquad \braket{k|q} = \frac{1}{\sqrt{2\pi}} e^{-ikq}
 \]
-quindi analogo ad \( U^\dag U = \mathbbm{1} \), cio\`e matrici di cambio di base
+quindi analogo ad \( U^\dag U = \mathbbm{1} \), cioè matrici di cambio di base
 \[
 \braket{q|\psi} = \psi(q), \qquad \braket{k|\psi} = \tilde{\psi}(k)
 \]
@@ -51,7 +51,7 @@ legate da
 \end{align*}
 N.B.: in generale, \( \tilde{\psi} \neq \psi \).
 
-Poich\'e
+Poiché
 \[
 \psi(q) = \braket{q|\psi} = \int_{-\infty}^{+\infty} \braket{q|k} \braket{k|\psi} \, dk = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-ikq} \psi(k) \, dk
 \]
