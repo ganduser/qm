@@ -35,7 +35,7 @@
 \caption{Una sorgente (\(A\)) emette granelli di sabbia verso una parete permeabile con due fenditure (\(B_1\) e \(B_2\)). Lo schermo registra per ogni punto quanti granelli sono arrivati.}
 \label{doppia_fenditura}
 \end{figure}
-Lo schema dell'apparato sperimentale \`e riportato in Figura \ref{doppia_fenditura}. Una fenditura aperta, piccata sulla fenditura (Figura \ref{granelli_una_fenditura}). Due fenditure aperte, ho la somma (Figura \ref{granelli_due_fenditure}). Ho un'equazione del moto deterministica (anche se non la so risolvere). Per\`o ho una probabilit\`a.
+Lo schema dell'apparato sperimentale \`e riportato in figura \ref{doppia_fenditura}. Una fenditura aperta, piccata sulla fenditura (figura \ref{granelli_una_fenditura}). Due fenditure aperte, ho la somma (figura \ref{granelli_due_fenditure}). Ho un'equazione del moto deterministica (anche se non la so risolvere). Per\`o ho una probabilit\`a.
 \[
 p(A \rightarrow C_k) = p(A \rightarrow B_1) \; p(B_1 \rightarrow C_k) + p(A \rightarrow B_2) \; p(B_2 \rightarrow C_k)
 \]
@@ -48,10 +48,8 @@ N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \begin{scope}[rotate=270]
-    \draw[color=blue, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1))})    node[right] {};
-    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x-1)*(\x-1))})    node[right] {};
-  \end{scope}
+  \draw[smooth, thick] plot file {./grafici/granelli_una_fend_1.txt};
+  \draw[smooth, thick] plot file {./grafici/granelli_una_fend_2.txt};
 
   \node (A) at (-.5,-3) {};
   \node (B) at (-.5,3) {};
@@ -65,20 +63,18 @@ N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(
   \node (G) at (-3.5, -1.05) {};
   \node (H) at (-3.5, -3) {};
 
-  \draw[thick] (A) -- (B);
-  \draw[thick] (C) -- (D);
-  \draw[thick] (E) -- (F);
-  \draw[thick] (G) -- (H);
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  \draw (E) -- (F);
+  \draw (G) -- (H);
 \end{tikzpicture}
-\caption{Le due distribuzioni, in colori diversi, nel caso di granelli di sabbia in cui si lasci aperta una sola fenditura per volta. Sono piccate sulle fenditure.}
+\caption{le due distribuzioni nel caso di granelli di sabbia in cui si lasci aperta una sola fenditura per volta. Sono piccate sulle fenditure.}
 \label{granelli_una_fenditura}
 \end{figure}
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \begin{scope}[rotate=270]
-    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1)) + exp(-(\x-1)*(\x-1))})    node[right] {};
-  \end{scope}
+  \draw[smooth, thick] plot file {./grafici/granelli_due_fend.txt};
 
   \node (A) at (-.5,-3) {};
   \node (B) at (-.5,3) {};
@@ -100,20 +96,20 @@ N(A \rightarrow C_k) &= N_{\text{TOT}} \sum_{i = 1}^2 p(A \rightarrow B_i) \; p(
 
   \node (M) at (-.1, -1.3) {\(C_k\)};
 
-  \draw[thick] (A) -- (B);
-  \draw[thick] (C) -- (D);
-  \draw[thick] (E) -- (F);
-  \draw[thick] (G) -- (H);
-  \draw[thick] (I) -- (J);
-  \draw[thick] (K) -- (L);
+  \draw(A) -- (B);
+  \draw(C) -- (D);
+  \draw(E) -- (F);
+  \draw(G) -- (H);
+  \draw(I) -- (J);
+  \draw(K) -- (L);
 \end{tikzpicture}
-\caption{In rosso la distribuzione ottenuta con entrambe le fenditure aperte. \(p(A \to C_k)\) rappresenta la probabilit\`a che un granello di sabbia arrivi sullo schermo in posizione \(C_k\).}
+\caption{distribuzione di granelli di sabbia ottenuta con entrambe le fenditure aperte. \(p(A \to C_k)\) rappresenta la probabilit\`a che un granello di sabbia arrivi sullo schermo in posizione \(C_k\).}
 \label{granelli_due_fenditure}
 \end{figure}
 
 \bigskip
 \noindent
-Quando la sorgente emette fullereni, le cose cambiano, bench\'e siano oggetti piuttosto grandi (diametro 1 nm). L'esempio \`e stato fatto anche con molecole pi\`u grandi (\( \text{C}_{60} \text{F}_{48} \) e TPP). L'esperimento \`e stato fatto da M.~Arndt e A.~Zeilinger (Figura \ref{arndt_zeilinger}).
+Quando la sorgente emette fullereni, le cose cambiano, bench\'e siano oggetti piuttosto grandi (diametro 1 nm). L'esempio \`e stato fatto anche con molecole pi\`u grandi (\( \text{C}_{60} \text{F}_{48} \) e TPP). L'esperimento \`e stato fatto da M.~Arndt e A.~Zeilinger (figura \ref{arndt_zeilinger}).
 
 \bigskip
 \noindent
@@ -145,7 +141,7 @@ Quando la sorgente emette fullereni, le cose cambiano, bench\'e siano oggetti pi
 
 \bigskip
 \noindent
-L'istogramma ha un andamento come in Figura \ref{arndt_zeilinger_distro}.
+L'istogramma ha un andamento come in figura \ref{arndt_zeilinger_distro}.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -160,16 +156,16 @@ L'istogramma ha un andamento come in Figura \ref{arndt_zeilinger_distro}.
   \node (E) at (3.5, -1) {};
   \node (F) at (3.5, -3) {};
 
-  \draw[thick] (A) -- (B);
-  \draw[thick] (C) -- (D);
-  \draw[thick] (E) -- (F);
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  \draw (E) -- (F);
 
-  \begin{scope}[rotate=270, shift={(0,4)}]
-    \draw[color=blue, domain=-3:3, samples=200, smooth]   plot (\x,{cos(10*\x r)*cos(10*\x r)*exp(-(\x*\x))}) node[right] {};
-    \draw[color=red, domain=-3:3, samples=200, smooth]   plot (\x,{exp(-(\x*\x))}) node[right] {};
+  \begin{scope}[shift={(4,0)}]
+    \draw[smooth, thick] plot file {./grafici/doppia_fenditura_1.txt};
+    \draw[smooth, dashed] plot file {./grafici/doppia_fenditura_2.txt};
   \end{scope}
 \end{tikzpicture}
-\caption{Distribuzione nell'esperimento di Arndt e Zeilinger.}
+\caption{distribuzione nell'esperimento di Arndt e Zeilinger.}
 \label{arndt_zeilinger_distro}
 \end{figure}
 \[
@@ -202,13 +198,11 @@ Il fatto \`e che la molecola dovrebbe passare o in una o nell'altra delle fendit
 
 \bigskip
 \noindent
-Se per\`o inserisco un rilevatore che dica in quale fenditura passa la singola molecola, sparisce l'interferenza (Figura \ref{rilevatore}).
+Se per\`o inserisco un rilevatore che dica in quale fenditura passa la singola molecola, sparisce l'interferenza (figura \ref{rilevatore}).
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \begin{scope}[rotate=270]
-    \draw[color=red, domain=-3:3]   plot (\x,{exp(-(\x+1)*(\x+1)) + exp(-(\x-1)*(\x-1))})    node[right] {};
-  \end{scope}
+  \draw[smooth, thick] plot file {./grafici/granelli_due_fend.txt};
 
   \node (C) at (-1.0, 3) {};
   \node (D) at (-1.0, 1.05) {};
