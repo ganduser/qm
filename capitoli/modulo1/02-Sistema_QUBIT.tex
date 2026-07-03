@@ -1,6 +1,5 @@
 \subsection{Sistema QUBIT}
 Sistema che pu\`o esistere in due stati \(\rightarrow\) notazione di Dirac. \(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
-
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -28,9 +27,10 @@ Sistema che pu\`o esistere in due stati \(\rightarrow\) notazione di Dirac. \(\k
 \caption{Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) \`e la combinazione degli stati \( \ket{+} \) e \( \ket{-} \).}
 \label{stati_qubit}
 \end{figure}
+In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\) \(\Rightarrow \ket{\pm}\) (figura \ref{stati_qubit}).
 
-In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\) \(\Rightarrow \ket{\pm}\) (Figura \ref{stati_qubit}).
-
+\bigskip
+\noindent
 Se non misuro da quale fenditura passa la particella allora ho sovrapposizione, cio\`e
 \[
 \ket{\psi} = a_+ \ket{+} + a_- \ket{-} \qquad \text{con } a_+, a_- \in \mathbb{C}, \mathrm{ampiezze}
@@ -41,9 +41,13 @@ P_\pm = |a_\pm|^2
 \]
 quando sto misurando.
 
+\bigskip
+\noindent
 Questa probabilit\`a \`e tale che \(P_+ + P_- = 1\), condizione di normalizzazione su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
 
-Una peculiarit\`a \`e quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (Figura \ref{sovrapposizione_stati}).
+\bigskip
+\noindent
+Una peculiarit\`a \`e quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (figura \ref{sovrapposizione_stati}).
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -91,7 +95,6 @@ Sovrapposizione
 \[
 \ket{\psi} = c_1 \ket{\psi_1} + c_2 \ket{\psi_2}
 \]
-
 Quando misuro, sapendo che
 \[
 c_1 = c_2 = \frac{1}{\sqrt{2}}
@@ -106,7 +109,6 @@ P_\pm &= \left| a_\pm^{(1)} + a_\pm^{(2)} \right|^2 = \\
 &= \left| a_\pm^{(1)} \right|^2 + \left| a_\pm^{(2)} \right|^2 + \left( a_+^{(1)}\right)^* a_\pm^{(2)} + \left( a_\pm^{(2)} \right)^* a_\pm^{(1)} \neq \\
 &\neq P_\pm^{(1)} + P_\pm^{(2)}
 \end{align*}
-
 Allora suppongo che ci sia un prodotto scalare: bra-ket.
 \[
 \ket{\psi}
@@ -137,7 +139,6 @@ cio\`e
 \[
 \bra{\psi} = a^* \bra{1} + b^* \bra{2}
 \]
-
 Stati esaustivi ed esclusivi \`e dato da
 \[
 \braket{+|+} = \braket{-|-}  = 1 \quad \text{esaustivo}
@@ -149,7 +150,6 @@ Quindi
 \[
 P_\pm = \left| \braket{\pm|\psi} \right|^2 = \left| \Braket{\pm|\left( a_+ \ket{+} + a_- \ket{-} \right)} \right|^2 = |a_\pm|^2
 \]
-
 Ad esempio,
 \[
 \ket{\psi_1} = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-})
@@ -168,7 +168,6 @@ cio\`e sono ortogonali, quindi sono diversi pur avendo la stessa probabilit\`a. 
 \[
 \braket{\psi_1|\psi_1} = \braket{\psi_2|\psi_2} = 1
 \]
-
 Quindi se dallo stato \(\ket{\psi_1}\) misuro \(\ket{+}\) e da qui misuro la probabilit\`a associata allo stato \(\ket{\psi_2}\), classicamente otterrei 0, mentre qui ho la rigenerazione di \(\ket{\psi_2}\).
 \[
 \left| \braket{\psi_2|+} \right|^2 = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}, \quad \text{cio\`e il 50\%}.
@@ -181,6 +180,8 @@ La misura quindi modifica lo stato. Allo stesso modo, se non eseguo nessuna misu
 \end{align*}
 cio\`e \`e sparito \(\ket{-}\) (cfr. le onde in controfase).
 
+\bigskip
+\noindent
 Potrei avere
 \[
 \ket{\psi_A} = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right), \qquad \ket{\psi_B} = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
@@ -197,6 +198,8 @@ e allora
 \]
 proprio come prima.
 
+\bigskip
+\noindent
 Quindi se ho due stati
 \[
 \ket{\psi} = a_+ \ket{+} + a_- \ket{-}
@@ -214,6 +217,8 @@ e questo \`e leggibile in termini di sovrapposizione
 \]
 Allora \(\left| \braket{\varphi|\psi} \right|^2\) \`e una probabilit\`a che ci sia la sovrapposizione degli stati.
 
+\bigskip
+\noindent
 Un altro esempio \`e
 \[
 \ket{\psi} = \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right)
