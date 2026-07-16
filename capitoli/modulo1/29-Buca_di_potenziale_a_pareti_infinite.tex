@@ -100,19 +100,17 @@ Gli andamenti sono riportati in Figura \ref{buca_infinita}.
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \draw[color=red, domain=-pi/2:pi/2, samples=200, smooth] plot(\x,{cos(\x r)}) node[right] {};
-  \node (A) at (-1.2,1) {\(n = 1\)};
+  \draw[->] (-4,0) -- (4,0);
+  \draw[->] (0,-3.5) -- (0,3.5);
+  \node (n1) at (-2,2) {\(n = 1\)};
+  \draw[dotted,very thick] plot[smooth] file {./grafici/buca_di_potenziale_cos.txt};
+  \node (n2) at (2,2.75) {\(n = 2\)};
+  \draw[dashed,very thick] plot[smooth] file {./grafici/buca_di_potenziale_sin.txt};
 
-  \draw[color=blue, domain=-pi/2:pi/2, samples=200, smooth] plot(\x,{sin(2*\x r)}) node[right] {};
-  \node (B) at (-1,-1.2) {\(n = 2\)};
-
-  \draw[thick] (-3,0) -- (3,0);
-  \draw[thick] (0,-1.5) -- (0,1.5);
-
-  \node (C) at (pi/2+.2,-.2) {\(a\)};
-  \node (D) at (-pi/2-.3,-.2) {\(-a\)};
+  \node (-a) at (-3.25,-.3) {\(-a\)};
+  \node (a) at (3,-.3) {\(a\)};
 \end{tikzpicture}
-\caption{Andamento dello stato fondamentale (rosso) e del primo stato eccitato (blu) per la buca di potenziale a pareti infinite.}
+\caption{Andamento dello stato fondamentale (punteggiato) e del primo stato eccitato (tratteggiato) per la buca di potenziale a pareti infinite.}
 \label{buca_infinita}
 \end{figure}
 Pensando alle soluzioni come azione dell'operatore parità sulla funzione d'onda si ha
