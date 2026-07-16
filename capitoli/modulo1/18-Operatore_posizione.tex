@@ -1,5 +1,4 @@
 \subsection{Operatore posizione}
-
 Il problema è decomporre \(\ket{\psi}\) su una base che ne dia la posizione. Allora introduco
 \[
 \hat{x} \ket{x} = x \ket{x}
@@ -24,7 +23,6 @@ che esteso a tutto lo spazio diventa
 \[
 \int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx = 1
 \]
-
 I problemi sorgono nell'esprimere la condizione di ortonormalità, perché
 \[
 \begin{cases}
@@ -43,7 +41,6 @@ che ha la proprietà per definizione
 \[
 \int_{-\infty}^{+\infty} \psi(x) \delta(x, x') \, dx = \psi(x')
 \]
-
 Da questa discende:
 \begin{enumerate}
 \item invarianza per traslazione
@@ -87,7 +84,6 @@ Poiché \(\psi\) è generica, \(f(0) \delta(x) = f(x) \delta(x)\).
 \int_{-\infty}^{+\infty} \delta(x) \cdot 1 \, dx = 1
 \]
 \end{enumerate}
-
 \textbf{Relazione di ortonormalizzazione}
 \[
 \ket{\psi} = \int_{-\infty}^{+\infty} \ket{x}\braket{x|\psi} \, dx
@@ -99,7 +95,6 @@ Nel caso continuo \(\braket{x|x'} = \delta(x - x') \longrightarrow\) ortogonaliz
 \int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx = 1
 \end{cases}
 \]
-
 \textbf{Risoluzione dell'identità}
 \[
 \int_{-\infty}^{+\infty} \ket{x} \bra{x} \, dx = \mathbbm{1}
@@ -108,7 +103,6 @@ il cui elemento
 \[
 \Braket{x'|\int_{-\infty}^{+\infty} \Ket{x} \Bra{x} dx\;|x''} = \int_{-\infty}^{+\infty} \delta(x' - x) \delta(x - x'') \, dx = \delta(x' - x'') = \braket{x'|x''}
 \]
-
 \textbf{Prodotto scalare fra stati}
 \[
 \braket{\varphi|\psi} = \int_{+\infty}^{-\infty} \braket{\varphi|x}\braket{x|\psi} \, dx = \int_{-\infty}^{+\infty} \varphi(x) \psi(x) \, dx
@@ -116,7 +110,6 @@ il cui elemento
 \[
 \braket{\psi|\psi} = \int_{-\infty}^{+\infty} |\psi(x)|^2 \, dx
 \]
-
 \textbf{Operatori}
 \[
 A(\hat{x}) = \sum_{i = 0}^\infty a_i \, (\hat{x})^i
@@ -133,7 +126,6 @@ Ad es.
 &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \psi^*(y) \, \cos z \, \delta(y - z) \, \psi(z) \, dy \, dz = \\
 &= \int_{-\infty}^{+\infty} |\psi(z)|^2 \, \cos z \, dz
 \end{align*}
-
 \textbf{Riepilogo}
 \begin{enumerate}
 \item \(\braket{q'|\hat{q}|q} = q \braket{q'|q} = q \delta(q' - q)\)
@@ -161,6 +153,9 @@ Ad es.
 \end{align*}
 quindi \( \mathcal{P} \) è hermitiano \( \Rightarrow \mathcal{P} \ket{x} = \ket{-x} \Rightarrow \mathcal{P}^2 \ket{x} = \ket{x} \Rightarrow \mathcal{P}^2 = \mathbbm{1} \Rightarrow \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \Rightarrow \mathcal{P} \) è unitario. \( \mathcal{P}^2 = \mathbbm{1} \Rightarrow \) autovalori \( \pm 1 \).
 
+
+\bigskip
+\noindent
 Le autofunzioni sono
 \[
 \braket{x|\mathcal{P}|\varphi_{-}} = \begin{cases}

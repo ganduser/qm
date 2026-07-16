@@ -1,5 +1,4 @@
 \subsection{Operatori compatibili e commutatore}
-
 \(A_1\) e \(A_2\) hermitiani sono
 \begin{enumerate}
 \item compatibili se ammettono una base comune di autovettori;
@@ -9,11 +8,14 @@ Teorema sul commutatore: \(A\) e \(B\) hermitiani sono compatibili se e solo se 
 \[
 \left[ A, B \right] = AB - BA \qquad \text{commutatore}
 \]
+\textbf{Dimostrazione.} Caso non degenere (\(\lambda_i \neq \lambda_j\)).
 
-Dimostrazione: caso non degenere (\(\lambda_i \neq \lambda_j\)).
-
+\bigskip
+\noindent
 \(\Leftarrow\) |
 
+\bigskip
+\noindent
 \(A \ket{e_k} = \lambda_k \ket{e_k}\) sono autovettori e autovalori e
 \begin{align*}
 0 &= \Braket{e_k|\left[ A, B \right]|e_k} = \braket{e_k|AB|e_k} - \braket{e_k|BA|e_k} = \\
@@ -26,15 +28,14 @@ cioè \(B\) è diagonale con autovettore \(\ket{e_k}\), infatti
 \[
 B\ket{e_k} = \left( \sum_j \lambda_j \ket{e_j} \bra{e_j} \right) \ket{e_k} = \lambda_k \ket{e_k}
 \]
-
 \(\Rightarrow\) |
-
 \[
 \left( AB - BA \right) \ket{e_j} = \left( \lambda_i \mu_j - \lambda_i \mu_j \right) \ket{e_j} = 0
 \]
+\textbf{Dimostrazione.} Caso degenere
 
-Dimostrazione: caso degenere
-
+\bigskip
+\noindent
 \(\Leftarrow\) |
 \[
 A \ket{e_i} = \lambda_i \ket{e_i} \quad \text{con } \ket{e_i^a} \text{ tale che} 

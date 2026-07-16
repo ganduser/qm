@@ -3,8 +3,10 @@ So che \( S(t_1, t_0) = S(t_1 + \delta, t_0 + \delta) \), nel caso infinitesimo
 \[
 \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0) = \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0 + \delta) \quad \Rightarrow \quad \frac{d}{dt} \hat{\mathcal{H}}(t) = 0
 \]
-cioè \( \hat{\mathcal{H}} \equiv \hat{\mathcal{H}}(\hat{p}, \hat{q}) \) (N.B.: è un ``se e solo se'').
+cioè \( \hat{\mathcal{H}} \equiv \hat{\mathcal{H}}(\hat{p}, \hat{q}) \) (\textbf{N.B.:} è un ``se e solo se'').
 
+\bigskip
+\noindent
 Se \( \hat{\mathcal{H}} \) non dipende dal tempo, allora \( S \) e \( \hat{\mathcal{H}} \) commutano. La condizione di partenza equivale a \( S(t_1 + \delta, t_0 + \delta) = S(t_1, t_0) \) con \( \delta \) infinitesimo questa volta,
 \begin{align*}
 S(t_1 + \delta, t_0 + \delta) &= S(t_1 + \delta, t_1) S(t_1, t_0) S(t_0, t_0 + \delta) = \\
@@ -28,6 +30,8 @@ Inoltre gli autovalori di \( \hat{\mathcal{H}} \) si conservano per traslazione 
 \end{align*}
 cioè \( \braket{E|S|E^\prime} = 0 \) se \( E \neq E^\prime \).
 
+\bigskip
+\noindent
 Digressione sulla lagrangiana.
 \begin{align*}
 \frac{d \mathcal{L}}{dt} \left( \underline{q}(t), \dot{\underline{q}}(t) \right) &= \sum_k \frac{\partial \mathcal{L}}{\partial q_k} \dot{q}_k + \sum_k \frac{\partial \mathcal{L}}{\partial \dot{q}_k} \ddot{q}_k = \left[ \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{q}_k} = \frac{\partial \mathcal{L}}{\partial q_k} \right] = \\
@@ -38,6 +42,8 @@ Digressione sulla lagrangiana.
 \]
 Fine digressione sulla lagrangiana.
 
+\bigskip
+\noindent
 Voglio che \(\hat{\mathcal{H}} = -c \mathcal{H}\). Dimensionalmente, poiché
 \[
 S(t, t_0) \ket{\psi(t_0)} = \ket{\psi(t)} \; \xrightarrow[\text{infinitesim.}] \; \ket{\psi(t)} = e^{(t - t_0) \frac{d}{dt}} \ket{\psi(t)} |_{t_0} =
@@ -70,13 +76,14 @@ Per \( \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) \) per stati \( \
 \[
 \Rightarrow \quad i \hbar \frac{d \psi}{dt}(q; t) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dq^2}(q;t) + V(q) \psi(q;t).
 \]
-
 Per l'evoluzione temporale, \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \), quindi
 \[
 i \hbar \frac{d}{dt} S(t, t_0) \ket{\psi(t_0)} = \mathcal{H}(t) S(t, t_0) \ket{\psi(t_0)}
 \]
 e, a seconda dei casi, ho diverse discussioni.
 
+\bigskip
+\noindent
 Caso 1.
 \[
 \frac{d\mathcal{H}}{dt} = 0 \qquad \text{(stato legato statico)}
@@ -87,7 +94,6 @@ i \hbar \frac{d}{dt} S(t, t_0) = \mathcal{H} S(t, t_0)
 \[
 \boxed{S(t, t_0) = \exp \left\{ \frac{t - t_0}{i \hbar}\mathcal{H} \right\} }
 \]
-
 Caso 2.
 \[
 \frac{d\mathcal{H}}{dt} \neq 0 \text{ e } [\mathcal{H}(t), \mathcal{H}(t^\prime)] = 0
@@ -95,7 +101,6 @@ Caso 2.
 \[
 i \hbar \frac{d}{dt} S(t, t_0) = \mathcal{H}(t) S(t, t_0) \quad \Rightarrow \quad \boxed{S(t, t_0) = \exp{\left\{ \frac{1}{i \hbar} \int_{t_0}^{t} \mathcal{H}(t^\prime) \, dt^\prime \right\}}}
 \]
-
 Caso 3.
 \[
 \frac{d\mathcal{H}}{dt} \neq 0 \text{ e } [\mathcal{H}(t), \mathcal{H}(t^\prime)] \neq 0
@@ -143,13 +148,14 @@ i \hbar \frac{d}{dt} S(t, t_0) &= \mathcal{H}(t) + \frac{1}{i \hbar} \mathcal{H}
 &\quad + \frac{1}{(i \hbar)^{n + 1}} \mathcal{H}(t) \int_{t_0}^t \int_{t_0}^{t_2} \cdots \int_{t_0}^{t_{n - 1}} \mathcal{H}(t_2) \cdots \mathcal{H}(t_n) \, dt_2 \cdots dt_n = \\
 &= \mathcal{H}(t) S(t, t_0)
 \end{align*}
-
 Nel caso più semplice in cui \( \frac{d}{dt} \mathcal{H} = 0 \) so che
 \[
 S(t, t_0) = \exp\left\{ \frac{1}{i \hbar} (t - t_0) \mathcal{H} \right\}
 \]
 allora l'operatore di evoluzione temporale lo posso calcolare solo quando \( \mathcal{H} \ket{n} = E_n \ket{n} \) (diagonalizzabilità dell'operatore), da cui poi \( \braket{n|\psi} = c_n \) e \( p_n = |c_n|^2\).
 
+\bigskip
+\noindent
 Se ho un potenziale per cui so calcolare gli stati di energia, posso calcolare gli elementi di matrice, ottenendo
 \[
 S(t, t_0) = \sum_{n,m} \ket{m} \braket{m|S(t, t_0)|n} \bra{n} =
@@ -168,6 +174,8 @@ S(t, t_0) = \sum_{n,m} \ket{m} \braket{m|S(t, t_0)|n} \bra{n} =
 \]
 operatore diagonale nella base degli \( \ket{n} \).
 
+\bigskip
+\noindent
 Quindi per \( \ket{\psi(t_0)} = \ket{k} \) al tempo \( t \)
 \[
 \ket{\psi(t)} = S(t, t_0) \ket{k} = \sum_n \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}} \ket{n} \braket{n|k} = e^{\frac{1}{i \hbar}(t-t_0)E_k}\ket{k}
@@ -186,7 +194,6 @@ cioè la probabilità si conserva perché
 \[
 p_n(t) = |c_n(t)|^2 = |c_n(t_0)|^2 = p_n(t_0).
 \]
-
 Per lo stato \( \ket{\psi} \) il valor medio di un operatore sulla base degli \( \ket{n} \) autostati dell'energia 
 \[
 \braket{n|A|n} = \braket{n(t_0)|e^{- \frac{1}{i \hbar} (t_n - t_0) E_n} A e^{\frac{1}{i \hbar} (t_n - t_0) E_n}|n(t_0)} = \braket{n(t_0)|A|n(t_0)}.
@@ -194,37 +201,37 @@ Per lo stato \( \ket{\psi} \) il valor medio di un operatore sulla base degli \(
 Gli stati \( \ket{n} \) sono detti \textbf{stati stazionari}.
 
 \subsubsection{Esempio: hamiltoniana e matrici di Pauli}
-$$ \mathcal{H} = B \sigma_z, \qquad \sigma_z = \begin{pmatrix}
+\[ \mathcal{H} = B \sigma_z, \qquad \sigma_z = \begin{pmatrix}
 1 & 0 \\
 0 & -1
 \end{pmatrix}.
-\[
 \]
+\[
 S = \exp \left\{ t \frac{B \sigma_z}{i\hbar} \right\}
-\[
 \]
+\[
 \left| \braket{\psi_1|\psi_2} \right|^2 = \left| \braket{\psi_1|\psi_2(t)} \right|^2 = \left| \braket{\psi_1|S|\psi_2(0)} \right|^2
-\[
 \]
+\[
 \ket{\psi(t)} = \exp \left\{ \frac{Bt\sigma_z}{i\hbar} \right\} \frac{\ket{+} + \ket{-}}{\sqrt{2}} = \frac{1}{\sqrt{2}} \left( e^{\frac{Bt}{i\hbar}} \ket{+} + e^{-\frac{Bt}{i\hbar}} \ket{-} \right)
-\[
 \]
+\[
 \bra{\psi_2} = \frac{1}{\sqrt{2}} \left( \bra{+} + \bra{-} \right)
-\[
 \]
-\left| \braket{\psi_2|\psi_1} \right|^2 = \frac{1}{4} \left| e^{\frac{Bt}{i\hbar}} + e^{-\frac{Bt}{i\hbar}} \right|^2 = \cos^2 \frac{Bt}{\hbar}
 \[
+\left| \braket{\psi_2|\psi_1} \right|^2 = \frac{1}{4} \left| e^{\frac{Bt}{i\hbar}} + e^{-\frac{Bt}{i\hbar}} \right|^2 = \cos^2 \frac{Bt}{\hbar}
+\]
 
 \subsubsection{Esempio: ancora su hamiltoniana e matrici di Pauli}
-\]
+\[
 \mathcal{H} = t B \sigma_z.
-\[
 \]
+\[
 S = \exp \left\{ \frac{1}{i\hbar} \int_{0}^t \mathcal{H}(t') \, dt' \right\} = \exp \left\{ \frac{t^2 B \sigma_z}{2i\hbar} \right\}.
-\[
 \]
+\[
 \ket{\psi(t)} = \exp \left\{ \frac{Bt^2\sigma_z}{i\hbar} \right\} \frac{\ket{+} + \ket{-}}{\sqrt{2}} = \frac{1}{\sqrt{2}} \left( e^{\frac{Bt^2}{i\hbar}} \ket{+} + e^{-\frac{Bt^2}{i\hbar}} \ket{-} \right)
-\[
 \]
+\[
 \left| \braket{\psi_2|\psi_1} \right|^2 = \frac{1}{4} \left| e^{\frac{Bt^2}{i\hbar}} + e^{-\frac{Bt^2}{i\hbar}} \right|^2 = \cos^2 \frac{Bt^2}{\hbar}
-$$
+\]

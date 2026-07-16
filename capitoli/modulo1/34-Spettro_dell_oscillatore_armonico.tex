@@ -10,7 +10,6 @@ Voglio determinare lo spettro di \( \mathcal{H} \) e passo attraverso \( [N, \ha
 \[
 [N, \hat{a}^\dag] = [\hat{a}^\dag \hat{a}, \hat{a}^\dag] = \hat{a}^\dag[\hat{a}, \hat{a}^\dag] = \hat{a}^\dag.
 \]
-
 Se conosco un autostato di \( N \), sia \( \ket{z} \), allora
 \[
 N \ket{z} = \lambda_z \ket{z} \; \Rightarrow \; \begin{cases}
@@ -25,21 +24,26 @@ N \hat{a}^\dag \ket{z} &= [N \hat{a}^\dag = \hat{a}^\dag N + \hat{a}^\dag] = (\h
 N \hat{a} \ket{z} &= (\hat{a}N - \hat{a}) \ket{z} = (\lambda_z - 1) \hat{a} \ket{z}. \qed
 \end{align*}
 
+\bigskip
+\noindent
 Inoltre, \( N \ket{z} = \lambda_z \ket{z} \Rightarrow \lambda_z \geq 0 \).
 
+\bigskip
+\noindent
 Dimostrazione: \( \braket{z|N|z} = \lambda_z \) quando \( \braket{z|z} = 1 \), quindi
 \begin{align*}
 \lambda_z &= \braket{z|\hat{a}^\dag \hat{a}|z} = \\
 &= \sum_n \braket{z|\hat{a}^\dag|n} \braket{n|\hat{a}|z} = \\
 &= \sum_n \left| \braket{n|\hat{a}|z} \right|^2 \geq 0. \qed
 \end{align*}
-
 Deve esistere \( \ket{0} \) tale che \( \hat{a} \ket{0} = 0 \), perché se non esistesse, cosiderando
 \[
 N \hat{a}^P \ket{z} = (\lambda_z - P) \hat{a}^P \ket{z},
 \]
 per \( P \) abbastanza grande avrei autovalori negativi. Inoltre, se \( \hat{a} \ket{0} = 0 \), allora \( N \ket{0} = \hat{a}^\dag \hat{a} \ket{0} = \lambda_0 \ket{0} \), cioè \( \lambda_0 = 0 \).
 
+\bigskip
+\noindent
 Allora posso definire
 \[
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0}
@@ -53,6 +57,8 @@ N \ket{n} = n \ket{n},
 \]
 Dico che \( \ket{0} \) è il \textbf{vuoto}, \( N \) è l'\textbf{operatore numero}, \( \hat{a} \) e \( \hat{a}^\dag \) sono gli \textbf{operatori di ditruzione e creazione}.
 
+\bigskip
+\noindent
 Per calcolare \( K_n \) normalizzo \( \braket{0|0} = 1 \). Allora
 \[
 \begin{cases}
@@ -86,8 +92,12 @@ da cui segue
 E_n = \hbar \omega \left( n + \frac{1}{2} \right) \text{ autovalori di } \mathcal{H}.
 \]
 
-N.B.: il formalismo di Heisenberg ha permesso di riscrivere tutto senza dover scegliere una base.
+\bigskip
+\noindent
+\textbf{N.B.:} il formalismo di Heisenberg ha permesso di riscrivere tutto senza dover scegliere una base.
 
+\bigskip
+\noindent
 Gli elementi di matrice li calcolo attraverso \( \hat{a} \pm \hat{a}^\dag \)
 \[
 \hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dag), \qquad \hat{p} = -i \sqrt{\frac{m\omega\hbar}{2}}(\hat{a} - \hat{a}^\dag)
@@ -118,7 +128,6 @@ Per gli operatori al quadrato
 \braket{n|\hat{p}^2|n} &= -\frac{m\omega\hbar}{2} \braket{n|(\hat{a}\hat{a}^\dag + \hat{a}^\dag\hat{a})|n} = \\
 &= m\omega\hbar \left( n + \frac{1}{2} \right).
 \end{align*}
-
 Passo all'energia cinetica e al potenziale (valori medi)
 \[
 \braket{T} = \frac{\omega\hbar}{2}\left( n + \frac{1}{2} \right),
@@ -128,6 +137,8 @@ Passo all'energia cinetica e al potenziale (valori medi)
 \]
 cioè un caso di equipartizione dell'energia.
 
+\bigskip
+\noindent
 Le indeterminazioni sono 
 \[
 \begin{cases}

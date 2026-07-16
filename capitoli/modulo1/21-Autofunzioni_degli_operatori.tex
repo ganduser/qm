@@ -3,7 +3,6 @@ So che \( \hat{q} \ket{q} = q \ket{q} \), dunque
 \[
 \braket{q^\prime|q} = \psi_q(q^\prime) = \delta(q - q^\prime) \; \rightarrow \; \text{autofunzione della posizione.}
 \]
-
 Per l'impulso voglio che esista \( \ket{k} \) tale che \( \hat{p} \ket{k} = \hbar k \ket{k} \). Scelgo la base dei \( \ket{q} \) e faccio
 \[
 \braket{q|\hat{p}|k} = \hbar k \braket{q|k}, \quad \text{con } \braket{q|k} = \psi_k(q) \quad \Rightarrow
@@ -49,8 +48,10 @@ legate da
 &= \int_{-\infty}^{+\infty} \frac{e^{-ikq}}{\sqrt{2\pi}} \psi(q) \, dq \\
 \braket{q|\psi} &= \int_{-\infty}^{+\infty} \braket{q|k} \braket{k|\psi} \, dk = \int_{-\infty}^{+\infty} \frac{e^{ikq}}{\sqrt{2\pi}} \tilde{\psi}(k) \, dk.
 \end{align*}
-N.B.: in generale, \( \tilde{\psi} \neq \psi \).
+\textbf{N.B.:} in generale, \( \tilde{\psi} \neq \psi \).
 
+\bigskip
+\noindent
 Poiché
 \[
 \psi(q) = \braket{q|\psi} = \int_{-\infty}^{+\infty} \braket{q|k} \braket{k|\psi} \, dk = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-ikq} \psi(k) \, dk
@@ -60,15 +61,16 @@ Poiché
 \]
 ottengo che \( \ket{q} \) e \( \ket{k} \) sono \textbf{linearmente dipendenti}.
 
+\bigskip
+\noindent
 Gli elementi di matrice
 \[
 \braket{k|\hat{p}|\psi} = \hbar k \psi(k).
 \]
-N.B.: \( \hat{p}\ket{p} = p \ket{p} \Leftrightarrow \braket{p|\hat{p}|\psi}  = p \psi(p) \) con \( \psi(p) = \braket{p|\psi} \), ma allora
+\textbf{N.B.:} \( \hat{p}\ket{p} = p \ket{p} \Leftrightarrow \braket{p|\hat{p}|\psi}  = p \psi(p) \) con \( \psi(p) = \braket{p|\psi} \), ma allora
 \[
 \braket{q|p} = \frac{1}{\sqrt{2\pi}} e^{i \frac{pq}{\hbar}}.
 \]
-
 \begin{align*}
 \braket{k|\hat{q}|\psi} &= \int_{-\infty}^{+\infty} \braket{k|\hat{q}|q} \braket{q|\psi} \, dq = \\
 &= \int_{-\infty}^{+\infty} q \braket{k|q} \psi(q) \, dq = \\

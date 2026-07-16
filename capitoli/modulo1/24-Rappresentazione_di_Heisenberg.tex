@@ -9,6 +9,8 @@ Per \( \ket{\psi} \) ho \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \) e ho ele
 \end{align*}
 Quindi passo da \( S \) ad \( H \) e nel primo l'operatore è costante nel tempo ed evolvono gli stati, nel secondo è il contrario.
 
+\bigskip
+\noindent
 Allora posso prendere gli \( \ket{n(t)} \) (fissi nel tempo) e uso
 \[
 A^H(t) \ket{n(t)} = \lambda_n \ket{n(t)}
@@ -26,7 +28,6 @@ Quindi una generica misura
 \[
 \braket{n_S(t_0)|\psi_S(t)} = \braket{n_S(t_0)|S(t, t_0)|\psi_S(t_0)} = \braket{n_H(t)|\psi_H(t)}.
 \]
-
 Per studiare l'evoluzione temporale di \( A^H(t) \) faccio
 \begin{align*}
 \frac{d}{dt} A^H(t) &= \frac{d}{dt} \left( S^{-1}(t, t_0) A^S(t_0) S(t, t_0) \right) = \\
@@ -54,7 +55,6 @@ però \( A^H = S^{-1} A^S S \) e \( A^H \mathcal{H}^H = S A^S S S^{-1} \mathcal{
 \[
 \frac{d}{dt} A_{ij}(t) = \braket{\psi_i^S(t)|\frac{1}{i \hbar} \left[ A^S(t_0), \mathcal{H}^S \right]|\psi_j^S(t)} + \braket{\psi_i^S(t)|\frac{\partial A^S}{\partial t}|\psi_j^S(t)}.
 \]
-
 Esempio: \( A \) e \( B \) costanti del moto \( \Rightarrow [A, B] \) costante del moto. Infatti
 \[
 [A, \mathcal{H}] = [B, \mathcal{H}] = 0 \quad \Rightarrow \quad \left[ [A, B], \hat{\mathcal{H}} \right] = 0.

@@ -1,5 +1,4 @@
 \subsection{Matrice densità}
-
 Sistema a due livelli
 \[
 \ket{\psi} = a_+ \ket{+} + a_- \ket{-}
@@ -16,13 +15,18 @@ fanno perdere informazione  sulla fase di \(\ket{\psi'}\) rispetto a  \(\ket{\ps
 \[
 \braket{\psi|A|\psi} = \braket{\psi'|A|\psi'}
 \]
-
 Ho una classe di equivalenze (\textit{raggio}) fra quelli che differiscono per la fase globale \(\rightarrow\) sono lo stesso stato.
 
+\bigskip
+\noindent
 Parto dalla considerazione che se non posso ricostruire il sistema con le sue condizioni iniziali,  non ho informazioni sul sistema. Devo poter riprodurre più volte le codizioni iniziali.
 
+\bigskip
+\noindent
 Suppongo di avere un'osservabile e voglio capire quanta informazione sullo stato posso ricostruire partendo dalle caratteristiche dell'osservabile.
 
+\bigskip
+\noindent
 Da \(A\) ottengo
 \[
 \begin{cases}
@@ -48,6 +52,8 @@ P_1 + P_2 = 1 \\
 \]
 Quindi due variabili compatibili danno la stessa informazione. Dovrò prenderne due incompatibili.
 
+\bigskip
+\noindent
 Introduco l'operatore densità
 \[
 \rho_\psi = P_\psi = \ket{\psi}\bra{\psi} \qquad \text{stati puri}
@@ -72,7 +78,6 @@ A \ket{e_i} = \lambda_i \ket{e_i}
 \[
 \Tr(A\rho) = \sum_i \braket{e_i|A|\psi} \braket{\psi|e_i} = \sum_i \lambda_i \braket{e_i|\psi} \braket{\psi|e_i} = \sum_i \lambda_i |a_i|^2 = \braket{A}
 \]
-
 In particolare, l'operatore densità è utile quando di un sistema conosco solo le probabilità associate agli stati.
 \[
 p_i \longrightarrow \ket{\psi_i}
@@ -83,7 +88,6 @@ p_i \longrightarrow \ket{\psi_i}
 \[
 \braket{\psi_i|\psi_i} = 1
 \]
-
 Allora \(\rho\) è definita da
 \[
 \rho = \sum_i p_i \ket{\psi_i} \bra{\psi_i} \qquad \text{stati misti}
@@ -127,7 +131,6 @@ p_{\ket{+}} = \frac{1}{2} \qquad p_{\ket{-}} = \frac{1}{2}
 \[
 \braket{A}_m = \Tr(A\rho_m) = \frac{1}{2} \braket{+|A|+} + \frac{1}{2} \braket{-|A|-} = 0
 \]
-
 In particolare, per gli stati puri ho
 \[
 \rho^2 = \ket{\psi} \braket{\psi|\psi} \bra{\psi} = \ket{\psi} \bra{\psi} = \rho

@@ -5,20 +5,22 @@
 V_0 \to +\infty & |x| > a
 \end{matrix*} \right.
 \]
-
 La particella è intrappolata nella buca indipendentemente dall'energia che può avere e non supera la barriera (questa è la teoria classica).
 
+\bigskip
+\noindent
 Voglio sapere lo spettro di autostati di \( \mathcal{H} \) nella base delle coordinate. Allora:
 \[
 \mathcal{H} \ket{\psi_E} = E \ket{\psi_E}
 \]
 dove so \( \braket{x|\psi_E} = \psi_E(x) \).
 
+\bigskip
+\noindent
 Per \( |x| < a \)
 \[
 \braket{x|\mathcal{H}|\psi_E} = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi_E(x) = E \psi_E(x).
 \]
-
 Per \( |x| > a \)
 \[
 \braket{x|\mathcal{H}|\psi_E} = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi_E(x) = (E - V_0) \psi_E(x).
@@ -47,6 +49,8 @@ Allora in generale ponendo \( k = \sqrt{\frac{2m}{\hbar^2}(V_0 - E)} \),
 \]
 che per \( V_0 \to +\infty \) dà \( \psi_E \to 0 \). Questo impone come condizioni al contorno \( \psi_E(\pm a) = 0 \).
 
+\bigskip
+\noindent
 Per \( |x| < a \) invece
 \[
 \psi_E(x) = A_E' e^{ikx} + B_E' e^{-ikx}, \qquad E = \frac{\hbar^2 k^2}{2m}
@@ -68,7 +72,6 @@ e si presentano due casi.
 &\Rightarrow E_n = \frac{\hbar^2 \pi^2}{2m} \frac{(2n + 1)^2}{4a^2}
 \end{align*}
 \end{enumerate}
-
 Quindi lo \textbf{spettro degli autovalori} è
 \[
 E_n = \frac{\hbar^2 k_n^2}{2m}, \qquad k_n = \frac{n\pi}{2a}
@@ -83,6 +86,8 @@ E_n = \frac{\hbar^2 n^2 \pi^2}{2 m L^2}.
 \]
 cioè la buca contiene \( n \) semilunghezze d'onda.
 
+\bigskip
+\noindent
 Definiamo allora lo \textbf{stato fondamentale} \( \psi^{II} \) come
 \[
 n = 1, \quad k = \frac{\pi}{2a}, \quad E = \frac{\hbar^2 \pi^2}{2 m L^2}
@@ -110,7 +115,6 @@ Gli andamenti sono riportati in Figura \ref{buca_infinita}.
 \caption{Andamento dello stato fondamentale (rosso) e del primo stato eccitato (blu) per la buca di potenziale a pareti infinite.}
 \label{buca_infinita}
 \end{figure}
-
 Pensando alle soluzioni come azione dell'operatore parità sulla funzione d'onda si ha
 \[
 \braket{x|\mathcal{P}|\psi} = \braket{-x|\psi} \; \Rightarrow \; \mathcal{P} \ket{\psi_E} = \begin{cases}
@@ -120,6 +124,8 @@ Pensando alle soluzioni come azione dell'operatore parità sulla funzione d'onda
 \]
 Inoltre \([\mathcal{H}, \mathcal{P}] = 0\), ed essendo \( \mathcal{P}^{-1} \mathcal{H} \mathcal{P} = \mathcal{H} \), le autofunzioni \( \psi_E \) sono gli autostati di \( \mathcal{H} \) e di \( \mathcal{P} \).
 
+\bigskip
+\noindent
 Era possibile dedurre lo stato ad energia minima dal principio di indeterminazione perché 
 \[
 \begin{cases}

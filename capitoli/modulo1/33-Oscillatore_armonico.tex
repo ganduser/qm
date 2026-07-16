@@ -12,6 +12,8 @@ pongo \( x_0 = 0 \) e \( V(x_0) = 0 \), allora determino gli autostati dell'ener
 \]
 e anche \( \braket{x|n} = \psi_n(x) \).
 
+\bigskip
+\noindent
 \textbf{Metodo di Heisenberg}: avrò alcune proprietà sugli \( E_n \).
 \begin{enumerate}
 \item \( \left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right) \ket{n} = E_n \ket{n}  \Rightarrow \braket{n|\left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right)|n} = E_n \braket{n|n} \). 
@@ -45,19 +47,20 @@ Allora ho due equazioni, da cui
 \[
 \braket{n|\hat{x}|k} = \frac{i\hbar}{m(E_k - E_n)} \frac{(-i\hbar m \omega^2)}{E_k - E_n} \braket{n|\hat{x}|k} \; \Rightarrow
 \]
-$$ \Rightarrow \; (E_k - E_n)^2 \braket{n|\hat{x}|k} = \hbar^2\omega^2 \braket{n|\hat{x}|k}
 \[
-cioè l'elemento
+\Rightarrow \; (E_k - E_n)^2 \braket{n|\hat{x}|k} = \hbar^2\omega^2 \braket{n|\hat{x}|k}
 \]
+cioè l'elemento
+\[
 \braket{n|\hat{x}|k} \begin{cases}
 = 0 \text{ sulla diagonale e anche dove la differenza è da } (\hbar \omega) \\
 \neq 0 \text{ dove } E_k - E_n = \pm \hbar \omega
 \end{cases}
-\[
-Introduco l'operatore
 \]
+Introduco l'operatore
+\[
 \hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + i\frac{\hat{p}}{m\omega} \right), \quad \hat{a}^\dag = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - i\frac{\hat{p}}{m\omega} \right)
-$$
+\]
 \begin{align*}
 [\hat{a}^\dag, \hat{a}] &= \frac{m\omega}{2\hbar} \left[ \hat{x} - i\frac{\hat{p}}{m\omega}, \hat{x} + i\frac{\hat{p}}{m\omega} \right] = \frac{m\omega}{\hbar} i \left[ \hat{x}, \frac{\hat{p}}{m\omega} \right] = -1 \\
 \hat{a}^\dag\hat{a} &= \frac{m\omega}{2\hbar} \left( \hat{x} - i\frac{\hat{p}}{m\omega} \right) \left( \hat{x} + i\frac{\hat{p}}{m\omega} \right) = \\

@@ -32,7 +32,6 @@ perché
 &= f(+\infty) - \int_{-\infty}^{+\infty} f(x) \frac{d}{dx}V(x) \, dx \\
 \int_{-\infty}^{+\infty} V(x) f'(x) \, dx &= \int_0^{+\infty} f'(x) \, dx = f(+\infty) - f(0).
 \end{align*}
-
 Scrivo l'equazione di Schr\"odinger
 \[
 -\frac{\hbar^2}{2m} \psi''(x) + V(x) \psi(x) = E \psi(x)
@@ -42,11 +41,12 @@ Scrivo l'equazione di Schr\"odinger
 \]
 Allora la \( \psi'' \) è discontinua perché lo è \( V \), ma quindi \( \psi \) e \( \psi' \) sono continue, così posso dividere il problema in due parti e poi imporre delle condizioni di raccordo.
 
+\bigskip
+\noindent
 Per \( x < 0 \) ho \( \psi_1 \) tale che 
 \[
 \psi_1''(x) = -\frac{2m}{\hbar^2} E \psi_1(x) \; \Rightarrow \; \psi_1(x) = A e^{ikx} + B e^{-ikx}, \; k = \frac{\sqrt{2mE}}{\hbar}.
 \]
-
 Per \( x > 0 \)
 \begin{align*}
 \psi_2''(x) &= -\frac{2m}{\hbar^2} (E - V_0) \psi_2(x) \; \Rightarrow \\
@@ -54,6 +54,8 @@ Per \( x > 0 \)
 \end{align*}
 e per ora impongo \( E > V_0 \).
 
+\bigskip
+\noindent
 Poiché \( \psi_1(0) = \psi_2(0) \) e \( \psi_1'(0) = \psi_2'(0) \), allora mi restano due condizioni da imporre. Sfrutto la normalizzazione per la terza equazione e poi impongo \( D = 0 \). Allora 
 \[
 \begin{cases}
@@ -64,7 +66,6 @@ B = \frac{k - k'}{k + k'} A \\
 C = \frac{2k}{k + k'} A
 \end{cases}.
 \]
-
 Introduco la \textbf{corrente di probabilità}
 \[
 J(x, t) = -\frac{i\hbar}{2m} \left( \psi^*(x, t) \frac{\partial}{\partial x} \psi(x, t) - \left( \frac{\partial}{\partial x} \psi^*(x, t) \right) \psi(x, t) \right)
@@ -81,7 +82,6 @@ poi per l'equazione di Schr\"odinger
 \[
 \frac{\partial^2 \psi}{\partial x^2} = \left( i\hbar\frac{\partial \psi}{\partial t} -V(x)\psi \right) \left( -\frac{2m}{\hbar^2} \right).
 \]
-
 Essendo \( \mathcal{H} \) hermitiano, \( \mathcal{H} = \mathcal{H}^\dag \), quindi 
 \[
 \frac{\partial^2 \psi^*}{\partial x^2} = \left( -i\hbar\frac{\partial \psi^*}{\partial t} - V(x) \psi^* \right) \left( -\frac{2m}{\hbar^2} \right)
@@ -92,7 +92,6 @@ allora
 &= - \left( \psi^* \frac{\partial \psi}{\partial t} + \frac{\partial \psi^*}{\partial t} \psi \right) = - \frac{\partial}{\partial t} \left( \psi^* \psi \right) = \\
 &= -\frac{\partial}{\partial t} \rho(x, t).
 \end{align*}
-
 Integrando
 \[
 \int_a^b \frac{\partial \rho}{\partial t} \, dx = -\int_a^b \frac{\partial J}{ \partial x} \, dx = - \left( J(b) - J(a) \right)
@@ -100,7 +99,6 @@ Integrando
 \[
 \frac{\partial \rho}{\partial t} > 0 \qquad \Rightarrow \qquad J(a) > J(b).
 \]
-
 Il valore medio di \( J \)
 \begin{align*}
 \int_{-\infty}^{+\infty} J(x, t) \, dx &= \frac{1}{m} \int_{-\infty}^{+\infty} \braket{\psi|x} \braket{x|\hat{p}|\psi} \, dx = \\
@@ -124,7 +122,6 @@ J(x, t) &= -\frac{i\hbar}{2m} \left( \left( A^* \exp \left\{ -\frac{i}{\hbar} (k
 &= \frac{k}{2m} \left( |A|^2 - |B|^2 \right) 2 = \frac{k}{m} \left( |A|^2 - |B|^2 \right) = \\
 &= J_A(x, t) + J_B(x, t).
 \end{align*}
-
 Poiché \( \ket{\psi} = \ket{k} \braket{k|\psi} + \ket{-k} \braket{-k|\psi} \), allora 
 \[
 \braket{J} = \frac{k}{m} \left( |\braket{k|\psi}|^2 - |\braket{-k|\psi}|^2 \right).
@@ -145,7 +142,6 @@ e i coefficienti
 \[
 T = \left| \frac{C}{A} \right|^2, \qquad R = \left| \frac{B}{A} \right|^2.
 \]
-
 Nel caso in cui \( E < V_0 \)
 \[
 k' = \sqrt{\frac{2m}{\hbar}(E - V_0)} \quad \Rightarrow \quad k' = i \beta, \, \beta \in \mathbb{R}
