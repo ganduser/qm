@@ -42,9 +42,9 @@ che è una gaussiana modulata (Figura \ref{gaussiana_modulata}).
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \draw[color=red, domain=-3:4,  samples=200, smooth] plot(\x,{cos(15*\x r)*exp(-(\x-1)*(\x-1))}) node[right] {};
-  \draw[thick] (-3,0) -- (4,0);
-  \draw[thick] (0,-2) -- (0,2);
+  \draw[thick] plot[smooth] file {./grafici/wave_packet.txt};
+  \draw[->] (-2.5,0) -- (6.5,0);
+  \draw[->] (0,-4) -- (0,4.5);
 \end{tikzpicture}
 \caption{Andamento qualitativo della funzione d'onda \(\psi\) per la particella libera. è una gaussiana modulata, pertanto la distribuzione è quella tipica del pacchetto d'onda.}
 \label{gaussiana_modulata}
