@@ -1,182 +1,217 @@
 \subsection{Sistema QUBIT}
-Sistema che può esistere in due stati \(\rightarrow\) notazione di Dirac. \(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
+Sistema che può esistere in due stati \(\rightarrow\) notazione di Dirac.
+\(\ket{A}\) ket \(\rightarrow\) stati del sistema \(\sim\) vettore.
 \begin{figure}
-\centering
-\begin{tikzpicture}
-  \node (A) at (0, 3) {};
-  \node (B) at (0, 1.05) {};
+  \centering
+  \begin{tikzpicture}
+    \node (A) at (0, 3) {};
+    \node (B) at (0, 1.05) {};
 
-  \node (C) at (0, .95) {};
-  \node (D) at (0, -.95) {};
+    \node (C) at (0, .95) {};
+    \node (D) at (0, -.95) {};
 
-  \node (E) at (0, -1) {};
-  \node (F) at (0, -3) {};
+    \node (E) at (0, -1) {};
+    \node (F) at (0, -3) {};
 
-  \node (G) at (2, 3) {};
-  \node (H) at (2, -3) {};
+    \node (G) at (2, 3) {};
+    \node (H) at (2, -3) {};
 
-  \node (I) at (-2, 0) {\( \ket{\psi} \)};
-  \node (J) at (.7, .95) {\( \ket{+} \)};
-  \node (K) at (.7,-1) {\( \ket{-} \)};
+    \node (I) at (-2, 0) {\( \ket{\psi} \)};
+    \node (J) at (.7, .95) {\( \ket{+} \)};
+    \node (K) at (.7,-1) {\( \ket{-} \)};
 
-  \draw[thick] (A) -- (B);
-  \draw[thick] (C) -- (D);
-  \draw[thick] (E) -- (F);
-  \draw[thick] (G) -- (H);
-\end{tikzpicture}
-\caption{Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) è la combinazione degli stati \( \ket{+} \) e \( \ket{-} \).}
-\label{stati_qubit}
+    \draw[thick] (A) -- (B);
+    \draw[thick] (C) -- (D);
+    \draw[thick] (E) -- (F);
+    \draw[thick] (G) -- (H);
+  \end{tikzpicture}
+  \caption{
+    Nell'esperimento della doppia fenditura, lo stato \( \ket{\psi} \) è la
+    combinazione degli stati \( \ket{+} \) e \( \ket{-} \).
+  }
+  \label{stati_qubit}
 \end{figure}
-In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\) \(\Rightarrow \ket{\pm}\) (figura \ref{stati_qubit}).
+In questo caso indico gli stati con \(\ket{+}\) e \(\ket{-}\)
+\(\Rightarrow \ket{\pm}\) (figura \ref{stati_qubit}).
 
 \bigskip
 \noindent
-Se non misuro da quale fenditura passa la particella allora ho sovrapposizione, cioè
+Se non misuro da quale fenditura passa la particella allora ho sovrapposizione,
+cioè
 \[
-\ket{\psi} = a_+ \ket{+} + a_- \ket{-} \qquad \text{con } a_+, a_- \in \mathbb{C}, \mathrm{ampiezze}
+  \ket{\psi} = a_+ \ket{+} + a_- \ket{-}
+  \qquad
+  \text{con } a_+, a_- \in \mathbb{C}, \mathrm{ampiezze}
 \]
-e \(\ket{\psi}\) è ancora uno stato del sistema. La probabilità allora è definita come
+e \(\ket{\psi}\) è ancora uno stato del sistema. La probabilità allora è
+definita come
 \[
-P_\pm = |a_\pm|^2
+  P_\pm = |a_\pm|^2
 \]
 quando sto misurando.
 
 \bigskip
 \noindent
-Questa probabilità è tale che \(P_+ + P_- = 1\), condizione di normalizzazione su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
+Questa probabilità è tale che \(P_+ + P_- = 1\), condizione di normalizzazione
+su \(\ket{\psi}\). A priori, \(a_\pm\) non sono determinabili.
 
 \bigskip
 \noindent
-Una peculiarità è quella di poter applicare il principio  di sovrapposizione. Quindi (senza fare misure) gli stati si sovrappongono linearmente (figura \ref{sovrapposizione_stati}).
+Una peculiarità è quella di poter applicare il principio di sovrapposizione.
+Quindi (senza fare misure) gli stati si sovrappongono linearmente (figura
+\ref{sovrapposizione_stati}).
 \begin{figure}
-\centering
-\begin{tikzpicture}
-  \node (A) at (0, 3) {};
-  \node (B) at (0, 1.05) {};
+  \centering
+  \begin{tikzpicture}
+    \node (A) at (0, 3) {};
+    \node (B) at (0, 1.05) {};
 
-  \node (C) at (0, .95) {};
-  \node (D) at (0, -.95) {};
+    \node (C) at (0, .95) {};
+    \node (D) at (0, -.95) {};
 
-  \node (E) at (0, -1) {};
-  \node (F) at (0, -3) {};
+    \node (E) at (0, -1) {};
+    \node (F) at (0, -3) {};
 
-  \node (G) at (2, 3) {};
-  \node (H) at (2, 1.05) {};
+    \node (G) at (2, 3) {};
+    \node (H) at (2, 1.05) {};
 
-  \node (I) at (2, .95) {};
-  \node (J) at (2, -.95) {};
+    \node (I) at (2, .95) {};
+    \node (J) at (2, -.95) {};
 
-  \node (K) at (2, -1) {};
-  \node (L) at (2, -3) {};
+    \node (K) at (2, -1) {};
+    \node (L) at (2, -3) {};
 
-  \node (M) at (-2, 0) {\( \ket{\psi} \)};
-  \node (N) at (.7, .95) {\( \ket{+} \)};
-  \node (O) at (.7,-1) {\( \ket{-} \)};
-  \node (P) at (2.7, .95) {\( \ket{\psi_1} \)};
-  \node (Q) at (2.7,-1) {\( \ket{\psi_2} \)};
+    \node (M) at (-2, 0) {\( \ket{\psi} \)};
+    \node (N) at (.7, .95) {\( \ket{+} \)};
+    \node (O) at (.7,-1) {\( \ket{-} \)};
+    \node (P) at (2.7, .95) {\( \ket{\psi_1} \)};
+    \node (Q) at (2.7,-1) {\( \ket{\psi_2} \)};
 
-  \draw[thick] (A) -- (B);
-  \draw[thick] (C) -- (D);
-  \draw[thick] (E) -- (F);
-  \draw[thick] (G) -- (H);
-  \draw[thick] (I) -- (J);
-  \draw[thick] (K) -- (L);
-\end{tikzpicture}
-\caption{Esempio di sovrapposizione lineare degli stati.}
-\label{sovrapposizione_stati}
+    \draw[thick] (A) -- (B);
+    \draw[thick] (C) -- (D);
+    \draw[thick] (E) -- (F);
+    \draw[thick] (G) -- (H);
+    \draw[thick] (I) -- (J);
+    \draw[thick] (K) -- (L);
+  \end{tikzpicture}
+  \caption{Esempio di sovrapposizione lineare degli stati.}
+  \label{sovrapposizione_stati}
 \end{figure}
 \[
-\ket{\psi_1} = a_+^{(1)} \ket{+} + a_-^{(1)} \ket{-}
+  \ket{\psi_1} = a_+^{(1)} \ket{+} + a_-^{(1)} \ket{-}
 \]
 \[
-\ket{\psi_2} = a_+^{(2)} \ket{+} + a_-^{(2)} \ket{-}
+  \ket{\psi_2} = a_+^{(2)} \ket{+} + a_-^{(2)} \ket{-}
 \]
 Sovrapposizione
 \[
-\ket{\psi} = c_1 \ket{\psi_1} + c_2 \ket{\psi_2}
+  \ket{\psi} = c_1 \ket{\psi_1} + c_2 \ket{\psi_2}
 \]
 Quando misuro, sapendo che
 \[
-c_1 = c_2 = \frac{1}{\sqrt{2}}
+  c_1 = c_2 = \frac{1}{\sqrt{2}}
 \]
 per semplicità, e 
 \[
-\ket{\psi} = \frac{1}{\sqrt{2}} \left( \left( a_+^{(1)} + a_+^{(2)} \right) \ket{+} + \left( a_-^{(1)} + a_-^{(2)} \right) \ket{-} \right)
+  \ket{\psi} = \frac{1}{\sqrt{2}} \left(
+    \left(
+      a_+^{(1)} + a_+^{(2)}
+    \right) \ket{+} + \left(
+      a_-^{(1)} + a_-^{(2)}
+    \right) \ket{-}
+  \right)
 \]
 ricavo le probabilità
 \begin{align*}
-P_\pm &= \left| a_\pm^{(1)} + a_\pm^{(2)} \right|^2 = \\
-&= \left| a_\pm^{(1)} \right|^2 + \left| a_\pm^{(2)} \right|^2 + \left( a_+^{(1)}\right)^* a_\pm^{(2)} + \left( a_\pm^{(2)} \right)^* a_\pm^{(1)} \neq \\
-&\neq P_\pm^{(1)} + P_\pm^{(2)}
+  P_\pm
+  &= \left| a_\pm^{(1)} + a_\pm^{(2)} \right|^2 \\
+  &= \left| a_\pm^{(1)} \right|^2 + \left| a_\pm^{(2)} \right|^2
+    + \left( a_+^{(1)}\right)^* a_\pm^{(2)}
+    + \left( a_\pm^{(2)} \right)^* a_\pm^{(1)} \\
+  &\neq P_\pm^{(1)} + P_\pm^{(2)}
 \end{align*}
 Allora suppongo che ci sia un prodotto scalare: bra-ket.
 \[
-\ket{\psi}
+  \ket{\psi}
 \]
 \[
-\ket{\varphi} \rightarrow \mathrm{bra } \bra{\varphi}
+  \ket{\varphi} \rightarrow \mathrm{bra } \bra{\varphi}
 \]
 \[
-\text{prodotto scalare} \braket{\varphi|\psi}
+  \text{prodotto scalare} \braket{\varphi|\psi}
 \]
 e lo definisco con le proprietà
 \begin{enumerate}
-\item \(\braket{\varphi|\psi} = (\braket{\psi|\varphi})^*\)
-\item \(\braket{\varphi|\varphi} \geq 0\)
-\item se \(\ket{\psi} = a \ket{1} + b \ket{2}\) allora
-\[
-\braket{\varphi|\psi} = a \braket{\varphi|1} + b \braket{\varphi|2}
-\]
+  \item \(\braket{\varphi|\psi} = (\braket{\psi|\varphi})^*\)
+  \item \(\braket{\varphi|\varphi} \geq 0\)
+  \item se \(\ket{\psi} = a \ket{1} + b \ket{2}\) allora
+    \[
+      \braket{\varphi|\psi} = a \braket{\varphi|1} + b \braket{\varphi|2}
+    \]
 \end{enumerate}
 Così \(\ket{\psi} = a \ket{1} + b \ket{2}\) dà
 \begin{align*}
-\braket{\psi|w} &\stackrel{(1)}{=} \left( \braket{w|\psi} \right)^* \\
-&\stackrel{(3)}{=} \left( a \braket{w|1} + b \braket{w|2} \right)^* \\
-&\stackrel{(2)}{=} a^* \braket{1|w} + b^* \braket{2|w} \\
-&\stackrel{(3)}{=} \left( a^* \bra{1} + b^* \bra{2} \right) \ket{w}
+  \braket{\psi|w}
+  &\stackrel{(1)}{=} \left( \braket{w|\psi} \right)^* \\
+  &\stackrel{(3)}{=} \left( a \braket{w|1} + b \braket{w|2} \right)^* \\
+  &\stackrel{(2)}{=} a^* \braket{1|w} + b^* \braket{2|w} \\
+  &\stackrel{(3)}{=} \left( a^* \bra{1} + b^* \bra{2} \right) \ket{w}
 \end{align*}
 cioè
 \[
-\bra{\psi} = a^* \bra{1} + b^* \bra{2}
+  \bra{\psi} = a^* \bra{1} + b^* \bra{2}
 \]
 Stati esaustivi ed esclusivi è dato da
 \[
-\braket{+|+} = \braket{-|-}  = 1 \quad \text{esaustivo}
+  \braket{+|+} = \braket{-|-}  = 1 \quad \text{esaustivo}
 \]
 \[
-\braket{+|-} = \braket{-|+} = 0 \quad \text{esclusivo}
+  \braket{+|-} = \braket{-|+} = 0 \quad \text{esclusivo}
 \]
 Quindi
 \[
-P_\pm = \left| \braket{\pm|\psi} \right|^2 = \left| \Braket{\pm|\left( a_+ \ket{+} + a_- \ket{-} \right)} \right|^2 = |a_\pm|^2
+  P_\pm
+  = \left| \braket{\pm|\psi} \right|^2
+  = \left| \Braket{\pm|\left( a_+ \ket{+} + a_- \ket{-} \right)} \right|^2
+  = |a_\pm|^2
 \]
 Ad esempio,
 \[
-\ket{\psi_1} = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-})
+  \ket{\psi_1} = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-})
 \]
 \[
-\ket{\psi_2} = \frac{1}{\sqrt{2}} (\ket{+} - \ket{-})
+  \ket{\psi_2} = \frac{1}{\sqrt{2}} (\ket{+} - \ket{-})
 \]
 \[
-P_\pm = \frac{1}{2}
+  P_\pm = \frac{1}{2}
 \]
 tuttavia non so se \(\psi_1\) e \(\psi_2\) sono uguali. Infatti,
 \[
-\braket{\psi_1|\psi_2} = \frac{1}{2} (\bra{+} + \bra{-})(\ket{+} - \ket{-}) = \frac{1}{2} (1 + 0 + 0 - 1) = 0
+  \braket{\psi_1|\psi_2}
+  = \frac{1}{2} (\bra{+} + \bra{-})(\ket{+} - \ket{-})
+  = \frac{1}{2} (1 + 0 + 0 - 1)
+  = 0
 \]
 cioè sono ortogonali, quindi sono diversi pur avendo la stessa probabilità. Inoltre,
 \[
-\braket{\psi_1|\psi_1} = \braket{\psi_2|\psi_2} = 1
+  \braket{\psi_1|\psi_1} = \braket{\psi_2|\psi_2} = 1
 \]
 Quindi se dallo stato \(\ket{\psi_1}\) misuro \(\ket{+}\) e da qui misuro la probabilità associata allo stato \(\ket{\psi_2}\), classicamente otterrei 0, mentre qui ho la rigenerazione di \(\ket{\psi_2}\).
 \[
-\left| \braket{\psi_2|+} \right|^2 = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}, \quad \text{cioè il 50\%}.
+  \left| \braket{\psi_2|+} \right|^2
+  = \frac{1}{2} \left| \left( \bra{+} + \bra{-} \right) \ket{+} \right|^2
+  = \frac{1}{2},
+  \quad \text{cioè il 50\%}.
 \]
 La misura quindi modifica lo stato. Allo stesso modo, se non eseguo nessuna misura, la sovrapposizione è data da
 \begin{align*}
-\ket{\varphi} &= \frac{1}{\sqrt{2}} \left( \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right) + \frac{1}{\sqrt{2}} \left( \ket{+} - \ket{-} \right) \right) = \\
-&= \frac{1}{2} \left( \ket{+} + \ket{+} + \ket{-} - \ket{-} \right) = \\
-&= \ket{+}
+  \ket{\varphi}
+  &= \frac{1}{\sqrt{2}} \left(
+    \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right)
+      + \frac{1}{\sqrt{2}} \left( \ket{+} - \ket{-} \right)
+  \right) \\
+  &= \frac{1}{2} \left( \ket{+} + \ket{+} + \ket{-} - \ket{-} \right) \\
+  &= \ket{+}
 \end{align*}
 cioè è sparito \(\ket{-}\) (cfr. le onde in controfase).
 
@@ -184,17 +219,29 @@ cioè è sparito \(\ket{-}\) (cfr. le onde in controfase).
 \noindent
 Potrei avere
 \[
-\ket{\psi_A} = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right), \qquad \ket{\psi_B} = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
+  \ket{\psi_A}
+  = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right), \qquad \ket{\psi_B}
+  = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
 \]
 e allora
 \[
-\braket{\psi_A|\psi_B} = \frac{1}{2} \left( \bra{+} - i \bra{-} \right) \left( \ket{+} - i \ket{-} \right) = \frac{1}{2} (1 - 1) = 0
+  \braket{\psi_A|\psi_B}
+  = \frac{1}{2} \left( \bra{+} - i \bra{-} \right)
+    \left( \ket{+} - i \ket{-} \right)
+  = \frac{1}{2} (1 - 1) = 0
 \]
 \[
-\left| \braket{\psi_A|+} \right|^2 = \left| \frac{1}{\sqrt{2}} \left( \bra{+} - i \bra{-} \right) \ket{+} \right|^2 = \frac{1}{2}
+  \left| \braket{\psi_A|+} \right|^2
+  = \left|
+    \frac{1}{\sqrt{2}} \left( \bra{+} - i \bra{-} \right) \ket{+}
+  \right|^2
+  = \frac{1}{2}
 \]
 \[
-\ket{\varphi} = \frac{1}{\sqrt{2}} \left( \ket{\psi_A} + \ket{\psi_B} \right) = \frac{1}{2} \left( \ket{+} + i \ket{-} + \ket{+} - i \ket{-} \right) = \ket{+}
+  \ket{\varphi}
+  = \frac{1}{\sqrt{2}} \left( \ket{\psi_A} + \ket{\psi_B} \right)
+  = \frac{1}{2} \left( \ket{+} + i \ket{-} + \ket{+} - i \ket{-} \right)
+  = \ket{+}
 \]
 proprio come prima.
 
@@ -202,35 +249,42 @@ proprio come prima.
 \noindent
 Quindi se ho due stati
 \[
-\ket{\psi} = a_+ \ket{+} + a_- \ket{-}
+  \ket{\psi} = a_+ \ket{+} + a_- \ket{-}
 \]
 \[
-\ket{\varphi} = b_+ \ket{+} + b_- \ket{-}
+  \ket{\varphi} = b_+ \ket{+} + b_- \ket{-}
 \]
 allora
 \[
-\braket{\varphi|\psi} = \left( b_+^* \bra{+} + b_-^* \bra{-} \right) \left( a_+ \ket{+} + a_- \ket{-} \right) = a_+ b_+^* + a_- b_-^*
+  \braket{\varphi|\psi}
+  = \left( b_+^* \bra{+} + b_-^* \bra{-} \right)
+    \left( a_+ \ket{+} + a_- \ket{-} \right)
+  = a_+ b_+^* + a_- b_-^*
 \]
 e questo è leggibile in termini di sovrapposizione
 \[
-\ket{w} = N \left( c \ket{\varphi} + d \ket{\psi} \right)
+  \ket{w} = N \left( c \ket{\varphi} + d \ket{\psi} \right)
 \]
-Allora \(\left| \braket{\varphi|\psi} \right|^2\) è una probabilità che ci sia la sovrapposizione degli stati.
+Allora \(\left| \braket{\varphi|\psi} \right|^2\) è una probabilità che ci sia
+la sovrapposizione degli stati.
 
 \bigskip
 \noindent
 Un altro esempio è
 \[
-\ket{\psi} = \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right)
+  \ket{\psi} = \frac{1}{\sqrt{2}} \left( \ket{+} + \ket{-} \right)
 \]
 \[
-\ket{\varphi} = \frac{1}{\sqrt{2}} \left( \ket{+} + e^{i \vartheta} \ket{-} \right)
+  \ket{\varphi} = \frac{1}{\sqrt{2}} \left(
+    \ket{+} + e^{i \vartheta} \ket{-}
+  \right)
 \]
 \[
-\left| \braket{\varphi|\psi} \right|^2 = \frac{1}{4} \left| 1 + e^{-i \vartheta} \right|^2
+  \left| \braket{\varphi|\psi} \right|^2
+  = \frac{1}{4} \left| 1 + e^{-i \vartheta} \right|^2
 \]
 Se faccio la misura
 \[
-\left| \braket{\varphi|+} \right|^2 = \frac{1}{2}
+  \left| \braket{\varphi|+} \right|^2 = \frac{1}{2}
 \]
 è sparita la fase, quindi è cambiato lo stato.
