@@ -2,10 +2,10 @@
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \draw (-5,0) -- (5,0);
-  \draw (0,-3) -- (0,1);
+  \draw[->] (-5,0) -- (5,0);
+  \draw[->] (0,-3) -- (0,1);
 
-  \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+  \draw[thick,smooth] plot file {./grafici/potenziale_particolare.dat};
 \end{tikzpicture}
 \caption{Andamento di un potenziale simmetrico, nullo all'infinito e con un punto di equilibrio stabile.}
 \label{particolare}
@@ -30,28 +30,28 @@ Da quello che già conosco mi aspetto uno spettro discreto non degenere, cioè d
   \node[draw] at (1,3) {\( \psi > 0 \)};
   \draw (-1.8,0.5) -- (1.8,0.5);
   \draw (0,0.2) -- (0,3);
-  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{1/\x});
-  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-1/\x});
+  \draw[thick] (.5,2) .. controls (.75,1.5) and (1,1) .. (1.7,.59);
+  \draw[thick] (-1.7,.59) .. controls (-1,1) and (-.75,1.5) .. (-.5,2);
 
   \draw (-1.8,-2.7) -- (1.8,-2.7);
   \draw (0,-0.2) -- (0,-3);
-  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{\x*\x/3 - 2.6});
-  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{\x*\x/3 - 2.6});
+  \draw[thick] (.5,-2.52) .. controls (.75,-2.5) and (1.25,-2.3) .. (1.7,-1.64);
+  \draw[thick] (-.5,-2.52) .. controls (-.75,-2.5) and (-1.25,-2.3) .. (-1.7,-1.64);
 
   \draw (2,3) -- (2,-3);
   \node[draw] at (5,3) {\( \psi < 0 \)};
   \draw (2.2,2.5) -- (5.8,2.5);
   \draw (4,0.2) -- (4,3);
   \begin{scope}[shift={(4,2.5)}]
-    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-1/\x});
-    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{1/\x});
+    \draw[thick] (.5,-2) .. controls (.75,-1.5) and (1,-1) .. (1.7,-.59);
+    \draw[thick] (-.5,-2) .. controls (-.75,-1.5) and (-1,-1) .. (-1.7,-.59);
   \end{scope}
 
   \draw (2.2,-0.7) -- (5.8,-0.7);
   \draw (4,-0.2) -- (4,-3);
   \begin{scope}[shift={(4,0)}]
-    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-\x*\x/3 - 1});
-    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-\x*\x/3 - 1});
+    \draw[thick] (.5,-1.08) .. controls (.75,-1.2) and (1.25,-1.5) .. (1.7,-1.96);
+    \draw[thick] (-.5,-1.08) .. controls (-.75,-1.2) and (-1.25,-1.5) .. (-1.7,-1.96);
   \end{scope}
 
   \node[draw] at (-3,3) {\( V > E \)};
@@ -60,7 +60,7 @@ Da quello che già conosco mi aspetto uno spettro discreto non degenere, cioè d
   \node (E) at (-2.5,-.8) {\(E\)};
   \draw (-4,-1) -- (-4,.5);
   \begin{scope}[scale=0.4, shift={(-10,0)}]
-    \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+    \draw[thick,smooth] plot file {./grafici/potenziale_particolare.dat};
   \end{scope}
 \end{tikzpicture}
 \caption{Trattazione qualitativa delle funzioni d'onda per potenziali \( V(x) > E \).}
@@ -74,29 +74,29 @@ Da quello che già conosco mi aspetto uno spettro discreto non degenere, cioè d
   \node[draw] at (1,3) {\( \psi > 0 \)};
   \draw (-1.8,0.5) -- (1.8,0.5);
   \draw (0,0.2) -- (0,3);
-  \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-\x*\x/3 + 2});
-  \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-\x*\x/3 + 2});
+  \draw[thick] (.5,1.92) .. controls (.75,1.85) and (1.25,1.6) .. (1.7,1.04);
+  \draw[thick] (-.5,1.92) .. controls (-.75,1.85) and (-1.25,1.6) .. (-1.7,1.04);
 
   \draw (-1.8,-2.7) -- (1.8,-2.7);
   \draw (0,-0.2) -- (0,-3);
   \begin{scope}[shift={(4,1)}]
-    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{\x*\x/3});
-    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{\x*\x/3});
+    \draw[thick] (.5,.08) .. controls (.75,.1) and (1.5,.75) .. (1.7,.96);
+    \draw[thick] (-.5,.08) .. controls (-.75,.1) and (-1.5,.75) .. (-1.7,.96);
   \end{scope}
   \draw (2,3) -- (2,-3);
   \node[draw] at (5,3) {\( \psi < 0 \)};
   \draw (2.2,2.5) -- (5.8,2.5);
   \draw (4,0.2) -- (4,3);
   \begin{scope}[shift={(0,-0.5)}]
-    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{-1/\x});
-    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{1/\x});
+    \draw[thick,smooth] (.5,-2) .. controls (.75,-1.25) and (1.25,-.75) .. (1.7,-.59);
+    \draw[thick,smooth] (-.5,-2) .. controls (-.75,-1.25) and (-1.25,-.75) .. (-1.7,-.59);
   \end{scope}
 
   \draw (2.2,-0.7) -- (5.8,-0.7);
   \draw (4,-0.2) -- (4,-3);
   \begin{scope}[shift={(4,-3)}]
-    \draw[thick, domain=.5:1.7, samples=200, smooth] plot(\x,{1/\x});
-    \draw[thick, domain=-1.7:-.5, samples=200, smooth] plot(\x,{-1/\x});
+    \draw[thick,smooth] (.5,2) .. controls (.75,1.25) and (1.25,.75) .. (1.7,.59);
+    \draw[thick,smooth] (-.5,2) .. controls (-.75,1.25) and (-1.25,.75) .. (-1.7,.59);
   \end{scope}
 
   \node[draw] at (-3,3) {\( V < E \)};
@@ -105,7 +105,7 @@ Da quello che già conosco mi aspetto uno spettro discreto non degenere, cioè d
   \node (E) at (-2.5,-.8) {\(E\)};
   \draw (-4,-1) -- (-4,.5);
   \begin{scope}[scale=0.4, shift={(-10,0)}]
-    \draw[thick, domain=-4.5:4.5, samples=200, smooth] plot(\x,{-2*exp(-\x*\x/4)});
+    \draw[thick,smooth] plot file {./grafici/potenziale_particolare.dat};
   \end{scope}
 \end{tikzpicture}
 \caption{Trattazione qualitativa delle funzioni d'onda per potenziali \( V(x) < E \).}
@@ -121,15 +121,15 @@ Se \( V(x) - E > 0 \) sempre, allora ho Figura \ref{V_gt_E_sempre} quindi non c'
   \draw (-5,0) -- (-1,0);
   \draw (-3,3) -- (-3,-.5);
   \begin{scope}[shift={(-3,1)}]
-    \draw[thick, domain=0:2, samples=200, smooth] plot(\x,{exp(-\x)});
-    \draw[thick, domain=-2:0, samples=200, smooth] plot(\x,{exp(\x)});
+    \draw[thick] (0,1) .. controls (.5,.5) and (1.5,.25) .. (2,0.13);
+    \draw[thick] (0,1) .. controls (-.5,.5) and (-1.5,.25) .. (-2,0.13);
   \end{scope}
   \node (A) at (-3,-1) {non derivabile};
 
   \draw (1,0) -- (5,0);
   \draw (3,3) -- (3,-.5);
   \begin{scope}[shift={(3,1)}]
-    \draw[thick, domain=-2:2, samples=200, smooth] plot(\x,{.25*\x*\x});
+    \draw[thick] (-2,1) .. controls (-1,-.5) and (1,-.5) .. (2,1);
   \end{scope}
   \node (B) at (3,-1) {non normalizzabile};
 \end{tikzpicture}
@@ -146,9 +146,12 @@ Se \( V(x) - E > 0 \) o \( V(x) - E < 0 \) a seconda delle regioni, ho Figura \r
   \draw (-5,0) -- (5,0);
   \draw (0,3) -- (0,-3);
 
-  \draw[thick, domain=-5:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*\x*\x)});
-  \draw[thick, dashed, domain=-5:5, samples=200, smooth] plot(\x,{3*\x*exp(-.25*\x*\x)});
-  \draw[thick, dotted, domain=0:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*(\x-1)*(\x-1))});
+  % \draw[thick, domain=-5:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*\x*\x)});
+  \draw[thick,smooth] plot file {./grafici/potenziale_particolare_1.dat};
+  % \draw[thick, dashed, domain=-5:5, samples=200, smooth] plot(\x,{3*\x*exp(-.25*\x*\x)});
+  \draw[thick,dashed,smooth] plot file {./grafici/potenziale_particolare_2.dat};
+  % \draw[thick, dotted, domain=0:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*(\x-1)*(\x-1))});
+  \draw[thick,dotted,smooth] plot file {./grafici/potenziale_particolare_3.dat};
 
   \draw[dashed] (-4,-3) -- (-4,3);
   \node (mx0) at (-4.5,-.5) {\(-x_0\)};
