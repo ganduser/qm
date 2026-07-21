@@ -146,11 +146,8 @@ Se \( V(x) - E > 0 \) o \( V(x) - E < 0 \) a seconda delle regioni, ho Figura \r
   \draw (-5,0) -- (5,0);
   \draw (0,3) -- (0,-3);
 
-  % \draw[thick, domain=-5:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*\x*\x)});
   \draw[thick,smooth] plot file {./grafici/potenziale_particolare_1.dat};
-  % \draw[thick, dashed, domain=-5:5, samples=200, smooth] plot(\x,{3*\x*exp(-.25*\x*\x)});
   \draw[thick,dashed,smooth] plot file {./grafici/potenziale_particolare_2.dat};
-  % \draw[thick, dotted, domain=0:5, samples=200, smooth] plot(\x,{2.5*exp(-.25*(\x-1)*(\x-1))});
   \draw[thick,dotted,smooth] plot file {./grafici/potenziale_particolare_3.dat};
 
   \draw[dashed] (-4,-3) -- (-4,3);
