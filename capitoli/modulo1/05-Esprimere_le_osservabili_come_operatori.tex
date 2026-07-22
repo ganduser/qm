@@ -1,108 +1,140 @@
 \subsection{Esprimere le osservabili come operatori}
-Il sistema si presenta come combinazione di stati \(\ket{e_i}\) e quando misuro ottengo un \(\lambda_i\) reale associato a \(\ket{e_i}\). Chiamo \(O\) questa osservabile. Allora
+Il sistema si presenta come combinazione di stati \(\ket{e_i}\) e quando misuro
+ottengo un \(\lambda_i\) reale associato a \(\ket{e_i}\). Chiamo \(O\) questa
+osservabile. Allora
 \begin{align*}
-\text{valore medio} \quad \braket{O}_\psi &= \sum_i \lambda_i P_i = \sum_i \lambda_i \left| \braket{e_i|\psi} \right|^2 \\
-&\stackrel{\text{def}}{=} \braket{\psi|O|\psi}
+  \text{valore medio} \quad \braket{O}_\psi
+  &= \sum_i \lambda_i P_i
+  = \sum_i \lambda_i \left| \braket{e_i|\psi} \right|^2 \\
+  &\stackrel{\text{def}}{=} \braket{\psi|O|\psi}
 \end{align*}
 \[
-\text{operatore} \quad O = \sum_i \lambda_i \ket{e_i} \bra{e_i}
+  \text{operatore} \quad O = \sum_i \lambda_i \ket{e_i} \bra{e_i}
 \]
 \[
-O \ket{\psi} = \sum_i \lambda_i \ket{e_i} \braket{e_i|\psi}
+  O \ket{\psi} = \sum_i \lambda_i \ket{e_i} \braket{e_i|\psi}
 \]
 \begin{align*}
-\braket{O}_\psi &= \sum_{ij} \braket{\psi|e_i} \braket{e_i|O|e_j} \braket{e_j|\psi} = \\
-&= \sum_{ijm} \braket{e_i|\psi} \underbrace{\braket{e_i|\lambda_m|e_m}}_{\lambda_m \delta_{im}} \underbrace{\braket{e_m|e_j}}_{\delta_{mj}} \braket{e_j|\psi} = \\
-&= \sum_i \lambda_i \braket{\psi|e_i} \braket{e_i|\psi} = \\
-&= \sum_i \lambda_i \left| \braket{\psi|e_i} \right|^2
+  \braket{O}_\psi
+  &= \sum_{ij} \braket{\psi|e_i} \braket{e_i|O|e_j} \braket{e_j|\psi} \\
+  &= \sum_{ijm} \braket{e_i|\psi}
+    \underbrace{\braket{e_i|\lambda_m|e_m}}_{\lambda_m \delta_{im}}
+    \underbrace{\braket{e_m|e_j}}_{\delta_{mj}} \braket{e_j|\psi} \\
+  &= \sum_i \lambda_i \braket{\psi|e_i} \braket{e_i|\psi} \\
+  &= \sum_i \lambda_i \left| \braket{\psi|e_i} \right|^2
 \end{align*}
 \[
-\braket{O}_\psi = \sum_i \lambda_i \left| \braket{\psi|e_i} \right|^2 \qquad \braket{O}_\psi = \braket{\psi|O|\psi}
+  \braket{O}_\psi = \sum_i \lambda_i \left| \braket{\psi|e_i} \right|^2
+  \qquad
+  \braket{O}_\psi = \braket{\psi|O|\psi}
 \]
 Inoltre, la matrice \(O\) è diagonale
 \[
-O = \begin{pmatrix}
-\lambda_1 & 0 \\
-0 & \ddots
-\end{pmatrix}
+  O = \begin{pmatrix}
+    \lambda_1 & 0 \\
+    0 & \ddots
+  \end{pmatrix}
 \]
 In particolare
 \[
-\lambda_i \text{ è un autovalore reale}
+  \lambda_i \text{ è un autovalore reale}
 \]
 \[
-\ket{e_i} \text{ è un autostato}
+  \ket{e_i} \text{ è un autostato}
 \]
-Quindi ogni osservabile è un operatore tale che ammette autovalori reali e una BON di autostati e viceversa.
+Quindi ogni osservabile è un operatore tale che ammette autovalori reali e una
+BON di autostati e viceversa.
 
 \subsubsection{Esempio: operatore come matrice}
 \[
-O = \ket{\psi_1}\bra{\psi_2} + \ket{\psi_2}\bra{\psi_1}
+  O = \ket{\psi_1}\bra{\psi_2} + \ket{\psi_2}\bra{\psi_1}
 \]
 \[
-\ket{\psi_1} = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right) \qquad \ket{\psi_2} = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
+  \ket{\psi_1} = \frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right)
+  \qquad
+  \ket{\psi_2} = \frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right)
 \]
 Poiché \(\braket{\pm|\pm} = 1\) e \(\braket{\pm|\mp} = 0\), ho la BON e
 \begin{align*}
-O_{11} &= \braket{+|\frac{1}{\sqrt{2}} \left( \ket{+} + i \ket{-} \right) \frac{1}{\sqrt{2}} \left( \bra{+} + i \bra{-} \right)|+} + \\
-&+ \braket{+|\frac{1}{\sqrt{2}} \left( \ket{+} - i \ket{-} \right) \frac{1}{\sqrt{2}} \left( \bra{+} - i \bra{-} \right)|+} = \\
-&= \frac{1}{2} + \frac{1}{2} = 1
+  O_{11}
+  &= \braket{+|\frac{1}{\sqrt{2}} \left(
+    \ket{+} + i \ket{-}
+  \right) \frac{1}{\sqrt{2}} \left(
+    \bra{+} + i \bra{-}
+  \right)|+} + \\
+  &\qquad + \braket{+|\frac{1}{\sqrt{2}} \left(
+    \ket{+} - i \ket{-}
+  \right) \frac{1}{\sqrt{2}} \left(
+    \bra{+} - i \bra{-}
+  \right)|+} \\
+  &= \frac{1}{2} + \frac{1}{2} = 1
 \end{align*}
 \[
-O_{12} = -\frac{1}{2} + \frac{1}{2} = 0 \qquad O_{21} = \frac{1}{2} - \frac{1}{2} = 0 \qquad O_{22} = -1
+  O_{12} = -\frac{1}{2} + \frac{1}{2} = 0 
+  \qquad
+  O_{21} = \frac{1}{2} - \frac{1}{2} = 0 \qquad O_{22} = -1
 \]
 \[
-O = \begin{pmatrix}
-1 & 0 \\
-0 & -1
-\end{pmatrix}
+  O = \begin{pmatrix}
+    1 & 0 \\
+    0 & -1
+  \end{pmatrix}
 \]
 
 \subsubsection{Esempio: proiezione di uno stato}
 \[
-\ket{\psi} = \frac{1}{2} \ket{1} + \frac{1}{\sqrt{2}} \ket{2} + \frac{1}{\sqrt{2}} \ket{3}
+  \ket{\psi} = \frac{1}{2} \ket{1}
+    + \frac{1}{\sqrt{2}} \ket{2}
+    + \frac{1}{\sqrt{2}} \ket{3}
 \]
 Normalizzo
 \[
-P_i = \frac{|a_i|^2}{\sum_{k=1}^3 |a_k|^2} = \begin{cases}
-1/5 \\
-2/5 \\
-2/5
-\end{cases}
+  P_i = \frac{|a_i|^2}{\sum_{k=1}^3 |a_k|^2} = \begin{cases}
+    1/5 \\
+    2/5 \\
+    2/5
+  \end{cases}
 \]
-e ho le singole probabilità. La probabilità che non si trovi in \(\ket{2}\) è \(1 - P_2 = 3/5\).
+e ho le singole probabilità. La probabilità che non si trovi in
+\(\ket{2}\) è \(1 - P_2 = 3/5\).
 
 \bigskip
 \noindent
 Potrei definire un'osservabile
 \[
-O = \lambda \ket{1}\bra{1} + \lambda \ket{3}\bra{3} + \lambda' \ket{2}\bra{2}
+  O = \lambda \ket{1}\bra{1} + \lambda \ket{3}\bra{3} + \lambda' \ket{2}\bra{2}
 \]
-e se misuro che il sistema si trova in \(\ket{2}\) so già, altrimenti se non si trova in \(\ket{2}\) è nello stato
+e se misuro che il sistema si trova in \(\ket{2}\) so già, altrimenti se non si
+trova in \(\ket{2}\) è nello stato
 \[
-\ket{\psi'} = \frac{1}{2} \ket{1} + \frac{1}{\sqrt{2}} \ket{3}
+  \ket{\psi'} = \frac{1}{2} \ket{1} + \frac{1}{\sqrt{2}} \ket{3}
 \]
 cioè proietto \(\ket{\psi}\) attraverso un operatore \(P\) tale che \(P^2 = P\) attraverso
 \[
-P_{\ket{S}} = \ket{S}\bra{S}, \qquad \text{non } S \rightarrow P = \mathbbm{1} - \ket{S}\bra{S}
+  P_{\ket{S}} = \ket{S}\bra{S},
+  \qquad
+  \text{non } S \rightarrow P = \mathbbm{1} - \ket{S}\bra{S}
 \]
 
 \bigskip
 \noindent
 Se si trova in \(\ket{2}\) e voglio calcolare la probabiltià con
 \[
-\ket{\varphi} = \frac{1}{\sqrt{2}} \left( \ket{2} - \ket{3} \right)
+  \ket{\varphi} = \frac{1}{\sqrt{2}} \left( \ket{2} - \ket{3} \right)
 \]
 \[
-\left| \braket{2|\varphi} \right|^2 = \frac{1}{2} = P
+  \left| \braket{2|\varphi} \right|^2 = \frac{1}{2} = P
 \]
 Inoltre,
 \[
-\left| \braket{\varphi|\psi} \right|^2 = 0
+  \left| \braket{\varphi|\psi} \right|^2 = 0
 \]
-cioè \(\ket{\varphi} \perp \ket{\psi}\) ed è l'informazione sul sistema \(\rightarrow\) il proiettore lascia invariato lo \(\ket{\varphi}\), infatti
+cioè \(\ket{\varphi} \perp \ket{\psi}\) ed è l'informazione sul sistema
+\(\rightarrow\) il proiettore lascia invariato lo \(\ket{\varphi}\), infatti
 \[
-P = \mathbbm{1} - \ket{\varphi}\bra{\varphi}, \qquad P \ket{\psi} = \ket{\psi}
+  P = \mathbbm{1} - \ket{\varphi}\bra{\varphi},
+  \qquad
+  P \ket{\psi} = \ket{\psi}
 \]
 e quindi la probabilità che il sistema sia in \(\ket{2}\).
 
@@ -110,5 +142,5 @@ e quindi la probabilità che il sistema sia in \(\ket{2}\).
 \noindent
 Quindi il proiettore
 \[
-P_\varphi = \ket{\varphi}\bra{\varphi}
+  P_\varphi = \ket{\varphi}\bra{\varphi}
 \]
