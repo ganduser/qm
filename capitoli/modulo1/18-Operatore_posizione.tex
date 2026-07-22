@@ -28,10 +28,10 @@ I problemi sorgono nell'esprimere la condizione di ortonormalità, perché
 \begin{cases}
 \ket{\psi} = \int_{-\infty}^{+\infty} \ket{x} \braket{x|\psi} \, dx \\
 \braket{x'|\psi} = \psi(x')
-\end{cases} \quad \Rightarrow \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \braket{x|\psi} \, dx \quad \Rightarrow
+\end{cases} \quad \implies \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \braket{x|\psi} \, dx \quad \implies
 \]
 \[
-\Rightarrow \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \psi(x) \, dx
+\implies \quad \psi(x') = \int_{-\infty}^{+\infty} \braket{x'|x} \psi(x) \, dx
 \]
 Cioè ho introdotto un oggetto tale che
 \[
@@ -71,7 +71,7 @@ Infatti
 Poiché \(\psi\) è generica, \(f(0) \delta(x) = f(x) \delta(x)\).
 \item \(\delta(ax) = \frac{1}{a} \delta(x)\)
 \[
-\int_{-\infty}^{+\infty} \delta(ax) \psi(x) \, dx = \left[ ax = t \; \Rightarrow \; dx = \frac{dt}{a} \right] = 
+\int_{-\infty}^{+\infty} \delta(ax) \psi(x) \, dx = \left[ ax = t \; \implies \; dx = \frac{dt}{a} \right] = 
 \]
 \[
 = \frac{1}{a} \int_{-\infty}^{+\infty} \delta(t) \psi \left( \frac{t}{a} \right) \, dt = \frac{1}{a} \psi(0) = \frac{1}{a} \int_{-\infty}^{+\infty} \delta(x) \psi(x) \, dx 
@@ -144,14 +144,14 @@ Ad es.
 \end{align*}
 
 \subsubsection{Esempio: operatore parità}
-\( \braket{x|\mathcal{P}|\psi} = \psi(-x) \) con \( \braket{x|\psi} = \psi(x) \Rightarrow \bra{x} \mathcal{P} = \bra{-x} \).
+\( \braket{x|\mathcal{P}|\psi} = \psi(-x) \) con \( \braket{x|\psi} = \psi(x) \implies \bra{x} \mathcal{P} = \bra{-x} \).
 \begin{align*}
 (\braket{\psi|\mathcal{P}|x})^* &= \left( \int_{-\infty}^{+\infty} \braket{\psi|x'} \braket{x'|\mathcal{P}|x} \, dx' \right)^* = \\
 &= \left( \int_{-\infty}^{+\infty} \psi^*(x') \delta(-x' - x) \, dx' \right)^* = \\
 &= \int_{-\infty}^{+\infty} \psi(x') \delta(-x' - x) \, dx' = \\
 &= \psi(-x)
 \end{align*}
-quindi \( \mathcal{P} \) è hermitiano \( \Rightarrow \mathcal{P} \ket{x} = \ket{-x} \Rightarrow \mathcal{P}^2 \ket{x} = \ket{x} \Rightarrow \mathcal{P}^2 = \mathbbm{1} \Rightarrow \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \Rightarrow \mathcal{P} \) è unitario. \( \mathcal{P}^2 = \mathbbm{1} \Rightarrow \) autovalori \( \pm 1 \).
+quindi \( \mathcal{P} \) è hermitiano \( \implies \mathcal{P} \ket{x} = \ket{-x} \implies \mathcal{P}^2 \ket{x} = \ket{x} \implies \mathcal{P}^2 = \mathbbm{1} \implies \mathcal{P} \mathcal{P} = \mathcal{P}^\dag \mathcal{P} = \mathbbm{1} \implies \mathcal{P} \) è unitario. \( \mathcal{P}^2 = \mathbbm{1} \implies \) autovalori \( \pm 1 \).
 
 
 \bigskip
@@ -161,13 +161,13 @@ Le autofunzioni sono
 \braket{x|\mathcal{P}|\varphi_{-}} = \begin{cases}
 - \varphi_{-}(x) \\
 \varphi_{-}(-x)
-\end{cases} \quad \Rightarrow \quad \varphi_{-} \text{ funzione dispari}
+\end{cases} \quad \implies \quad \varphi_{-} \text{ funzione dispari}
 \]
 \[
 \braket{x|\mathcal{P}|\varphi_{+}} = \begin{cases}
 \varphi_{+}(x) \\
 \varphi_{+}(-x)
-\end{cases} \quad \Rightarrow \quad \varphi_{+} \text{ funzione pari}
+\end{cases} \quad \implies \quad \varphi_{+} \text{ funzione pari}
 \]
 \[
 f(x) = \frac{f(x) + f(-x)}{2} + \frac{f(x) - f(-x)}{2}.

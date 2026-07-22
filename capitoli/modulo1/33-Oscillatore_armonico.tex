@@ -16,14 +16,14 @@ e anche \( \braket{x|n} = \psi_n(x) \).
 \noindent
 \textbf{Metodo di Heisenberg}: avrò alcune proprietà sugli \( E_n \).
 \begin{enumerate}
-\item \( \left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right) \ket{n} = E_n \ket{n}  \Rightarrow \braket{n|\left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right)|n} = E_n \braket{n|n} \). 
+\item \( \left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right) \ket{n} = E_n \ket{n}  \implies \braket{n|\left( \frac{\hat{p}^2}{2m} + \frac{1}{2} m \omega^2 \hat{x}^2 \right)|n} = E_n \braket{n|n} \). 
 \[
 E_n = \sum_k \frac{1}{2m} \braket{n|\hat{p}|k} \braket{k|\hat{p}|n} + \sum_k \frac{1}{2} m \omega^2 \braket{n|\hat{x}|k} \braket{k|\hat{x}|n} =
 \]
 \[
 = \frac{1}{2m} \sum_k \left| \braket{n|\hat{p}|k} \right|^2 + \frac{1}{2} m \omega^2 \sum_k \left| \braket{n|\hat{x}|k} \right|^2 \geq 0.
 \]
-Ma se per assurdo \( E_n = 0 \Rightarrow \braket{n|\hat{p}|k} = \braket{n|\hat{x}|k} = 0, \forall \ket{k} \), quindi
+Ma se per assurdo \( E_n = 0 \implies \braket{n|\hat{p}|k} = \braket{n|\hat{x}|k} = 0, \forall \ket{k} \), quindi
 \[
 \sum_k \left( \braket{n|\hat{x}|k} \braket{k|\hat{p}|n} - \braket{n|\hat{p}|k} \braket{k|\hat{x}|n} \right) = 0,
 \]
@@ -45,10 +45,10 @@ e poi so che
 \end{align*}
 Allora ho due equazioni, da cui 
 \[
-\braket{n|\hat{x}|k} = \frac{i\hbar}{m(E_k - E_n)} \frac{(-i\hbar m \omega^2)}{E_k - E_n} \braket{n|\hat{x}|k} \; \Rightarrow
+\braket{n|\hat{x}|k} = \frac{i\hbar}{m(E_k - E_n)} \frac{(-i\hbar m \omega^2)}{E_k - E_n} \braket{n|\hat{x}|k} \; \implies
 \]
 \[
-\Rightarrow \; (E_k - E_n)^2 \braket{n|\hat{x}|k} = \hbar^2\omega^2 \braket{n|\hat{x}|k}
+\implies \; (E_k - E_n)^2 \braket{n|\hat{x}|k} = \hbar^2\omega^2 \braket{n|\hat{x}|k}
 \]
 cioè l'elemento
 \[

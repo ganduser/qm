@@ -12,7 +12,7 @@ Voglio determinare lo spettro di \( \mathcal{H} \) e passo attraverso \( [N, \ha
 \]
 Se conosco un autostato di \( N \), sia \( \ket{z} \), allora
 \[
-N \ket{z} = \lambda_z \ket{z} \; \Rightarrow \; \begin{cases}
+N \ket{z} = \lambda_z \ket{z} \; \implies \; \begin{cases}
 N \hat{a}^\dag \ket{z} = (\lambda_z + 1) \hat{a}^\dag \ket{z} \\
 N \hat{a} \ket{z} = (\lambda_z - 1) \hat{a} \ket{z}
 \end{cases}.
@@ -26,7 +26,7 @@ N \hat{a} \ket{z} &= (\hat{a}N - \hat{a}) \ket{z} = (\lambda_z - 1) \hat{a} \ket
 
 \bigskip
 \noindent
-Inoltre, \( N \ket{z} = \lambda_z \ket{z} \Rightarrow \lambda_z \geq 0 \).
+Inoltre, \( N \ket{z} = \lambda_z \ket{z} \implies \lambda_z \geq 0 \).
 
 \bigskip
 \noindent
@@ -64,10 +64,10 @@ Per calcolare \( K_n \) normalizzo \( \braket{0|0} = 1 \). Allora
 \begin{cases}
 \ket{n} = K_n (\hat{a}^\dag)^n \ket{0} \\
 \braket{n|n} = 1
-\end{cases} \quad \Rightarrow
+\end{cases} \quad \implies
 \]
 \begin{align*}
-\Rightarrow \quad 1 &= |K_n|^2 \braket{0|(\hat{a})^n(\hat{a}^\dag)^n|0} = \\
+\implies \quad 1 &= |K_n|^2 \braket{0|(\hat{a})^n(\hat{a}^\dag)^n|0} = \\
 &= |K_n|^2 \braket{0|(\hat{a})^{n - 1} \hat{a} \hat{a}^\dag (\hat{a}^\dag)^{n - 1}|0} = \\
 &= |K_n|^2 \braket{0|(\hat{a})^{n - 1} (\hat{a}^\dag \hat{a} + 1) (\hat{a}^\dag)^{n - 1}|0} = \\
 &= |K_n|^2 \braket{0|(\hat{a})^{n - 1} (N + 1) (\hat{a}^\dag)^{n - 1}|0} = \\
@@ -107,10 +107,10 @@ e usando \( \braket{n|m} = \delta_{nm} \), allora
 \begin{cases}
 \braket{m|\hat{a}^\dag|n} = \delta_{m, n + 1}\sqrt{n + 1} \\
 \braket{m|\hat{a}|n} = \delta_{m, n - 1}\sqrt{n}
-\end{cases} \quad \Rightarrow 
+\end{cases} \quad \implies 
 \]
 \[
-\Rightarrow \quad \begin{cases}
+\implies \quad \begin{cases}
 \braket{m|\hat{x}|n} = \sqrt{\frac{\hbar}{2m\omega}} (\delta_{m, n - 1}\sqrt{n} + \delta_{m, n + 1}\sqrt{n + 1}) \\
 \braket{m|\hat{p}|n} = -i \sqrt{\frac{m\hbar\omega}{2}} (\delta_{m, n - 1}\sqrt{n} - \delta_{m, n + 1}\sqrt{n + 1})
 \end{cases}
@@ -144,9 +144,9 @@ Le indeterminazioni sono
 \begin{cases}
 \braket{n|\Delta^2 \hat{x}|n} = \braket{n|\hat{x}^2|n} \\
 \braket{n|\Delta^2 \hat{p}|n} = \braket{n|\hat{p}^2|n}
-\end{cases} \quad \Rightarrow
+\end{cases} \quad \implies
 \]
 \[
-\Rightarrow \quad \Delta^2 \hat{x} \Delta^2 \hat{p} = \hbar^2 \left( n + \frac{1}{2} \right)^2 \geq \frac{\hbar^2}{4}
+\implies \quad \Delta^2 \hat{x} \Delta^2 \hat{p} = \hbar^2 \left( n + \frac{1}{2} \right)^2 \geq \frac{\hbar^2}{4}
 \]
 e \( n = 0 \) dà lo stato a minima indeterminazione.

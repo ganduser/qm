@@ -5,10 +5,10 @@ So che \( \hat{q} \ket{q} = q \ket{q} \), dunque
 \]
 Per l'impulso voglio che esista \( \ket{k} \) tale che \( \hat{p} \ket{k} = \hbar k \ket{k} \). Scelgo la base dei \( \ket{q} \) e faccio
 \[
-\braket{q|\hat{p}|k} = \hbar k \braket{q|k}, \quad \text{con } \braket{q|k} = \psi_k(q) \quad \Rightarrow
+\braket{q|\hat{p}|k} = \hbar k \braket{q|k}, \quad \text{con } \braket{q|k} = \psi_k(q) \quad \implies
 \]
 \[
-\Rightarrow \quad -i \hbar \frac{d}{dq} \psi_k(q) = \hbar k \psi_k(q) \quad \Rightarrow \quad \psi_k(q) = N_k e^{ikq}.
+\implies \quad -i \hbar \frac{d}{dq} \psi_k(q) = \hbar k \psi_k(q) \quad \implies \quad \psi_k(q) = N_k e^{ikq}.
 \]
 Poiché
 \[
@@ -25,7 +25,7 @@ Allora
 &= \int_{\mathbb{R}^2} |N_k|^2 e^{i (k - k^\prime) q} \, dq \, dk = \\
 &= \lim_{\lambda \rightarrow +\infty} \int_{-\infty}^{+\infty} |N_k|^2 \left[ \frac{e^{i (k - k^\prime) q}}{i (k - k^\prime)} \right]_{-\lambda}^{+\lambda} \, dk = \\
 &= \lim_{\lambda \rightarrow +\infty} \int_{-\infty}^{+\infty} |N_k|^2 \frac{e^{i (k - k^\prime) \lambda} - e^{-i (k - k^\prime) \lambda}}{i (k - k^\prime)} \, dk = \\
-&= 2 \pi |N_k|^2 \qquad \Rightarrow \qquad |N_k|^2 = \frac{1}{2\pi}
+&= 2 \pi |N_k|^2 \qquad \implies \qquad |N_k|^2 = \frac{1}{2\pi}
 \end{align*}
 \[
 \psi_k(q) = \frac{1}{\sqrt{2\pi}} e^{ikq}

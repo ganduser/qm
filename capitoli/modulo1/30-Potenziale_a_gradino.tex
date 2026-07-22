@@ -45,12 +45,12 @@ Allora la \( \psi'' \) è discontinua perché lo è \( V \), ma quindi \( \psi \
 \noindent
 Per \( x < 0 \) ho \( \psi_1 \) tale che 
 \[
-\psi_1''(x) = -\frac{2m}{\hbar^2} E \psi_1(x) \; \Rightarrow \; \psi_1(x) = A e^{ikx} + B e^{-ikx}, \; k = \frac{\sqrt{2mE}}{\hbar}.
+\psi_1''(x) = -\frac{2m}{\hbar^2} E \psi_1(x) \; \implies \; \psi_1(x) = A e^{ikx} + B e^{-ikx}, \; k = \frac{\sqrt{2mE}}{\hbar}.
 \]
 Per \( x > 0 \)
 \begin{align*}
-\psi_2''(x) &= -\frac{2m}{\hbar^2} (E - V_0) \psi_2(x) \; \Rightarrow \\
-&\; \Rightarrow \; \psi_2(x) = C e^{ik'x} + D e^{-ik'x}, \; k' = \sqrt{\frac{2m}{\hbar^2}(E - V_0)}
+\psi_2''(x) &= -\frac{2m}{\hbar^2} (E - V_0) \psi_2(x) \; \implies \\
+&\; \implies \; \psi_2(x) = C e^{ik'x} + D e^{-ik'x}, \; k' = \sqrt{\frac{2m}{\hbar^2}(E - V_0)}
 \end{align*}
 e per ora impongo \( E > V_0 \).
 
@@ -61,7 +61,7 @@ Poiché \( \psi_1(0) = \psi_2(0) \) e \( \psi_1'(0) = \psi_2'(0) \), allora mi r
 \begin{cases}
 A + B = C \\
 ik(A - B) = ik'C 
-\end{cases} \quad \Rightarrow \quad \begin{cases}
+\end{cases} \quad \implies \quad \begin{cases}
 B = \frac{k - k'}{k + k'} A \\
 C = \frac{2k}{k + k'} A
 \end{cases}.
@@ -97,7 +97,7 @@ Integrando
 \int_a^b \frac{\partial \rho}{\partial t} \, dx = -\int_a^b \frac{\partial J}{ \partial x} \, dx = - \left( J(b) - J(a) \right)
 \]
 \[
-\frac{\partial \rho}{\partial t} > 0 \qquad \Rightarrow \qquad J(a) > J(b).
+\frac{\partial \rho}{\partial t} > 0 \qquad \implies \qquad J(a) > J(b).
 \]
 Il valore medio di \( J \)
 \begin{align*}
@@ -128,7 +128,7 @@ Poiché \( \ket{\psi} = \ket{k} \braket{k|\psi} + \ket{-k} \braket{-k|\psi} \), 
 \]
 Inoltre, essendo 
 \[
-\rho = |\psi|^2 \; \Rightarrow \; \frac{\partial \rho}{\partial t} = 0 \; \Rightarrow \; \frac{\partial J}{\partial x} = 0,
+\rho = |\psi|^2 \; \implies \; \frac{\partial \rho}{\partial t} = 0 \; \implies \; \frac{\partial J}{\partial x} = 0,
 \]
 quindi \( J \) è invariante per spostamento, quindi 
 \[
@@ -144,7 +144,7 @@ T = \left| \frac{C}{A} \right|^2, \qquad R = \left| \frac{B}{A} \right|^2.
 \]
 Nel caso in cui \( E < V_0 \)
 \[
-k' = \sqrt{\frac{2m}{\hbar}(E - V_0)} \quad \Rightarrow \quad k' = i \beta, \, \beta \in \mathbb{R}
+k' = \sqrt{\frac{2m}{\hbar}(E - V_0)} \quad \implies \quad k' = i \beta, \, \beta \in \mathbb{R}
 \]
 quindi \( \psi_2(x) = C e^{-\beta x} \), cioè l'andamento è esponenziale e la corrente \( J_C(x, t) = 0 \), quindi \( J_A = - J_B \) e 
 \[

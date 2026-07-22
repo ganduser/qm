@@ -26,7 +26,7 @@ Per \( |x| > a \)
 \braket{x|\mathcal{H}|\psi_E} = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi_E(x) = (E - V_0) \psi_E(x).
 \]
 \[
-V_0 \to +\infty \Rightarrow \frac{d^2}{dx^2} \psi_E(x) = -\frac{2m}{\hbar^2} (E - V_0) \psi_E(x) \to +\infty, \forall E \Rightarrow \psi_E(x) = 0.
+V_0 \to +\infty \implies \frac{d^2}{dx^2} \psi_E(x) = -\frac{2m}{\hbar^2} (E - V_0) \psi_E(x) \to +\infty, \forall E \implies \psi_E(x) = 0.
 \]
 Infatti fuori dalla buca una soluzione dell'equazione differenziale (con normalizzazione) è
 \[
@@ -61,15 +61,15 @@ ovvero una combinazione lineare di seno e coseno
 \]
 e si presentano due casi.
 \begin{enumerate}
-\item \( B_E = 0 \Rightarrow \psi_E^I(x) = A_E \sin(kx) \) quindi per \( x = \pm a \) vale
+\item \( B_E = 0 \implies \psi_E^I(x) = A_E \sin(kx) \) quindi per \( x = \pm a \) vale
 \begin{align*}
-\sin(ka) = -\sin(-ka) = 0 &\Rightarrow ka = \pi n \Rightarrow k_n = \frac{\pi}{a} n \Rightarrow \\
-&\Rightarrow E_n = \frac{\hbar^2 \pi^2}{2m} \frac{n^2}{a^2}
+\sin(ka) = -\sin(-ka) = 0 &\implies ka = \pi n \implies k_n = \frac{\pi}{a} n \implies \\
+&\implies E_n = \frac{\hbar^2 \pi^2}{2m} \frac{n^2}{a^2}
 \end{align*}
-\item \( A_E = 0 \Rightarrow \psi_E^{II}(x) = B_E \cos(kx) \) e per \( x = \pm a \) ho
+\item \( A_E = 0 \implies \psi_E^{II}(x) = B_E \cos(kx) \) e per \( x = \pm a \) ho
 \begin{align*}
-\cos(ka) = 0 \Rightarrow ka = (2n + 1) \frac{\pi}{2} &\Rightarrow k_n = \frac{\pi}{2a}(2n + 1) \Rightarrow \\ 
-&\Rightarrow E_n = \frac{\hbar^2 \pi^2}{2m} \frac{(2n + 1)^2}{4a^2}
+\cos(ka) = 0 \implies ka = (2n + 1) \frac{\pi}{2} &\implies k_n = \frac{\pi}{2a}(2n + 1) \implies \\ 
+&\implies E_n = \frac{\hbar^2 \pi^2}{2m} \frac{(2n + 1)^2}{4a^2}
 \end{align*}
 \end{enumerate}
 Quindi lo \textbf{spettro degli autovalori} è
@@ -82,7 +82,7 @@ E_n = \frac{\hbar^2 n^2 \pi^2}{2 m L^2}.
 \]
 è anche possibile definire una \textbf{lunghezza d'onda} per le \( \psi_E \):
 \[
-\lambda_n = \frac{2\pi}{k_n} = \frac{2L}{n} \quad \Rightarrow \quad \frac{\lambda_n}{2} = \frac{L}{n}
+\lambda_n = \frac{2\pi}{k_n} = \frac{2L}{n} \quad \implies \quad \frac{\lambda_n}{2} = \frac{L}{n}
 \]
 cioè la buca contiene \( n \) semilunghezze d'onda.
 
@@ -115,7 +115,7 @@ Gli andamenti sono riportati in Figura \ref{buca_infinita}.
 \end{figure}
 Pensando alle soluzioni come azione dell'operatore parità sulla funzione d'onda si ha
 \[
-\braket{x|\mathcal{P}|\psi} = \braket{-x|\psi} \; \Rightarrow \; \mathcal{P} \ket{\psi_E} = \begin{cases}
+\braket{x|\mathcal{P}|\psi} = \braket{-x|\psi} \; \implies \; \mathcal{P} \ket{\psi_E} = \begin{cases}
 + \ket{\psi_E} \text{ se ho } \psi^{II} \\
 - \ket{\psi_E} \text{ se ho } \psi^I 
 \end{cases}
@@ -127,8 +127,8 @@ Inoltre \([\mathcal{H}, \mathcal{P}] = 0\), ed essendo \( \mathcal{P}^{-1} \math
 Era possibile dedurre lo stato ad energia minima dal principio di indeterminazione perché 
 \[
 \begin{cases}
-\Delta x \leq L \Rightarrow \Delta^2 x \leq L^2 \\
+\Delta x \leq L \implies \Delta^2 x \leq L^2 \\
 \Delta^2 \hat{p} \Delta^2 \hat{x} \geq \frac{\hbar^2}{4}
-\end{cases} \; \Rightarrow \; \Delta^2 \hat{p} \geq \frac{\hbar^2}{4L^2}
+\end{cases} \; \implies \; \Delta^2 \hat{p} \geq \frac{\hbar^2}{4L^2}
 \]
 avendo che l'impulso ha un valore minimo. Dunque non posso che avere un'energia minima.

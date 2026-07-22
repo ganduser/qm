@@ -1,7 +1,7 @@
 \subsection{Invarianza per traslazioni temporali di \(\mathcal{H}\)}
 So che \( S(t_1, t_0) = S(t_1 + \delta, t_0 + \delta) \), nel caso infinitesimo
 \[
-\mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0) = \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0 + \delta) \quad \Rightarrow \quad \frac{d}{dt} \hat{\mathcal{H}}(t) = 0
+\mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0) = \mathbbm{1} + i \varepsilon \hat{\mathcal{H}}(t_0 + \delta) \quad \implies \quad \frac{d}{dt} \hat{\mathcal{H}}(t) = 0
 \]
 cioè \( \hat{\mathcal{H}} \equiv \hat{\mathcal{H}}(\hat{p}, \hat{q}) \) (\textbf{N.B.:} è un ``se e solo se'').
 
@@ -13,10 +13,10 @@ S(t_1 + \delta, t_0 + \delta) &= S(t_1 + \delta, t_1) S(t_1, t_0) S(t_0, t_0 + \
 &= S(t_1 + \delta, t_1) S(t_1, t_0) S^{-1}(t_0 + \delta, t_0) = \\
 &=  S(t_1 + \delta, t_1) S(t_1, t_0) S^\dag(t_0 + \delta, t_0) = \\
 &= \left( \mathbbm{1} + i \delta \hat{\mathcal{H}} \right) S(t_1, t_0) \left( \mathbbm{1} - i \delta \hat{\mathcal{H}} \right) = \\
-&= S(t_1, t_0) + i \delta \left[ \hat{\mathcal{H}}, S(t_1, t_0) \right] + \mathcal{O}(\delta) \quad \Rightarrow
+&= S(t_1, t_0) + i \delta \left[ \hat{\mathcal{H}}, S(t_1, t_0) \right] + \mathcal{O}(\delta) \quad \implies
 \end{align*}
 \[
-\Rightarrow \quad \left[ \hat{\mathcal{H}}, S(t_1, t_0) \right] = 0.
+\implies \quad \left[ \hat{\mathcal{H}}, S(t_1, t_0) \right] = 0.
 \]
 Inoltre gli autovalori di \( \hat{\mathcal{H}} \) si conservano per traslazione temporale
 \[
@@ -49,18 +49,18 @@ Voglio che \(\hat{\mathcal{H}} = -c \mathcal{H}\). Dimensionalmente, poiché
 S(t, t_0) \ket{\psi(t_0)} = \ket{\psi(t)} \; \xrightarrow[\text{infinitesim.}] \; \ket{\psi(t)} = e^{(t - t_0) \frac{d}{dt}} \ket{\psi(t)} |_{t_0} =
 \]
 \[
-= \left( \mathbbm{1} + (t - t_0) \frac{d}{dt} + \mathcal{O}(t - t_0) \right) \ket{\psi(t_0)} \quad \Rightarrow
+= \left( \mathbbm{1} + (t - t_0) \frac{d}{dt} + \mathcal{O}(t - t_0) \right) \ket{\psi(t_0)} \quad \implies
 \]
 \[
-\Rightarrow \quad \hat{\mathcal{H}}(t) \ket{\psi(t)} = \frac{d}{dt} \ket{\psi(t)}
+\implies \quad \hat{\mathcal{H}}(t) \ket{\psi(t)} = \frac{d}{dt} \ket{\psi(t)}
 \]
 la costante è un'azione, quindi \( c \equiv \frac{1}{\hbar} \). Riscrivo
 \[
-\hat{\mathcal{H}} = - \frac{1}{\hbar} \mathcal{H} \left( \hat{p}, \hat{q} \right) \quad \Rightarrow \quad \boxed{i \hbar \frac{d}{dt} \ket{\psi(t)} = \mathcal{H}( t; \hat{p}, \hat{q}) \ket{\psi(t)}} \; \text{eq. di Schr\"odinger.}
+\hat{\mathcal{H}} = - \frac{1}{\hbar} \mathcal{H} \left( \hat{p}, \hat{q} \right) \quad \implies \quad \boxed{i \hbar \frac{d}{dt} \ket{\psi(t)} = \mathcal{H}( t; \hat{p}, \hat{q}) \ket{\psi(t)}} \; \text{eq. di Schr\"odinger.}
 \]
 Per \( \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) \) per stati \( \ket{q} \)
 \[
-\braket{q|i \hbar \frac{d}{dt}|\psi(t)} = \braket{q|\frac{\hat{p}^2}{2m} + V(\hat{q})|\psi(t)} \quad \Rightarrow
+\braket{q|i \hbar \frac{d}{dt}|\psi(t)} = \braket{q|\frac{\hat{p}^2}{2m} + V(\hat{q})|\psi(t)} \quad \implies
 \]
 \[
 \left[
@@ -74,7 +74,7 @@ Per \( \mathcal{H} = T + V = \frac{\hat{p}^2}{2m} + V(\hat{q}) \) per stati \( \
 \right]
 \]
 \[
-\Rightarrow \quad i \hbar \frac{d \psi}{dt}(q; t) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dq^2}(q;t) + V(q) \psi(q;t).
+\implies \quad i \hbar \frac{d \psi}{dt}(q; t) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dq^2}(q;t) + V(q) \psi(q;t).
 \]
 Per l'evoluzione temporale, \( \ket{\psi(t)} = S(t, t_0) \ket{\psi(t_0)} \), quindi
 \[
@@ -99,7 +99,7 @@ Caso 2.
 \frac{d\mathcal{H}}{dt} \neq 0 \text{ e } [\mathcal{H}(t), \mathcal{H}(t^\prime)] = 0
 \]
 \[
-i \hbar \frac{d}{dt} S(t, t_0) = \mathcal{H}(t) S(t, t_0) \quad \Rightarrow \quad \boxed{S(t, t_0) = \exp{\left\{ \frac{1}{i \hbar} \int_{t_0}^{t} \mathcal{H}(t^\prime) \, dt^\prime \right\}}}
+i \hbar \frac{d}{dt} S(t, t_0) = \mathcal{H}(t) S(t, t_0) \quad \implies \quad \boxed{S(t, t_0) = \exp{\left\{ \frac{1}{i \hbar} \int_{t_0}^{t} \mathcal{H}(t^\prime) \, dt^\prime \right\}}}
 \]
 Caso 3.
 \[
@@ -182,13 +182,13 @@ Quindi per \( \ket{\psi(t_0)} = \ket{k} \) al tempo \( t \)
 \]
 cioè \( \ket{\psi(t_0)} \) e \( \ket{\psi(t)} \) \textbf{differiscono per una fase}. Inoltre
 \[
-\ket{\psi(t_0)} = \sum_k \ket{k} \overbrace{\braket{k|\psi(t_0)}}^{c_k(t_0)} = \sum_k c_k(t_0) \ket{k} \quad \Rightarrow
+\ket{\psi(t_0)} = \sum_k \ket{k} \overbrace{\braket{k|\psi(t_0)}}^{c_k(t_0)} = \sum_k c_k(t_0) \ket{k} \quad \implies
 \]
 \[
-\Rightarrow \quad \ket{\psi(t)} = \sum_n \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}} \ket{n} \overbrace{\braket{n|\psi(t)}}^{c_n(t)} \; \Rightarrow
+\implies \quad \ket{\psi(t)} = \sum_n \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}} \ket{n} \overbrace{\braket{n|\psi(t)}}^{c_n(t)} \; \implies
 \]
 \[
-\Rightarrow \; c_n(t) = c_n(t_0) \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}}
+\implies \; c_n(t) = c_n(t_0) \exp{\left\{ \frac{1}{i \hbar} (t - t_0) E_n \right\}}
 \]
 cioè la probabilità si conserva perché 
 \[
