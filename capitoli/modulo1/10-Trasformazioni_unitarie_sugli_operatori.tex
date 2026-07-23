@@ -1,19 +1,25 @@
 \subsection{Trasformazioni unitarie sugli operatori}
-Ho un operatore qualunque \(A_{ij} = \braket{e_i|A|e_j}\) e voglio trovare \(A_{ij}' = \braket{e_i'|A|e_j'}\). Prendo
+Ho un operatore qualunque \(A_{ij} = \braket{e_i|A|e_j}\) e voglio trovare
+\(A_{ij}' = \braket{e_i'|A|e_j'}\). Prendo
 \[
-\bra{e_i} U = \bra{e_i} \sum_k \ket{e_k} \bra{e_k'} = \bra{e_i'}
+  \bra{e_i} U = \bra{e_i} \sum_k \ket{e_k} \bra{e_k'} = \bra{e_i'}
 \]
 \[
-U^\dag \ket{e_j} = \left( \sum_k \ket{e_k} \bra{e_k'} \right)^\dag \ket{e_j} = \ket{e_j'}
+  U^\dag \ket{e_j}
+  = \left( \sum_k \ket{e_k} \bra{e_k'} \right)^\dag \ket{e_j}
+  = \ket{e_j'}
 \]
 quindi
 \[
-A' = U A U^\dag
+  A' = U A U^\dag
 \]
-Così definisco gli operatori unitari equivalenti. Siano \(A\) e \(B\) operatori tali che \(B = U A U^\dag\) con \(U\) unitario. Allora per gli autovettori
+Così definisco gli operatori unitari equivalenti. Siano \(A\) e \(B\) operatori
+tali che \(B = U A U^\dag\) con \(U\) unitario. Allora per gli autovettori
 \begin{align*}
-A \ket{e_k} = \mu_k \ket{e_k} \quad &\Leftrightarrow \quad U A \ket{e_k} = \mu_k U \ket{e_k} \\
-&\Leftrightarrow \quad U A U^\dag \left[ U \ket{e_k} \right] = \mu_k U \ket{e_k} \\
-&\Leftrightarrow \quad B \ket{e_k'} = \mu_k \ket{e_k'} \\
-&\Leftrightarrow \quad \ket{e_k'} = U \ket{e_k}
+  A \ket{e_k} = \mu_k \ket{e_k} \quad
+  &\Leftrightarrow \quad U A \ket{e_k} = \mu_k U \ket{e_k} \\
+  &\Leftrightarrow \quad U A U^\dag \left[ U \ket{e_k} \right]
+    = \mu_k U \ket{e_k} \\
+  &\Leftrightarrow \quad B \ket{e_k'} = \mu_k \ket{e_k'} \\
+  &\Leftrightarrow \quad \ket{e_k'} = U \ket{e_k}
 \end{align*}
